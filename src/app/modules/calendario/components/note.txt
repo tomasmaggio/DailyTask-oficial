@@ -1,0 +1,2 @@
+#En la carpeta 'components' iran los componentes que usaremos para la pagina 'CALENDARIO' como por ejemplo un card o un carousel#
+#deberan ir en otra carpeta(ng g component) con el nombre del componente que usaremos#
