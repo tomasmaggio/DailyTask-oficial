@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PagesComponent } from './pages.component';
+import { GuardadosComponent } from './guardados.component';
 
-describe('PagesComponent', () => {
-  let component: PagesComponent;
-  let fixture: ComponentFixture<PagesComponent>;
+describe('GuardadosComponent', () => {
+  let component: GuardadosComponent;
+  let fixture: ComponentFixture<GuardadosComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PagesComponent]
+      declarations: [GuardadosComponent]
     });
-    fixture = TestBed.createComponent(PagesComponent);
+    fixture = TestBed.createComponent(GuardadosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

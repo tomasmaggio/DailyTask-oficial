@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CalendarioRoutingModule } from './calendario-routing.module';
 import { PagesComponent } from './pages/pages.component';
+import { CalendarioComponent } from './pages/calendario/calendario.component';
 
 
 
@@ -11,7 +12,8 @@ import { PagesComponent } from './pages/pages.component';
     
 
   
-    PagesComponent
+    PagesComponent,
+             CalendarioComponent
   ],
   imports: [
     CommonModule,

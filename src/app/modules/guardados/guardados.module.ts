@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { GuardadosRoutingModule } from './guardados-routing.module';
 import { PagesComponent } from './pages/pages.component';
+import { GuardadosComponent } from './pages/guardados/guardados.component';
 
 
 
@@ -12,7 +13,8 @@ import { PagesComponent } from './pages/pages.component';
     
 
   
-    PagesComponent
+    PagesComponent,
+             GuardadosComponent
   ],
   imports: [
     CommonModule,
