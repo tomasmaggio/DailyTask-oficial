@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
+
 
 
 
@@ -14,11 +17,20 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     AppComponent,
 
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: 'inicio', component: InicioComponent},
+      {path:'', redirectTo: 'inicio', pathMatch: 'full'}
+    ])
+    
+  ],
+  exports:[
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
