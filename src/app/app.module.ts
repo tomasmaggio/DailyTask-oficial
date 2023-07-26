@@ -8,6 +8,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
+import { BienvenidaComponent } from './modules/bienvenida/bienvenida.component';
 
 
 
@@ -18,6 +19,7 @@ import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component'
 
     NavbarComponent,
     FooterComponent,
+    BienvenidaComponent,
     
   ],
   imports: [
