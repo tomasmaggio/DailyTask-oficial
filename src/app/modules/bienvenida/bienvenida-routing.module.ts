@@ -4,7 +4,7 @@ import { BienvenidaComponent } from './pages/bienvenida.component';
 
 const routes: Routes = [
   {
-    path:'bienvenida', component:BienvenidaComponent
+    path:'', component:BienvenidaComponent
   }
 ];
 
