@@ -27,10 +27,7 @@ const routes: Routes = [
   path:'usuario',
   loadChildren:()=>import('./modules/usuario/usuario.module').then( m=> m.UsuarioModule)
 },
-{
-  path:'usuarioconfig',
-  loadChildren:()=>import('./modules/usuarioconfig/usuarioconfig.module').then( m=> m.UsuarioconfigModule)
-},
+
 {
   path:'bienvenida',
   loadChildren:()=>import('./modules/bienvenida/bienvenida.module').then( m=> m.BienvenidaModule)
