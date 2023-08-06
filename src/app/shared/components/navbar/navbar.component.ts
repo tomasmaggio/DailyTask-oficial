@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 
 })
+
+
 export class NavbarComponent {
+  isSidebarClosed = false;
+  isDarkMode = false;
 
-  constructor(){
-
-    
-    
-
+  toggleSidebar() {
+    this.isSidebarClosed = !this.isSidebarClosed;
   }
 
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    const body = document.querySelector('body');
+    if (body) {
+      body.classList.toggle('dark', this.isDarkMode);
+    }
+  }
 }
-

@@ -1,13 +1,60 @@
+/* --------------------------- Google font 'Hind' --------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap');
+
+*{
+    font-family: 'Hind', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    /* ------------------------- Colores del modo claro ------------------------- */
+    --body-color: #ffffff; /*Color background*/
+    --sidebar-color: #FFF; /*Color del sidevar (fondo)*/
+    --primary-color: #3A4C94; /*Color cuando paso el mouse por encima de uno de los componentes*/
+    --primary-color-light: #F6F5FF; /*Color del buscar y el color mode*/
+    --toggle-color: #DDD; /*Color del toggle (interruptor)*/
+    --text-color: #707070; /*Color de los textos del nav*/
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
 /* -------------------------- Opciones del sidebar -------------------------- */
-.sidebar{
+ .sidebar{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 250px;
     padding: 10px 14px;
-    background: var(--sidebar-color);
-    transition: var(--tran-05); /*transición de como se abre el nav*/
+    background:#FFF;
+    transition: all 03.s ease; /*transición de como se abre el nav*/
     z-index: 100;  
 }
 .sidebar.close{
@@ -16,7 +63,14 @@
 
 
 
-/* ------------------- Diseño de los modulos en el nav ------------------ */
+
+
+
+
+
+
+
+/* ------------------- Diseño de los componentes en el nav ------------------ */
 .sidebar li{
     height: 50px; /*Espacio entre cada componente*/
     list-style: none;
@@ -25,7 +79,16 @@
     margin-top: 10px;
 }
 
-/* ---------------------------------- icono --------------------------------- */
+
+
+
+
+
+
+
+
+
+/* ---------------------------------- iconos --------------------------------- */
 .sidebar header .image,
 .sidebar .icon{
     min-width: 60px;
@@ -42,9 +105,16 @@
 }
 .sidebar .text,
 .sidebar .icon{
-    color:#707070; /*Color del titulo*/
-    transition:all 0.2 ease; /*Transición en la que aparece y desaparece el titulo*/
+    color: #707070; /*Color del titulo*/
+    transition: all 0.3s ease; /*Transición en la que aparece y desaparece el titulo*/
 }
+
+
+
+
+
+
+
 
 
 /* --------------------------- textos del sidebar --------------------------- */
@@ -60,6 +130,14 @@
 
 
 
+
+
+
+
+
+
+
+/* ---------------------------------- Logo y texto del logo --------------------------------- */
 .sidebar header{
     position: relative; /* Posición del Boton de despliegue*/
 }
@@ -92,12 +170,69 @@ header .image-text .profession{ /*profession sería "Daily Task"*/
 }
 
 
+
+
+
+
+
+
+/* ----------------- Toggle / abrir y cerrar menu ----------------- */
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color:#3A4C94;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+body.dark .sidebar header .toggle{
+    color: #707070;
+}
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------ menu general del sidebar ------------------------ */
 .sidebar .menu{
     margin-top: 40px;
 }
-
-
+.sidebar li.search-box{ /*Input de busqueda / search*/
+    border-radius: 6px;
+    background-color:#F6F5FF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.sidebar li.search-box input{ /*Input de busqueda / search*/
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #F6F5FF;
+    color: #707070;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
 .sidebar li a{
     list-style: none;
     height: 100%;
@@ -110,17 +245,16 @@ header .image-text .profession{ /*profession sería "Daily Task"*/
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
 .sidebar li a:hover{
-    background-color:#3A4C94;
+    background-color: #3A4C94;
 }
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
-    color:#FFFFFF;
+    color: #FFF;
 }
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
-    color:#707070;
+    color: #707070;
 }
 .sidebar .menu-bar{
     height: calc(100% - 55px);
@@ -132,13 +266,9 @@ body.dark .sidebar li a:hover .text{
 .menu-bar::-webkit-scrollbar{
     display: none;
 }
-
-
-
-
 .sidebar .menu-bar .mode{
     border-radius: 6px;
-    background-color:#3A4C94;
+    background-color:#707070;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -158,13 +288,6 @@ body.dark .mode .sun-moon i.sun{
 body.dark .mode .sun-moon i.moon{
     opacity: 0;
 }
-
-
-
-
-
-
-
 .menu-bar .bottom-content .toggle-switch{
     position: absolute;
     right: 0;
@@ -181,7 +304,7 @@ body.dark .mode .sun-moon i.moon{
     height: 22px;
     width: 40px;
     border-radius: 25px;
-    background-color: #ddd;
+    background-color: #DDD;
     transition: all 0.3s ease;
 }
 .switch::before{
@@ -193,38 +316,12 @@ body.dark .mode .sun-moon i.moon{
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    background-color:#FFFFFF;
-    transition: all 0.4s ease;
+    background-color: #FFF;
+    transition: all 0.3s ease;
 }
 body.dark .switch::before{
     left: 20px;
 }
-
-
-/* ----------------- Toggle / abrir y cerrar menu ----------------- */
-
-
-.sidebar header .toggle{
-    position: absolute;
-    top: 50%;
-    right: -25px;
-    transform: translateY(-50%) rotate(180deg);
-    height: 25px;
-    width: 25px;
-    background-color:#3A4C94;
-    color:#FFFFFF;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.sidebar.close .toggle{
-    transform: translateY(-50%) rotate(0deg);
-}
-
 .home{
     position: absolute;
     top: 0;
@@ -232,8 +329,8 @@ body.dark .switch::before{
     left: 250px;
     height: 100vh;
     width: calc(100% - 250px);
-    background-color:#FFFFFF;
-    transition: all 0.3s ease;
+    background-color: #ffffff;
+    transition:  all 0.3s ease;
 }
 .home .text{
     font-size: 30px;
@@ -246,7 +343,6 @@ body.dark .switch::before{
     height: 100vh;
     width: calc(100% - 78px);
 }
-
-
-
-
+body.dark .home .text{
+    color:#707070;
+}

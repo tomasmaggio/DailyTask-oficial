@@ -8,18 +8,18 @@
 
 </head>
 <body>
-    <nav class="sidebar close">
+    <nav class="sidebar" [ngClass]="{'close': isSidebarClosed}">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="/src/assets/Logo/logo azul.png" alt="">
+                    <img src="src/" alt="">
                 </span>
                 <div class="text logo-text">
                     <span class="name">Daily Task</span>
                     <span class="profession">Prácticas</span>
                 </div>
             </div>
-            <i class='bx bx-chevron-right toggle'></i>
+            <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()"></i>
         </header>
         <div class="menu-bar">
             <div class="menu">
@@ -41,16 +41,11 @@
                     
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bx-book-open icon' ></i>
+                            <i class='bx bx-note icon' ></i>
                             <span class="text nav-text">Notas</span>
                         </a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-bookmark icon' ></i>
-                            <span class="text nav-text">Guardados</span>
-                        </a>
-                    </li>
+                    
 
                     
                 </ul>
@@ -68,16 +63,7 @@
                         <span class="text nav-text">Salir</span>
                     </a>
                 </li>
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-sun icon sun'></i>
-                        <i class='bx bx-moon icon moon'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
+                
                 
             </div>
         </div>
