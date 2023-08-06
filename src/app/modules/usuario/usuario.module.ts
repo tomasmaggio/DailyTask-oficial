@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UsuarioRoutingModule } from './usuario-routing.module';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { ConfigUsuarioComponent } from './pages/config-usuario/config-usuario.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ConfigUsuarioComponent } from './pages/config-usuario/config-usuario.co
   ],
   imports: [
     CommonModule,
-    UsuarioRoutingModule
+    UsuarioRoutingModule,
+    SharedModule
   ]
 })
 export class UsuarioModule { }
