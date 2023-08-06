@@ -29,12 +29,12 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--body-color);
-    transition: var(--tran-05);
+    background-color: #FFF;
+    transition: all 0.3s ease;
 }
 ::selection{
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #cfd4e2;
+    color: #3A4C94;
 }
 
 
