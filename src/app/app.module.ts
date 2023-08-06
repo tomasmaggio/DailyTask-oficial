@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
+
+import { RouterModule } from '@angular/router';
+import { BienvenidaComponent } from './modules/bienvenida/pages/bienvenida.component';
+
 
 
 
@@ -13,12 +15,18 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   declarations: [
     AppComponent,
 
-    NavbarComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: 'bienvenida', component: BienvenidaComponent},
+      {path:'', redirectTo: 'bienvenida', pathMatch: 'full'} //ruta vacía para redirigir a la pagina 'Bienvenida' en algun caso extraordinario
+    ])
+    
+  ],
+  exports:[
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

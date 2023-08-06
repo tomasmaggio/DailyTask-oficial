@@ -4,7 +4,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 
 const routes: Routes = [
 {
-  path:'inicio', component:InicioComponent
+  path:'', component:InicioComponent
 }
 
 ];
