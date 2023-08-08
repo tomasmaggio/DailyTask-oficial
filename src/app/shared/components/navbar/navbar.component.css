@@ -1,3 +1,10 @@
+/* --------------------------- Tipografía: Google font 'Hind' --------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 
 :root{
@@ -15,6 +22,9 @@
     --tran-05: all 0.3s ease;
 }
 
+
+
+
 body{
     min-height: 100vh;
     background-color: #FFF;
@@ -29,10 +39,6 @@ body{
 
 
 
-
-
-
-
 /* -------------------------- Opciones del sidebar -------------------------- */
  .sidebar{
     position: fixed;
@@ -42,7 +48,7 @@ body{
     width: 250px;
     padding: 10px 14px;
     background:#FFF;
-    transition: all 03.s ease; /*transición de como se abre el nav*/
+    transition: all 0.5s ease; /*transición de como se abre el nav*/
     z-index: 100;  
 }
 .sidebar.close{
