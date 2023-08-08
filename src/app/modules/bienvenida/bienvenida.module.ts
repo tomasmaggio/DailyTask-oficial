@@ -8,7 +8,7 @@ import { BienvenidaRoutingModule } from './bienvenida-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    BienvenidaRoutingModule
+    BienvenidaRoutingModule,
   ]
 })
 export class BienvenidaModule { }

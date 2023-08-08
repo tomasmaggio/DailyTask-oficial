@@ -1,0 +1,342 @@
+/* --------------------------- Tipografía: Google font 'Hind' --------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    /* ------------------------- Colores del modo claro ------------------------- */
+    --body-color: #ffffff; /*Color background*/
+    --sidebar-color: #FFF; /*Color del sidevar (fondo)*/
+    --primary-color: #3A4C94; /*Color cuando paso el mouse por encima de uno de los componentes*/
+    --primary-color-light: #F6F5FF; /*Color del buscar y el color mode*/
+    --toggle-color: #DDD; /*Color del toggle (interruptor)*/
+    --text-color: #707070; /*Color de los textos del nav*/
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+
+
+
+body{
+    min-height: 100vh;
+    background-color: #FFF;
+    transition: all 0.3s ease;
+}
+::selection{
+    background-color: #cfd4e2;
+    color: #3A4C94;
+}
+
+
+
+
+
+/* -------------------------- Opciones del sidebar -------------------------- */
+ .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background:#FFF;
+    transition: all 0.5s ease; /*transición de como se abre el nav*/
+    z-index: 100;  
+}
+.sidebar.close{
+    width: 88px; /*Que tanto se cierra el nav*/
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------- Diseño de los componentes en el nav ------------------ */
+.sidebar li{
+    height: 50px; /*Espacio entre cada componente*/
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------- iconos --------------------------------- */
+.sidebar header .image,
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+}
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.sidebar .text,
+.sidebar .icon{
+    color: #707070; /*Color del titulo*/
+    transition: all 0.3s ease; /*Transición en la que aparece y desaparece el titulo*/
+}
+
+
+
+
+
+
+
+
+
+/* --------------------------- textos del sidebar --------------------------- */
+.sidebar .text{
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap; /*El 'nowrap' hace que el texto cuando se cierre no se pliegue*/
+    opacity: 1;
+}
+.sidebar.close .text{
+    opacity: 0; /*Opacidad cuando se cierra (titulo)*/
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------- Logo y texto del logo --------------------------------- */
+.sidebar header{
+    position: relative; /* Posición del Boton de despliegue*/
+}
+.sidebar header .image-text{
+    display: flex;
+    align-items: center; /*posición del icono*/
+}
+.sidebar header .logo-text{ /*Posicion del texto del logo*//**/
+    display: flex;
+    flex-direction: column;
+}
+header .image-text .name { /*Opciones del texto del logo*/
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+header .image-text .profession{ /*profession sería "Daily Task"*/
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+.sidebar header .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar header .image img{ /*Tamaño y border del icono*/
+    width: 40px;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+
+
+/* ----------------- Toggle / abrir y cerrar menu ----------------- */
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color:#3A4C94;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+body.dark .sidebar header .toggle{
+    color: #707070;
+}
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------ menu general del sidebar ------------------------ */
+.sidebar .menu{
+    margin-top: 40px;
+}
+.sidebar li.search-box{ /*Input de busqueda / search*/
+    border-radius: 6px;
+    background-color:#F6F5FF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.sidebar li.search-box input{ /*Input de busqueda / search*/
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #F6F5FF;
+    color: #707070;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.sidebar li a{
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.sidebar li a:hover{
+    background-color: #3A4C94;
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: #FFF;
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+    color: #707070;
+}
+.sidebar .menu-bar{
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar{
+    display: none;
+}
+.sidebar .menu-bar .mode{
+    border-radius: 6px;
+    background-color:#707070;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.menu-bar .mode .sun-moon{
+    height: 50px;
+    width: 60px;
+}
+.mode .sun-moon i{
+    position: absolute;
+}
+.mode .sun-moon i.sun{
+    opacity: 0;
+}
+body.dark .mode .sun-moon i.sun{
+    opacity: 1;
+}
+body.dark .mode .sun-moon i.moon{
+    opacity: 0;
+}
+.menu-bar .bottom-content .toggle-switch{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.toggle-switch .switch{
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: #DDD;
+    transition: all 0.3s ease;
+}
+.switch::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: #FFF;
+    transition: all 0.3s ease;
+}
+body.dark .switch::before{
+    left: 20px;
+}
+.home{
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: #ffffff;
+    transition:  all 0.3s ease;
+}
+.home .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: #707070;
+    padding: 12px 60px;
+}
+.sidebar.close ~ .home{
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+body.dark .home .text{
+    color:#707070;
+}

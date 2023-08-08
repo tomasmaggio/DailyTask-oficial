@@ -1,2 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~boxicons/css/boxicons.min.css';
+/* --------------------------- Google font 'Hind' --------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap');
+
+*{
+    font-family: 'Hind', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+   }
+

@@ -18,7 +18,6 @@ import { BienvenidaComponent } from './modules/bienvenida/pages/bienvenida.compo
   ],
   imports: [
     BrowserModule,
-    
     AppRoutingModule,
     RouterModule.forRoot([
       {path: 'bienvenida', component: BienvenidaComponent},
