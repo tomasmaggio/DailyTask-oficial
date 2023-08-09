@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   //lazyloading
 {
-  path:'auth',
+  path:'',
   loadChildren:()=>import('./modules/auth/auth.module').then( m=> m.AuthModule)
 },
 {

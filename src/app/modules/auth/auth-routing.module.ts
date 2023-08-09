@@ -5,8 +5,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 
 const routes: Routes = [
   //rutas secundarias
-  {
-    path: 'login', component:LoginComponent},
+    {path: 'login', component:LoginComponent},
     {path: 'registro', component:RegistroComponent}
 ];
 
