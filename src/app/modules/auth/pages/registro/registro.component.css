@@ -1,0 +1,25 @@
+.full-height{ /*El row ocupará el 100% de la pagina*/
+    height: 100vh; /* 100% del alto de la ventana (viewport height) */
+}
+
+
+.columna1, .columna2 {
+    display: flex;            /* Convierto los elementos en elementos flexibles */
+    flex-direction: column;   /* Establezco la dirección de los elementos internos en columna */
+    justify-content:center;   /* Centramos verticalmente el contenido a lo largo del eje principal */
+    align-items: center;      /* Centramos horizontalmente el contenido a lo largo del eje secundario */
+    height: 100%;             /* Hace que el elemento ocupe todo el alto del div padre */
+}
+
+
+
+/* -------------------------------- columna 1 ------------------------------- */
+.contenido-logo{
+    height: 500px;
+}
+
+.imagen-logo{
+    width: 25vh;
+    margin: 50px;
+}
+
