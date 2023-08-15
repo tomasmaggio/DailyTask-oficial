@@ -1,0 +1,97 @@
+/* -------------------------------- Registro -------------------------------- */
+/* -------------------------------- Registro -------------------------------- */
+
+
+.full-height{ /*El row ocupará el 100% de la pagina*/
+    height: 100vh; /* 100% del alto de la ventana (viewport height) */
+}
+
+
+.columna1, .columna2 {
+    display: flex;            /* Convierto los elementos en elementos flexibles */
+    flex-direction: column;   /* Establezco la dirección de los elementos internos en columna */
+    justify-content:center;   /* Centramos verticalmente el contenido a lo largo del eje principal */
+    align-items: center;      /* Centramos horizontalmente el contenido a lo largo del eje secundario */
+    height: 100%;             /* Hace que el elemento ocupe todo el alto del div padre */
+}
+
+
+
+/* -------------------------------- columna 1 ------------------------------- */
+.contenido-logo{
+    height: 500px;
+}
+
+.imagen-logo{
+    width: 25vh;
+    margin: 50px;
+}
+
+.columna1 h1, .columna1 h6 {
+    color: #3A4C94;
+}
+
+
+/* -------------------------------- columna 2 ------------------------------- */
+.columna2 {
+    display: flex; /* Establece el contenedor como elemento flexible */
+    flex-direction: column; /* Apila los elementos internos en una columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    height: 100%; /* Ocupa todo el alto del contenedor padre */
+    /* Agrega otros estilos necesarios para la columna 2 */
+}
+
+
+/* Estilo para el rectángulo sin relleno y con bordes */
+.rectangulo {
+    border: 3.5px solid #000; /* Establece un borde de 2px sólido de color negro */
+    border-radius: 20px;
+    border-color: #3A4C94;
+    width: 470px; /* Ancho del rectángulo */
+    height: 600px; /* Alto del rectángulo */
+    padding: 20px; /* Espacio entre el borde y el contenido interno */
+    /* Agrega otros estilos necesarios para el rectángulo */
+}
+
+
+.comencemos-textos h2{
+    color: #3A4C94;
+}
+.comencemos-textos h6{
+    color: #999999;
+}
+
+.label-check{
+    text-align: start; 
+    font-size: 14px; 
+    color: #999999; 
+}
+
+
+.btn-comencemos{
+    background-color: #3A4C94;
+    color: #ffffff;
+    font-size: 21px;
+    border-radius: 13px;
+    width: 394px;
+    height: 57px;
+    border: none;
+}
+
+
+
+/* Estilos para el enlace */
+.a-google {
+    display: inline-block; /* Muestra el enlace como bloque en línea */
+    text-decoration: none; /* Elimina la decoración de subrayado */
+  }
+  
+.a-redirigir-login{
+    display: inline-block;
+    text-decoration: none;
+    color: #3A4C94;
+}
+.a-terminos{
+    color: #3A4C94;
+}
