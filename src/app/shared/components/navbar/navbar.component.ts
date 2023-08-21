@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class NavbarComponent {
-  isSidebarClosed = false;
+  isSidebarClosed = true;
   isDarkMode = false;
 
   toggleSidebar() {
