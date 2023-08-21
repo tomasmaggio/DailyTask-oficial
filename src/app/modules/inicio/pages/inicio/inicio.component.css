@@ -1,3 +1,67 @@
-.container{
+.container {
     padding-left: 5px;
+    display: flex;
+    justify-content: space-between; /* Espaciado equitativo entre las columnas */
+    align-items: center; /* Centrq verticalmente el contenido de las columnas */
+    height: 100vh; 
+}
+
+.col {
+    flex: 1;
+    text-align: center; /* alinea el contenido de cada columna horizontalmente */
+}
+
+.columna1, .columna2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente el contenido de cada columna */
+    gap: 20px; /* Espaciado entre elementos dentro de cada columna */
+}
+
+
+.botones{
+    padding-top: 50px;
+    
+}
+
+.botones button{
+    margin-right: 30px;
+}
+
+.btn-calendario{
+    background-color: #3A4C94; /* Color de fondo de los botones */
+    color: #fff; /* Color del texto de los botones */
+    padding: 17px 20px; /* Espaciado interno en los botones */
+    border: none; /* Quita el borde de los botones */
+    border-radius: 10px; /* Borde redondeado en los botones */
+}
+.btn-notas{
+    background-color: #738CCF; 
+    color: #fff; 
+    padding: 17px 20px; 
+    border: none; 
+    border-radius: 10px; 
+}
+.btn-usuario{
+    background-color: transparent;
+    border: 3px solid #3A4C94;
+    color: #3A4C94;
+    padding: 14px 20px; 
+    border-radius: 10px; 
+}
+
+.rectangulo {
+    border: 4px solid #000; /* Establece un borde de 2px sólido de color negro */
+    border-radius: 80px;
+    border-color: #3A4C94;
+    width: 600px; /* Ancho del rectángulo */
+    height: 500px; /* Alto del rectángulo */
+    padding: 20px; /* Espacio entre el borde y el contenido interno */
+    /* Agrega otros estilos necesarios para el rectángulo */
+}
+.rectangulo-titulo{
+    color: #3A4C94;
+    display: flex;
+    height: 14px;
+    margin-right: 220px;
 }
