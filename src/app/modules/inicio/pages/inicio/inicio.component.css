@@ -29,19 +29,36 @@
 }
 
 .btn-calendario{
-    background-color: #3A4C94; /* Color de fondo de los botones */
-    color: #fff; /* Color del texto de los botones */
-    padding: 17px 20px; /* Espaciado interno en los botones */
-    border: none; /* Quita el borde de los botones */
-    border-radius: 10px; /* Borde redondeado en los botones */
-}
-.btn-notas{
-    background-color: #738CCF; 
-    color: #fff; 
-    padding: 17px 20px; 
-    border: none; 
+    background-color: #3A4C94;
+    border: 3px solid #3A4C94;
+    color: #fff;
+    padding: 14px 20px; 
     border-radius: 10px; 
 }
+.btn-calendario:hover{
+    color: #3A4C94 !important;
+    background-color:transparent;
+    box-shadow: 0 4px 16px #3A4C94;
+    transition: all 0.3s ease;
+}
+
+
+
+.btn-notas{
+    background-color: #738CCF;
+    border: 3px solid #738CCF;
+    color: #fff;
+    padding: 14px 20px; 
+    border-radius: 10px; 
+}
+.btn-notas:hover{
+    color: #738CCF !important;
+    background-color: transparent;
+    box-shadow: 0 4px 16px #738CCF;
+    transition: all 0.3s ease;
+}
+
+
 .btn-usuario{
     background-color: transparent;
     border: 3px solid #3A4C94;
@@ -49,6 +66,14 @@
     padding: 14px 20px; 
     border-radius: 10px; 
 }
+.btn-usuario:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: #3A4C94;
+    box-shadow: 0 4px 16px #3A4C94;
+    transition: all 0.3s ease;
+  }
+
+
 
 .rectangulo {
     border: 4px solid #000; /* Establece un borde de 2px sólido de color negro */
