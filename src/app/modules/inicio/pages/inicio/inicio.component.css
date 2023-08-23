@@ -1,3 +1,153 @@
-.container{
+
+.waves {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color:#3A4C94;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+    z-index: -1; /* Coloca las olas detrás de otros elementos */
+  }
+  
+  .waves::before,
+  .waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  
+  .waves::before {
+    border-radius: 44%;
+    background: rgb(255, 255, 255);
+    animation: waves 8s linear infinite;
+  }
+  
+  .waves::after {
+    border-radius: 44%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: waves 15s linear infinite;
+  }
+
+  @keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+  
+  /* Resto de tus estilos para otros elementos */
+  
+
+
+
+
+
+.container {
     padding-left: 5px;
+    display: flex;
+    justify-content: space-between; /* Espaciado equitativo entre las columnas */
+    align-items: center; /* Centrq verticalmente el contenido de las columnas */
+    min-height: 100vh;    
+}
+
+body{
+    position: fixed; bottom:0; width: 100%;
+    
+
+}
+
+
+.col {
+    flex: 1;
+    text-align: center; /* alinea el contenido de cada columna horizontalmente */
+}
+
+.columna1, .columna2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente el contenido de cada columna */
+    gap: 20px; /* Espaciado entre elementos dentro de cada columna */
+}
+
+
+.botones{
+    padding-top: 20px;
+    
+}
+
+.botones button{
+    margin-right: 30px;
+}
+
+.btn-calendario{
+    background-color: #3A4C94;
+    border: 3px solid #3A4C94;
+    color: #fff;
+    padding: 14px 20px; 
+    border-radius: 10px; 
+}
+.btn-calendario:hover{
+    color: #3A4C94 !important;
+    background-color:transparent;
+    box-shadow: 0 4px 16px #3A4C94;
+    transition: all 0.3s ease;
+}
+
+
+
+.btn-notas{
+    background-color: #738CCF;
+    border: 3px solid #738CCF;
+    color: #fff;
+    padding: 14px 20px; 
+    border-radius: 10px; 
+}
+.btn-notas:hover{
+    color: #738CCF !important;
+    background-color: transparent;
+    box-shadow: 0 4px 16px #738CCF;
+    transition: all 0.3s ease;
+}
+
+
+.btn-usuario{
+    background-color: transparent;
+    border: 3px solid #3A4C94;
+    color: #3A4C94;
+    padding: 14px 20px; 
+    border-radius: 10px; 
+}
+.btn-usuario:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: #3A4C94;
+    box-shadow: 0 4px 16px #3A4C94;
+    transition: all 0.3s ease;
+  }
+
+
+
+.rectangulo {
+    border: 4px solid #000; /* Establece un borde de 2px sólido de color negro */
+    border-radius: 80px;
+    border-color: #3A4C94;
+    width: 600px; /* Ancho del rectángulo */
+    height: auto; /* Alto del rectángulo */
+    padding: 20px; /* Espacio entre el borde y el contenido interno */
+    /* Agrega otros estilos necesarios para el rectángulo */
+}
+.rectangulo-titulo{
+    color: #3A4C94;
+    background-color: transparent;
+    display: flex;
+    height: 14px;
+    margin-right: 220px;
 }
