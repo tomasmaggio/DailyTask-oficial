@@ -95,3 +95,9 @@
 .a-terminos{
     color: #3A4C94;
 }
+
+
+.inp-usuario, .inp-email, .inp-contraseña{
+    padding: 10px;
+    margin: 5px;
+}
