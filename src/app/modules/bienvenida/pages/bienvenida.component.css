@@ -1,6 +1,69 @@
-/* --------------------------- Google font 'Hind' --------------------------- */
 
-body{
-    src: url(/src/assets/Fuente\ hind/hind);
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    display: flex;
+    padding: 20px;
+}
 
+.titulo h1 {
+    margin: 0;
+    color: #3a4c94;
+    display:flex;
+    padding-left:20px;
+}
+
+/* Estilos para la columna */
+.col-6 {
+    display: flex;
+    align-items: center;
+}
+
+
+.col-btn {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+
+}
+
+.boton1, .boton2 {
+    padding: 8px 16px;
+    background-color: #3a4c94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el segundo row y el rectángulo */
+.rectangle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; 
+} 
+
+.rectangle {
+    width: 50%;
+    padding-top: 30px;
+    width: 1200px;
+    border-radius: 30px;
+    height: 500px;
+    background-color: #e4e9f7; 
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea la imagen a la derecha */
+    margin-right: 30px;
+}
+
+.img-chica{
+    display: flex;
+    width: 300px;
+    border-radius: 40px 40px 100px 40px;
+    
 }
