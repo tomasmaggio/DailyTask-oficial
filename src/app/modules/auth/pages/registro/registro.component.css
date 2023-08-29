@@ -52,6 +52,13 @@
     /* Agrega otros estilos necesarios para el rectángulo */
 }
 
+.separator{
+  background-color: transparent; 
+}
+.linea{
+   
+}
+
 
 .comencemos-textos h2{
     color: #3A4C94;
@@ -76,11 +83,16 @@
 .btn-comencemos{
     background-color: #3A4C94;
     color: #ffffff;
-    font-size: 21px;
+    font-size: 19px;
     border-radius: 13px;
-    width: 394px;
-    height: 57px;
+    width: 384px;
+    height: 47px;
     border: none;
+}
+
+.ingresa-aqui{
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 
@@ -89,6 +101,7 @@
 .a-google {
     display: inline-block; /* Muestra el enlace como bloque en línea */
     text-decoration: none; /* Elimina la decoración de subrayado */
+    margin-top: 3px;
   }
   
 .a-redirigir-login{
