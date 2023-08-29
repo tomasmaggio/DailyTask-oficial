@@ -66,6 +66,12 @@
     color: #999999; 
 }
 
+.form-check-input{
+  width: 10px;
+  height: auto;
+  
+}
+
 
 .btn-comencemos{
     background-color: #3A4C94;
@@ -109,14 +115,14 @@
 
 
 /* Estilo del campo de entrada de texto */
-input[type="text"] {
+input {
     box-sizing: border-box; /* Caja de borde que incluye el relleno y el borde en el ancho total */
     width: 100%; /* Ancho completo del contenedor */
     height: calc(3em + 2px); /* Altura del campo de entrada */
     margin: 0 0 1em; /* Margen inferior para separar elementos */
     padding: 6px; /* Relleno interno del campo de entrada */
     border: 1px solid #bababa; /* Borde del campo de entrada */
-    border-radius: 3px; /* Esquinas redondeadas del borde */
+    border-radius: 15px; /* Esquinas redondeadas del borde */
     background: #fff; /* Fondo blanco */
     font-size: 16px; /* Tamaño de fuente */
     resize: none; /* Evitar que el usuario pueda redimensionar el campo de entrada */
@@ -124,40 +130,40 @@ input[type="text"] {
   }
   
   /* Estilo del campo de entrada de texto cuando tiene el foco */
-  input[type="text"]:focus {
+  input:focus {
     border-color: #00bafa; /* Cambio de color del borde al obtener el foco */
   }
   
   /* Estilo del marcador de posición cuando el campo de entrada tiene el foco */
-  input[type="text"]:focus + label[placeholder]:before {
+  input:focus + label[placeholder]:before {
     color: #0091da; /* Cambio de color del marcador de posición cuando el campo está enfocado */
   }
   
   /* Estilo del marcador de posición cuando el campo de entrada tiene el foco o contiene un valor válido */
-  input[type="text"]:focus + label[placeholder]:before,
-  input[type="text"]:valid + label[placeholder]:before {
+  input:focus + label[placeholder]:before,
+  input:valid + label[placeholder]:before {
     transition-duration: .2s; /* Duración de la transición */
     transform: translate(0, -1.6em) scale(0.9, 0.9);	/* Desplazamiento y reducción del tamaño del marcador de posición */
     font-weight: bold; /* Hacer que el texto del marcador de posición sea más negrita */
   }
   
   /* Estilo del campo de entrada de texto cuando contiene un valor válido */
-  input[type="text"]:valid {
+  input:valid {
     border-color: #3A4C94; /* Cambio de color del borde cuando el valor es válido */
   }
   
   /* Estilo del marcador de posición cuando el campo de entrada contiene un valor válido */
-  input[type="text"]:valid + label[placeholder]:before {
+  input:valid + label[placeholder]:before {
     color: #3A4C94; /* Cambio de color del marcador de posición cuando el valor es válido */
   }
   
   /* Estilo del marcador de posición cuando el campo de entrada es inválido y tiene un atributo 'alt' definido */
-  input[type="text"]:invalid + label[placeholder][alt]:before {
+  input:invalid + label[placeholder][alt]:before {
     content: attr(alt); /* Mostrar el contenido del atributo 'alt' como el marcador de posición */
   }
   
   /* Estilo de la etiqueta del marcador de posición */
-  input[type="text"] + label[placeholder] {
+  input + label[placeholder] {
     display: block;	/* Hacer que la etiqueta sea un bloque */
     pointer-events: none; /* Evitar eventos de puntero en la etiqueta */
     line-height: 1.25em; /* Altura de línea de la etiqueta */
@@ -166,7 +172,7 @@ input[type="text"] {
   }
   
   /* Estilo del contenido del marcador de posición */
-  input[type="text"] + label[placeholder]:before {
+  input + label[placeholder]:before {
     content: attr(placeholder); /* Mostrar el atributo 'placeholder' como contenido del marcador de posición */
     display: inline-block; /* Hacer que el marcador de posición sea en línea con el texto */
     margin: 0 calc(0.5em + 2px); /* Margen del marcador de posición */
