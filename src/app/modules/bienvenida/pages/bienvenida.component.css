@@ -50,7 +50,7 @@
     padding-top: 30px;
     width: 1200px;
     border-radius: 30px;
-    height: 600px;
+    height: 550px;
     background-color: #e4e9f7; 
 }
 
@@ -63,13 +63,29 @@
 
 .img-chica{
     display: flex;
-    width:450px;
+    width:410px; /* 450px para mas grande */
     border-radius: 40px 40px 100px 40px;
 }
 
 .img-text{
-margin-right: 20px;
+margin-right: 240px;
 font-size: 200%;
-justify-content: flex-start;
+line-height: 2; /* Ajusta el espaciado vertical entre las líneas del texto */
+-webkit-text-stroke: 1px #000000; /* Grosor y color del relleno */
+}
 
+.colored-word {
+    color: #3a4c94; /* Cambia este color al que desees */
+    -webkit-text-stroke: 1px #3a4c94;
+}
+
+
+.boton3{
+    padding: 10px 20px;
+    background-color: #3a4c94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
