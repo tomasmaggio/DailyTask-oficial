@@ -88,4 +88,24 @@ line-height: 2; /* Ajusta el espaciado vertical entre las líneas del texto */
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: left;
+    -webkit-text-stroke: #ffffff; /* Grosor y color del relleno */
+}
+
+/* ultima parte */
+
+.flex-container {
+
+    flex-direction: row;
+    display: flex;
+  }
+
+.btn4{
+    padding: 8px 16px;
+    background-color: #3a4c94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
 }
