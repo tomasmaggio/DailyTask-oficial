@@ -1,41 +1,18 @@
+/* -------------------------------- Renglon 1 ------------------------------- */
 
-.logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-    display: flex;
-    padding: 20px;
+.logo-img{
+    width: 55px;
 }
-
-.titulo h1 {
-    margin: 0;
-    color: #3a4c94;
-    display:flex;
-    padding-left:20px;
-}
-
-/* Estilos para la columna */
-.col-6 {
-    display: flex;
-    align-items: center;
+.text-h1{
+    
 }
 
 
-.col-btn {
-    display: flex;
-    gap: 10px;
-    justify-content: end;
 
-}
 
-.boton1, .boton2 {
-    padding: 8px 16px;
-    background-color: #3a4c94;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+/* -------------------------------- renglon 2 ------------------------------- */
+
+
 
 /* Estilos para el segundo row y el rectángulo */
 .rectangle-row {
