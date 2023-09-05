@@ -7,6 +7,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 
 
 
+
 @NgModule({
   declarations: [
     LoginComponent,
@@ -18,3 +19,4 @@ import { RegistroComponent } from './pages/registro/registro.component';
   ]
 })
 export class AuthModule { }
+
