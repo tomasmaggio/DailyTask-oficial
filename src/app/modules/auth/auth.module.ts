@@ -7,6 +7,12 @@ import { RegistroComponent } from './pages/registro/registro.component';
 
 import { FormsModule } from '@angular/forms';
 
+//Importaciones de Firebase
+import { enviroments } from 'src/enviroments/enviroments';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+
 
 @NgModule({
   declarations: [
