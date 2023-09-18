@@ -14,23 +14,23 @@ export class RegistroComponent {
   usuarios: Usuario = {
     uid: '',
     nombre: '',
-    // email: '',
     contrasena: '',
-    // rol: '',
   };
-
- 
-
-  async registrarse(){
-    const credenciales = {
-      nombre: this.usuarios.nombre,
-      contrasena: this.usuarios.contrasena
-    }
-  }
 
   constructor(public servicioAuth: AuthService) {}
 
-   const res = await this.servicioAuth.registrar(credenciales.nombre, credenciales.contrasena).catch(error) => {console.log('error =>', error)}
+  async registrarse() {
+    const credenciales = {
+      nombre: this.usuarios.nombre,
+      contrasena: this.usuarios.contrasena,
+    };
 
-  // console.log(res);
+    try {
+      const res = await this.servicioAuth
+        .registrar(credenciales.nombre, credenciales.contrasena);
+      console.log('Registro exitoso:', res);
+    } catch (error) {
+      console.log('Error en el registro:', error);
+    }
+  }
 }
