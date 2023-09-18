@@ -5,12 +5,14 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 
+import { SharedModule } from 'src/app/shared/shared.module';
+
 import { FormsModule } from '@angular/forms';
 
 //Importaciones de Firebase
 import { enviroments } from 'src/enviroments/enviroments';
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 
@@ -22,6 +24,17 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    FormsModule,
+    SharedModule,
+
+
+
+    //Angular
+    AngularFireModule.initializeApp(enviroments.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+
+
   ]
 })
 export class AuthModule { }
