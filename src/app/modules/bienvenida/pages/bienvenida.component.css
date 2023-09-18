@@ -51,10 +51,12 @@
 }
 
 .img-text{
-margin-right: 240px;
+/*margin-right: 240px;*/
+margin-right: 140px;
 font-size: 40px;
 line-height: 2; /* Ajusta el espaciado vertical entre las líneas del texto */
 -webkit-text-stroke: 1px #000000; /* Grosor y color del relleno */
+
 }
 
 .colored-word {
