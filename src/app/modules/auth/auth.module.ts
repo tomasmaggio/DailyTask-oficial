@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 //Importaciones de Firebase
 import { enviroments } from 'src/enviroments/enviroments';
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 

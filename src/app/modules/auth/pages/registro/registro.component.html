@@ -19,7 +19,7 @@
                     </div>
 
                     <p style="text-align: start;">	
-                        <input id="input" type="text" required />                    
+                        <input id="input" [(ngModel)]="usuarios.nombre" type="text" required />                    
                         <label for="input" alt="Nombre de usuario" placeholder="Nombre de usuario"></label>
                     </p>
                     <p style="text-align: start;">	
@@ -27,7 +27,7 @@
                         <label for="input" alt="Email" placeholder="Email"></label>
                     </p>
                     <p style="text-align: start;">	
-                        <input id="input" type="password" required />                    
+                        <input id="input"  [(ngModel)]="usuarios.contrasena" type="password" required />                    
                         <label for="input" alt="Contraseña" placeholder="Contraseña"></label>
                     </p>
                     <p style="text-align: start;">	
@@ -41,7 +41,7 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="">
                         <label class="label-check">
-                            Al registrarse usted está de acuerdo con nuestros <a href="" class="a-terminos">terminos y condiciones</a>
+                            Al registrarte estás de acuerdo con nuestros <a href="" class="a-terminos">terminos y condiciones</a>
                         </label>
                     </div>
 
@@ -58,7 +58,7 @@
 
 
                         
-                        <div class="ingresa-aqui"><p>¿Ya tiene una cuenta? <a href="/login" class="a-redirigir-login"> ¡Ingresa Acá!</a></p></div>          
+                        <div class="ingresa-aqui"><p>¿Ya tenés una cuenta? <a href="/login" class="a-redirigir-login"> ¡Ingresa Acá!</a></p></div>          
                     </div>
                       
                 </div>
