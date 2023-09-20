@@ -11,22 +11,31 @@ import interactionPlugin from '@fullcalendar/interaction';
   styleUrls: ['./calendario.component.css']
 })
 export class CalendarioComponent {
-  calendarOptions: CalendarOptions = {
-    initialView: 'dayGridMonth',
-    plugins: [dayGridPlugin, interactionPlugin],
-  };
+  
 
   events: any[] = [
     {
-      title: 'Cumpleaños Juan',
-      start: '2023-05-15'
+      title: 'Cumpleaños de Juan',
+      start: '2023-09-15'
     },
     {
-       title: 'Reunión de trabajo',
-       start: '2023-05-18T10:00:00'
-    }
+       title: 'Reunión de equipo',
+       start: '2023-09-10T14:00:00'
+    },
+    {
+       title: 'Salida de campo',
+       start: '2023-09-20T08:00:00'
+    } 
   ];
 
+  calendarOptions: CalendarOptions = {
+
+    initialView: 'dayGridMonth',
+    plugins: [dayGridPlugin, interactionPlugin],
+    
+    events: this.events
+  
+  };
   
   
 }
