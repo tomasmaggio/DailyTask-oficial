@@ -36,9 +36,12 @@ export class CalendarioComponent {
     locale: esLocale, //idioma
     selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
 
+    //Drag & Drop
     editable: true, //permite hacer los eventos editables (true)
     eventStartEditable: true,
-    
+    eventDrop: (info) => {
+      // código para actualizar fecha en BD
+    },
     
     events: this.events
   
