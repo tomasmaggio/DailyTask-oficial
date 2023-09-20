@@ -14,7 +14,19 @@ export class CalendarioComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
-    
   };
+
+  events: any[] = [
+    {
+      title: 'Cumpleaños Juan',
+      start: '2023-05-15'
+    },
+    {
+       title: 'Reunión de trabajo',
+       start: '2023-05-18T10:00:00'
+    }
+  ];
+
+  
   
 }
