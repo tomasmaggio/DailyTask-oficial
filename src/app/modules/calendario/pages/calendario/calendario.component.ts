@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
+//aqui se importan los plugins del fullcalendar (primero hay que instalarlos https://fullcalendar.io/docs/plugin-index)
 import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
+
 
 @Component({
   selector: 'app-calendario',
@@ -10,6 +13,8 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 export class CalendarioComponent {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
-    plugins: [dayGridPlugin]
+    plugins: [dayGridPlugin, interactionPlugin],
+    
   };
+  
 }
