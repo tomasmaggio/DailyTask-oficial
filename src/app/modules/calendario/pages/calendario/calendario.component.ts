@@ -33,8 +33,12 @@ export class CalendarioComponent {
 
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
-    locale: esLocale,
+    locale: esLocale, //idioma
+    selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
 
+    editable: true, //permite hacer los eventos editables (true)
+    eventStartEditable: true,
+    
     
     events: this.events
   
