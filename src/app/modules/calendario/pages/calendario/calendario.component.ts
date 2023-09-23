@@ -17,9 +17,6 @@ import { ModalComponent } from '../../components/modal/modal.component';
 })
 export class CalendarioComponent {
   
-  @ViewChild(ModalComponent) modal: ModalComponent;
-
-
   calendarOptions: CalendarOptions = {
 
     
@@ -36,6 +33,10 @@ export class CalendarioComponent {
       // código para actualizar fecha en BD
     },
   };
+
+  constructor(public modal: ModalComponent) {}
+
+
 
 
   
