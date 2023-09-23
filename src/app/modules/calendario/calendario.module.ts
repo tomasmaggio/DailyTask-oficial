@@ -5,11 +5,13 @@ import { CalendarioRoutingModule } from './calendario-routing.module';
 import { CalendarioComponent } from './pages/calendario/calendario.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
   declarations: [
-    CalendarioComponent
+    CalendarioComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,

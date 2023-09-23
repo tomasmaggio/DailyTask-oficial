@@ -4,14 +4,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { BienvenidaComponent } from './modules/bienvenida/pages/bienvenida.component';
-import { FullCalendarModule} from '@fullcalendar/angular'
-
+import { FullCalendarModule} from '@fullcalendar/angular';
+import { ModalComponent } from './modules/calendario/components/modal/modal.component';
 
  
 
 @NgModule({
   declarations: [
     AppComponent,
+    ModalComponent,
 
   ],
   imports: [
