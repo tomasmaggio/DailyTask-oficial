@@ -37,6 +37,9 @@ export class CalendarioComponent {
     locale: esLocale, //idioma
     selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
     unselectAuto: true,
+    select: function(){
+      
+    },
     
 
     //Drag & Drop
