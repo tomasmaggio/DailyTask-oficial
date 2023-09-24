@@ -35,12 +35,29 @@ export class CalendarioComponent {
 
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
-    locale: esLocale, //idioma
-    selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
+    
+    //idioma
+    locale: esLocale,
+
+    //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
+    selectable: true, 
+
+    //deseleccionar fechas automaticamente
     unselectAuto: true,
-    select: function(start){
+
+    //funcion para abrir el modal
+    select: function(arg){
       $('#ejemploModal').modal('toggle');
+
+
+      $('#guardarbtn').click(function(){
+          var titulo = $('titulo').val();
+          console.log('titulo')
+      })
     },
+
+    
+
 
     //Drag & Drop
     editable: true, //permite hacer los eventos editables (true)
