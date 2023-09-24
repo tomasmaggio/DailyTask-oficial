@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
 import { RouterModule } from '@angular/router';
 import { BienvenidaComponent } from './modules/bienvenida/pages/bienvenida.component';
+import { FullCalendarModule} from '@fullcalendar/angular'
 
 
-
+ 
 
 @NgModule({
   declarations: [
@@ -18,6 +16,7 @@ import { BienvenidaComponent } from './modules/bienvenida/pages/bienvenida.compo
   ],
   imports: [
     BrowserModule,
+    FullCalendarModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: 'bienvenida', component: BienvenidaComponent},
