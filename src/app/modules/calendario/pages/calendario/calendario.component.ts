@@ -1,13 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 //aqui se importan los plugins del fullcalendar (primero hay que instalarlos https://fullcalendar.io/docs/plugin-index)
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es';
-//modal
-import { ModalComponent } from '../../components/modal/modal.component';
-
-
 
 
 @Component({
@@ -17,9 +13,23 @@ import { ModalComponent } from '../../components/modal/modal.component';
 })
 export class CalendarioComponent {
   
-  calendarOptions: CalendarOptions = {
 
-    
+  events: any[] = [
+    {
+      title: 'Cumpleaños de Juan',
+      start: '2023-09-15'
+    },
+    {
+       title: 'Reunión de equipo',
+       start: '2023-09-10T14:00:00'
+    },
+    {
+       title: 'Salida de campo',
+       start: '2023-09-20T08:00:00'
+    } 
+  ];
+
+  calendarOptions: CalendarOptions = {
 
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
@@ -32,14 +42,10 @@ export class CalendarioComponent {
     eventDrop: (info) => {
       // código para actualizar fecha en BD
     },
-  };
-
-  constructor(public modal: ModalComponent) {}
-
-
-
-
+    
+    events: this.events
   
+  };
   
   
 }
