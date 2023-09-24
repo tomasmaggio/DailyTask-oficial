@@ -39,9 +39,8 @@ export class CalendarioComponent {
     selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
     unselectAuto: true,
     select: function(start){
-      $('#exampleModal')
+      $('#exampleModal').modal('toggle');
     },
-    
 
     //Drag & Drop
     editable: true, //permite hacer los eventos editables (true)
