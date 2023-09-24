@@ -7,6 +7,7 @@ import esLocale from '@fullcalendar/core/locales/es';
 
 
 
+
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
@@ -37,8 +38,8 @@ export class CalendarioComponent {
     locale: esLocale, //idioma
     selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
     unselectAuto: true,
-    select: function(){
-      
+    select: function(start){
+      console.log('seleccionando...')
     },
     
 
