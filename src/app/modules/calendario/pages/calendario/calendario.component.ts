@@ -39,7 +39,7 @@ export class CalendarioComponent {
     selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
     unselectAuto: true,
     select: function(start){
-      console.log('seleccionando...')
+      console.log(start)
     },
     
 
