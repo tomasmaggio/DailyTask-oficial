@@ -52,8 +52,10 @@ export class CalendarioComponent {
 
       $('#guardarbtn').click(function(){
           var titulo = $('titulo').val();
-          console.log('titulo')
+          console.log(titulo);
       })
+
+      
     },
 
     
