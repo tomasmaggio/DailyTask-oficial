@@ -6,6 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es';
 
 
+
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
@@ -35,6 +36,8 @@ export class CalendarioComponent {
     plugins: [dayGridPlugin, interactionPlugin],
     locale: esLocale, //idioma
     selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
+    unselectAuto: true,
+    
 
     //Drag & Drop
     editable: true, //permite hacer los eventos editables (true)
