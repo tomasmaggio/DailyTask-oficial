@@ -18,17 +18,37 @@ export class CalendarioComponent {
 
   events: any[] = [
     {
-      title: 'Cumpleaños de Juan',
-      start: '2023-09-15'
+      title: 'Corte de pelo de panchito',
+      start: '2023-09-07'
     },
     {
-       title: 'Reunión de equipo',
-       start: '2023-09-10T14:00:00'
+       title: 'Clases de Alemán',
+       start: '2023-09-08'
     },
     {
-       title: 'Salida de campo',
-       start: '2023-09-20T08:00:00'
-    } 
+       title: 'Yoga',
+       start: '2023-09-12'
+    },
+    {
+      title: 'Yoga',
+      start: '2023-08-29'
+   },
+   {
+    title: 'Yoga',
+    start: '2023-09-05'
+  },
+  {
+    title: 'Yoga',
+    start: '2023-09-19'
+  },
+  {
+    title: 'Yoga',
+    start: '2023-09-26'
+  },
+    {
+      title: 'Cumpleaños de juan',
+      start: '2023-09-29'
+   }  
   ];
 
   calendarOptions: CalendarOptions = {
@@ -52,7 +72,7 @@ export class CalendarioComponent {
 
       $('#guardarbtn').click(function(){
           var titulo = $('titulo').val();
-          console.log(titulo);
+          console.log('titulo');
       })
 
       
