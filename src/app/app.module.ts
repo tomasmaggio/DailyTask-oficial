@@ -18,10 +18,7 @@ import { FullCalendarModule} from '@fullcalendar/angular'
     BrowserModule,
     FullCalendarModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      {path: 'bienvenida', component: BienvenidaComponent},
-      {path:'', redirectTo: 'bienvenida', pathMatch: 'full'} //ruta vacía para redirigir a la pagina 'Bienvenida' en algun caso extraordinario
-    ])
+    RouterModule
     
   ],
   exports:[
