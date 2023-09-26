@@ -69,19 +69,22 @@ line-height: 2; /* Ajusta el espaciado vertical entre las líneas del texto */
     padding: 10px; /* Espaciado interno para el contenido de la tarjeta */
     z-index: 1; /* Coloca la tarjeta sobre la imagen */
     border-radius: 30px 30px 60px 30px;
-    box-shadow: 6px 20px 10px rgb(134, 125, 125);
-}
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+    box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);}
 
 .card-over-image-2 {
     position: absolute;
     top: 450px; /* Coloca la tarjeta en la parte superior del contenedor */
-    right: 10px; /* Alinea la tarjeta a la derecho del contenedor */
+    right: 100px; /* Alinea la tarjeta a la derecho del contenedor */
     background-color: #ffffff; /* Fondo semitransparente para que el texto sea legible */
     width: 100%; /* Ocupa todo el ancho del contenedor */
     padding: 10px; /* Espaciado interno para el contenido de la tarjeta */
     z-index: 1; /* Coloca la tarjeta sobre la imagen */
     border-radius: 20px 20px 20px 20px;
-    box-shadow: 6px 20px 10px 10px rgb(134, 125, 125);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+-moz-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
 }
 
 
