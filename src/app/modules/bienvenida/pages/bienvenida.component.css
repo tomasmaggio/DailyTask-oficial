@@ -1,6 +1,126 @@
-/* --------------------------- Google font 'Hind' --------------------------- */
+/* -------------------------------- row 1 ------------------------------- */
 
-body{
-    src: url(/src/assets/Fuente\ hind/hind);
+.boton1{
+    background-color: transparent;
+    border: none;
+    color: #3a4c94;
+}
+
+.boton2{
+    border: none;
+    padding: 11px;
+    background-color: #3A4C94;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+
+/* -------------------------------- row 2 ------------------------------- */
+
+
+
+/* Estilos para el segundo row y el rectángulo */
+.rectangle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; 
+} 
+
+.rectangle {
+    width: 50%;
+    padding-top: 30px;
+    width: 1200px;
+    border-radius: 30px;
+    height: 550px;
+    background-color: #e4e9f7; 
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea la imagen a la derecha */
+    margin-right: 30px;
+}
+
+.img-chica{
+    display: flex;
+    width:410px; /* 450px para mas grande */
+    border-radius: 40px 40px 100px 40px;
+}
+
+
+.img-text{
+/*margin-right: 240px;*/
+margin-right: 140px;
+font-size: 40px;
+line-height: 2; /* Ajusta el espaciado vertical entre las líneas del texto */
+-webkit-text-stroke: 1px #000000; /* Grosor y color del relleno */
+
+}
+
+.card-over-image {
+    position: absolute;
+    top: 350px; /* Coloca la tarjeta en la parte superior del contenedor */
+    right: 480px; /* Alinea la tarjeta a la derecho del contenedor */
+    background-color: #ffffff; /* Fondo semitransparente para que el texto sea legible */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno para el contenido de la tarjeta */
+    z-index: 1; /* Coloca la tarjeta sobre la imagen */
+    border-radius: 30px 30px 60px 30px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+    box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);}
+
+.card-over-image-2 {
+    position: absolute;
+    top: 450px; /* Coloca la tarjeta en la parte superior del contenedor */
+    right: 100px; /* Alinea la tarjeta a la derecho del contenedor */
+    background-color: #ffffff; /* Fondo semitransparente para que el texto sea legible */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno para el contenido de la tarjeta */
+    z-index: 1; /* Coloca la tarjeta sobre la imagen */
+    border-radius: 20px 20px 20px 20px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+-moz-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+}
+
+
+.colored-word {
+    color: #3a4c94; /* Cambia este color al que desees */
+    -webkit-text-stroke: 1px #3a4c94;
+}
+
+
+.boton3{
+    padding: 10px 25px;
+    margin-top: 55px;
+    background-color: #3a4c94;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    -webkit-text-stroke: #ffffff; /* Grosor y color del relleno */
+}
+
+/* ultima parte */
+
+.flex-container {
+
+    flex-direction: row;
+    display: flex;
+  }
+
+.btn4{
+    padding: 8px 16px;
+    background-color: #3a4c94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 
 }
