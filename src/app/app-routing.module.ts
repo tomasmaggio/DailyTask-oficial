@@ -31,7 +31,13 @@ const routes: Routes = [
 {
   path:'bienvenida',
   loadChildren:()=>import('./modules/bienvenida/bienvenida.module').then( m=> m.BienvenidaModule)
-}
+},
+
+// {
+//   path: '',
+//   redirectTo: 'bienvenida', 
+//   pathMatch: 'full'
+// },
 
 
 
