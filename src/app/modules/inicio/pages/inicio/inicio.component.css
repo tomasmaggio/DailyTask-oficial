@@ -25,13 +25,13 @@
   .waves::before {
     border-radius: 44%;
     background: rgb(255, 255, 255);
-    animation: waves 8s linear infinite;
+   animation: waves 20s linear infinite;  /* velocidad de la ola */
   }
   
   .waves::after {
     border-radius: 44%;
     background: rgba(255, 255, 255, 0.5);
-    animation: waves 15s linear infinite;
+    animation: waves 30s linear infinite; /* velocidad de la ola */
   }
 
   @keyframes waves {
