@@ -9,5 +9,7 @@
 }
 
 @media (max-width: 600px){
-
+    .notas-container{
+        padding: 10px;
+    }
 }
