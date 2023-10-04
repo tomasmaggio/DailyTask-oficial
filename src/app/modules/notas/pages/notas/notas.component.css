@@ -11,6 +11,8 @@
     padding: 20px;
     height: 90vh;
     position: absolute;
+    top: 50%;
+
 }
 
 @media (max-width: 768px){
