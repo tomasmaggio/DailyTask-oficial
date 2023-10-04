@@ -6,4 +6,6 @@
 .rectangulo{
     height: 90%;
     background: transparent;
+    border: 4px solid #3A4C94;
+
 }
