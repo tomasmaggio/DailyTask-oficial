@@ -1,7 +1,6 @@
 .container{
     padding-left: 5px;
     display: flex;
-    align-items: center;
     
 }
 
@@ -16,6 +15,11 @@
     transform: translate(-50%, -50%);
 }
 
+.agregar-container{
+    
+}
+
+
 @media (max-width: 768px){
     .notas-container{
         padding: 10px;
@@ -26,8 +30,3 @@
 
 }
 
-.col-md-10, 
-.col-md-2 {
-  display: flex;
-  align-items: center;
-}
