@@ -142,7 +142,6 @@ body{
     width: 600px; /* Ancho del rectángulo */
     height: auto; /* Alto del rectángulo */
     padding: 20px; /* Espacio entre el borde y el contenido interno */
-    /* Agrega otros estilos necesarios para el rectángulo */
 }
 .rectangulo-titulo{
     color: #3A4C94;
