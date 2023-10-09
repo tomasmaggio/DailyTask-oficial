@@ -7,4 +7,5 @@
   background: transparent;
   border: 4px solid #3a4c94;
   height: 90%;
+  display: flex;
 }
