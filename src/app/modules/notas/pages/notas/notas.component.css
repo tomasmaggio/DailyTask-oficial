@@ -7,6 +7,10 @@
  padding: 50px;
 }
 
+.columna2{
+  padding-top: 50px;
+}
+
 .rectangulo {
   border: 4px solid #000; /* Establece un borde de 2px sólido de color negro */
   border-radius: 80px;
