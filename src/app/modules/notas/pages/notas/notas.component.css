@@ -36,7 +36,7 @@
   margin: 10px;
 
   &:hover{
-    background-color: aqua;
+      cursor: pointer;
   }
 }
 
