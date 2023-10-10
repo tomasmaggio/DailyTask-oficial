@@ -5,6 +5,7 @@ import { NotasRoutingModule } from './notas-routing.module';
 import { NotasComponent } from './pages/notas/notas.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SplitButtonModule } from 'primeng/splitbutton';
     CommonModule,
     NotasRoutingModule,
     SharedModule,
-    SplitButtonModule
+    SplitButtonModule,
+    InputTextModule
   ]
 })
 export class NotasModule { }
