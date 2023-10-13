@@ -39,7 +39,6 @@
   &:hover{
       cursor: pointer;
       box-shadow: 0px 0px 0px 4px #1967D2;
-      display: block;
   }
 }
 
@@ -56,6 +55,5 @@
 
 .x-btn{
   display: none;
-  position: absolute;
 }
 
