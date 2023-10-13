@@ -49,6 +49,7 @@
 
 .nota-ind-contenido{
   position: relative;
+  max-height: 75px;
   color: #fff;
   text-align: start;
 }
