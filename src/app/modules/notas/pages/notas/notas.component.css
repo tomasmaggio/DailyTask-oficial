@@ -48,9 +48,11 @@
 }
 
 .nota-ind-contenido{
+  position: relative;
   color: #fff;
   text-align: start;
 }
+
 
 
 .x-btn-style{
