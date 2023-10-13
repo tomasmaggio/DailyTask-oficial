@@ -11,7 +11,8 @@ import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
-    NotasComponent
+    NotasComponent,
+    NotaindComponent
   ],
   imports: [
     CommonModule,
