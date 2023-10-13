@@ -56,4 +56,7 @@
 .x-btn{
   display: none;
 }
+.nota-ind:hover .x-btn{
+  display: block;
+}
 
