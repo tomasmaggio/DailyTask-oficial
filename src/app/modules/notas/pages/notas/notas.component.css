@@ -53,12 +53,19 @@
 
 }
 
+
+.x-btn-style{
+  background: transparent;
+  border: none;
+  font-size: 30px;
+
+}
 .x-btn{
   display: none;
   position: absolute;
   top: 5px;
   right: 15px;
-  background: transparent;
+
   
 }
 .nota-ind:hover .x-btn{
