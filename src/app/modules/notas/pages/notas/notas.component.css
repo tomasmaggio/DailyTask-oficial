@@ -56,6 +56,7 @@
 .x-btn-style{
   background: transparent;
   border: none;
+  height: 40px;
   border-radius: 20%;
   font-size: 30px;
   color: #fff;
