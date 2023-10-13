@@ -48,6 +48,7 @@
 }
 
 .nota-ind-contenido{
+  /* font-weight: 400; */
   position: relative;
   max-height: 75px;
   overflow: hidden;
