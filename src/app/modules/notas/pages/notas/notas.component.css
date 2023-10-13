@@ -50,8 +50,12 @@
 .nota-ind-contenido{
   position: relative;
   max-height: 75px;
+  overflow: hidden;
   color: #fff;
   text-align: start;
+}
+.desvanecer-contenido{
+  position: absolute;
 }
 
 
