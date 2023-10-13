@@ -37,7 +37,6 @@
   margin: 10px;
 
   &:hover{
-      cursor: pointer;
       box-shadow: 0px 0px 0px 4px #1967D2;
   }
 }
@@ -71,5 +70,7 @@
 }
 .nota-ind:hover .x-btn{
   display: block;
+  cursor: pointer;
+
 }
 
