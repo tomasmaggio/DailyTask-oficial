@@ -13,7 +13,8 @@ import { InputTextModule } from 'primeng/inputtext';
 @NgModule({
   declarations: [
     NotasComponent,
-    NotaindComponent
+    NotaindComponent,
+    NotasmodalComponent
   ],
   imports: [
     CommonModule,
