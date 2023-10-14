@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-notaind',
@@ -6,8 +6,13 @@ import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit } fr
   styleUrls: ['./notaind.component.css']
 })
 export class NotaindComponent implements AfterViewInit {
+
+  @Input() titulo: string;
+  @Input() contenido: string;
+
   @ViewChild('desvanecer') desvanecer!: ElementRef<HTMLElement>;
   @ViewChild('notaContenido') notaContenido!: ElementRef<HTMLElement>;
+
 
   constructor(private renderer: Renderer2) {}
 
