@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./notas.component.css']
 })
 export class NotasComponent {
-
+  mostrarModal = false;
 }
