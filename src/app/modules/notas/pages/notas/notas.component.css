@@ -29,9 +29,9 @@
 }
 
 .barra-busqueda-input{
-  width: 80%;
+  width: 90%;
   justify-content: center;
   border: 1px solid #00000030;
-  border-radius: 45px;
+  border-radius: 15px;
 }
 
