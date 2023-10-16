@@ -36,6 +36,8 @@ p-dialog.custom-modal {
 }
 
 
-.ng-invalid{
-    background-color: red;
+input, textarea{
+    &.ng-invalid{
+        border-color: red;
+    }
 }
