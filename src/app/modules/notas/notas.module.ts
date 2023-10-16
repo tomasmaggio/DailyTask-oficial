@@ -9,6 +9,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DialogModule } from 'primeng/dialog';
     SharedModule,
     SplitButtonModule,
     InputTextModule,
-    DialogModule
+    DialogModule,
+    FormsModule
   ]
 })
 export class NotasModule { }
