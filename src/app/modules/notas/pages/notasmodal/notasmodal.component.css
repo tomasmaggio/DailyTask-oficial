@@ -1,0 +1,32 @@
+.custom-modal {
+    background-color: #ef0000; /* Cambia el color de fondo del modal a gris claro */
+    border: 2px solid #333; /* Agrega un borde al modal */
+    padding: 20px; /* Agrega relleno al contenido del modal */
+}
+
+/* Estilos para los elementos de formulario dentro del modal */
+p-dialog.custom-modal {
+
+}
+
+.custom-modal .field {
+    
+    margin-bottom: 30px; /* Espaciado entre campos */
+}
+
+.custom-modal .label {
+
+}
+
+.custom-modal .input {
+    
+}
+
+.custom-modal .textarea {
+    
+}
+
+/* Estilos para otros elementos dentro del modal, como el botón de cierre */
+.custom-modal .ui-dialog-titlebar {
+    
+}
