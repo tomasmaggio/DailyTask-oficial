@@ -9,6 +9,6 @@ export class NotasComponent {
   mostrarModal = false;
 
   closeDialog(){
-    
+    this.mostrarModal = false;
   }
 }
