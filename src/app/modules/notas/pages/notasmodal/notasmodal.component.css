@@ -5,6 +5,10 @@
 }
 
 /* Estilos para los elementos de formulario dentro del modal */
+.form-container{
+    background: red;
+}
+
 p-dialog.custom-modal {
 
 }

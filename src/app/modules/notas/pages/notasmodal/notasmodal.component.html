@@ -1,29 +1,31 @@
 <p-dialog header="Nueva nota" [visible]="showModal" (onHide)="onClose.emit()" class="custom-modal">
     
-    <form #notaForm="ngForm" >
+    <div class="form-container">
+        <form #notaForm="ngForm" >
 
-        <div class="field">
-            <label class="label">Titulo</label>
-            <div class="control">
-                <input type="text" class="input">
+            <div class="field">
+                <label class="label">Titulo</label>
+                <div class="control">
+                    <input type="text" class="input">
+                </div>
             </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Color</label>
-            <div class="control">
-                <input type="color" class="">
+    
+            <div class="field">
+                <label class="label">Color</label>
+                <div class="control">
+                    <input type="color" class="">
+                </div>
             </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Body</label>
-            <div class="control">
-                <textarea class="textarea"></textarea>
+    
+            <div class="field">
+                <label class="label">Body</label>
+                <div class="control">
+                    <textarea class="textarea"></textarea>
+                </div>
             </div>
-        </div>
-
-    </form>
+    
+        </form>
+    </div>
 
 </p-dialog>
   
