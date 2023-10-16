@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Nota } from 'src/app/shared/nota.model';
 
 @Component({
   selector: 'app-notasmodal',
@@ -7,9 +8,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./notasmodal.component.css']
 })
 export class NotasmodalComponent implements OnInit {
+
   //modal
   @Input() showModal: boolean;
   @Output() onClose = new EventEmitter<void>();
+
+  nota: Nota
+
 
   constructor() { }
 
