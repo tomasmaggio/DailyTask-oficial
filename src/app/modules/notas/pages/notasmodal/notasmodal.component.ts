@@ -20,6 +20,7 @@ export class NotasmodalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.nota = new Nota();
   }
 
   //creo el metodo
