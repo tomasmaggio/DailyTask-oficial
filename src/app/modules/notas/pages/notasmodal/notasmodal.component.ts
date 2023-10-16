@@ -13,7 +13,8 @@ export class NotasmodalComponent implements OnInit {
   @Input() showModal: boolean;
   @Output() onClose = new EventEmitter<void>();
 
-  nota: Nota
+  //la estructura usada
+  nota: Nota;
 
 
   constructor() { }
