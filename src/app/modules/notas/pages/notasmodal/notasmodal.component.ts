@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-notasmodal',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notasmodal.component.css']
 })
 export class NotasmodalComponent implements OnInit {
-
+  @Input() showModal: boolean;
+  @Output() onClose = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {

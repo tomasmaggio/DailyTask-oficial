@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./notas.component.css']
 })
 export class NotasComponent {
-  mostrarModal = false;
+  showModal = false;
 
-  closeDialog(){
-    this.mostrarModal = false;
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeDialog() {
+    this.showModal = false;
   }
 }

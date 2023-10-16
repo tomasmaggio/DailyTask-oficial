@@ -1,8 +1,4 @@
-<p-dialog header="Título del Modal" [(visible)]="mostrarModal" (onHide)="closeDialog()">
-    <!-- Aquí puedes agregar tu formulario -->
-    <!-- Ejemplo: -->
-    <form>
-      <!-- Campos del formulario -->
-    </form>
-  </p-dialog>
+<p-dialog header="Título del Modal" [visible]="showModal" (onHide)="onClose.emit()">
+    <h1>hola modal</h1>
+</p-dialog>
   
