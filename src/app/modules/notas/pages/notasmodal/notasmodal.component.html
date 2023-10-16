@@ -1,13 +1,13 @@
 <p-dialog header="Nueva nota" [visible]="showModal" (onHide)="onClose.emit()" class="custom-modal">
     
     <div class="form-container">
-        <form #notaForm="ngForm" >
+        <form #notaForm="ngForm" (ngSubmit)="onSubmit(notaForm)">
 
             <div class="field">
                 <label class="label">Titulo</label>
                 <div class="control">
                     <input type="text" required class="input"> //el required es para que el titulo sea requerido si o si
-                    
+
                 </div>
             </div>
     
