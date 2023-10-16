@@ -7,12 +7,12 @@
                 <div class="col"><p style="font-size: 30px;">Notas</p></div>
                 <div class="col" style="text-align: end;"><button (click)="openModal()" class="btn btn-primary boton">+</button></div>
             </div>
-            <div class="barra-busqueda">
-                <input type="search">          
+            <div class="col text-center">
+                <input class="barra-busqueda-input" type="search">          
             </div>
             <div class="notas-container" style="padding: 10px;">
 
-              <app-notaind [titulo]="'Título de la notaaaa'" [contenido]="'Contenido de la notaaaaaaaaaaaaa'"></app-notaind>
+              <app-notaind [titulo]="'Título de la nota :3'" [contenido]="'Contenido de la nota :D'"></app-notaind>
               
 
             </div>
@@ -25,7 +25,7 @@
     </div>
 
   </div>
-  
+
 <app-notasmodal [showModal]="showModal" (onClose)="closeDialog()"></app-notasmodal> 
 <app-navbar></app-navbar>
 
