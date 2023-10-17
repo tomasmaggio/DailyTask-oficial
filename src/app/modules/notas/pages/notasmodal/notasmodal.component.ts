@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
 
@@ -18,7 +19,7 @@ export class NotasmodalComponent implements OnInit {
   nota: Nota;
 
 
-  constructor(private notasService: NotasService) { }
+  constructor(private notasService: NotasService, private router: Router) { }
 
   ngOnInit() {
     this.nota = new Nota();
