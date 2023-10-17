@@ -30,7 +30,7 @@
                     <button type="button" class="btn-cancelar" >Cancelar</button>
                 </div>
                 <div class="control">
-                    <button type="submit" class="btn-guardar">Guardar</button>
+                    <button type="submit" class="btn-guardar" [disabled]="!notaForm.valid">Guardar</button>
                 </div>
             </div>
 
