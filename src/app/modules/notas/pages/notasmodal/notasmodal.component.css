@@ -1,48 +1,67 @@
 .custom-modal {
-    background-color: #ef0000; /* Cambia el color de fondo del modal a gris claro */
-    border: 2px solid #333; /* Agrega un borde al modal */
-    padding: 20px; /* Agrega relleno al contenido del modal */
+    background-color: #ef0000;
+    /* Cambia el color de fondo del modal a gris claro */
+    border: 2px solid #333;
+    /* Agrega un borde al modal */
+    padding: 20px;
+    /* Agrega relleno al contenido del modal */
 }
 
-input, textarea{
+input,
+textarea {
     &.ng-invalid.ng-touched {
         border-color: red;
 
         &:focus {
-            box-shadow: 0px 0px 0px 2px rgba(red, 0,1);
+            box-shadow: 0px 0px 0px 2px rgba(red, 0, 1);
         }
     }
 }
 
 
-.p-element, .p-dialog-header, .ng-trigger, .ng-trigger-animation, .ng-tns-c4042076560-0, .p-dialog, .p-component, .p-dialog-draggable, .p-dialog-resizable, .ng-star-inserted{
+.p-element,
+.p-dialog-header,
+.ng-trigger,
+.ng-trigger-animation,
+.ng-tns-c4042076560-0,
+.p-dialog,
+.p-component,
+.p-dialog-draggable,
+.p-dialog-resizable,
+.ng-star-inserted {
     background-color: rgb(255, 255, 255);
     padding: 10px;
 }
 
+
+/* -------------------------- estilo de los botones ------------------------- */
+
 .field-btn {
-    display: flex; /* Establecer el contenedor como flex */
-    justify-content: flex-end; /* Alinear los elementos al inicio del contenedor */
+    display: flex;
+    /* Establecer el contenedor como flex */
+    justify-content: flex-end;
+    /* Alinear los elementos al inicio del contenedor */
 }
 
 .control-btn {
-    margin-right: 20px; /* Agregar espacio entre los botones (ajusta según tus preferencias) */
+    margin-right: 20px;
+    /* Agregar espacio entre los botones (ajusta según tus preferencias) */
 }
 
-.btn-cancelar{
+.btn-cancelar {
     border: none;
     padding: 8px;
     margin: 2px;
     color: #333;
     border-radius: 6px;
     background-color: rgb(230, 230, 230)
-
 }
-.btn-guardar{
+
+.btn-guardar {
     border: none;
     padding: 8px;
     margin: 2px;
-    color:aliceblue;
+    color: aliceblue;
     background-color: #03d684;
     border-radius: 6px;
 
