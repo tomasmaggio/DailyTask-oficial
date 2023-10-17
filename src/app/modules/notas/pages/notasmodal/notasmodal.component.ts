@@ -29,6 +29,7 @@ export class NotasmodalComponent implements OnInit {
   onSubmit(form: NgForm){
     //guardar la nota y cargarlas dinamicamente al listado de notas
     this.notasService.add(form.value);
+    this.router.navigateByUrl('/')
   }
 
 }
