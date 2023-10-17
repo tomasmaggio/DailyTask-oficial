@@ -68,5 +68,24 @@ input, textarea{
 
 
 .p-element, .p-dialog-header, .ng-trigger, .ng-trigger-animation, .ng-tns-c4042076560-0, .p-dialog, .p-component, .p-dialog-draggable, .p-dialog-resizable, .ng-star-inserted{
-    background-color: red;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.field-btn {
+    display: flex; /* Establecer el contenedor como flex */
+    justify-content: flex-end; /* Alinear los elementos al inicio del contenedor */
+}
+
+.control-btn {
+    margin-right: 20px; /* Agregar espacio entre los botones (ajusta según tus preferencias) */
+}
+
+.btn-cancelar{
+    border: none;
+    padding: 8px;
+
+}
+.btn-guardar{
+
 }
