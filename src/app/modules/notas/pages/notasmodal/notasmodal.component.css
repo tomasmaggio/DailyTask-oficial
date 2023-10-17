@@ -42,4 +42,6 @@ input, textarea{
     padding: 8px;
     color:aliceblue;
     background-color: #03d684;
+    border-radius: 15px;
+
 }
