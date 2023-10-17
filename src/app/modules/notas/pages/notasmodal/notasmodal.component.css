@@ -4,58 +4,6 @@
     padding: 20px; /* Agrega relleno al contenido del modal */
 }
 
-/* Estilos para los elementos de formulario dentro del modal */
-/* Estilos para el contenedor del formulario */
-/*
-.form-container {
-    // Esto está desactivado temporalmente.
-}
-*/
-
-/* Estilos para el p-dialog con la clase custom-modal */
-/*
-p-dialog.custom-modal {
-    // Esto está desactivado temporalmente.
-}
-*/
-
-/* Estilos para los elementos con la clase field dentro de custom-modal */
-/*
-.custom-modal .field {
-    // Esto está desactivado temporalmente.
-    /*margin-bottom: 30px; // Espaciado entre campos
-}
-*/
-
-/* Estilos para elementos con la clase label dentro de custom-modal */
-/*
-.custom-modal .label {
-    // Esto está desactivado temporalmente.
-}
-*/
-
-/* Estilos para elementos con la clase input dentro de custom-modal */
-/*
-.custom-modal .input {
-    // Esto está desactivado temporalmente.
-}
-*/
-
-/* Estilos para elementos con la clase textarea dentro de custom-modal */
-/*
-.custom-modal .textarea {
-    // Esto está desactivado temporalmente.
-}
-*/
-
-/* Estilos para otros elementos dentro del modal, como el botón de cierre */
-/*
-.custom-modal .ui-dialog-titlebar {
-    // Esto está desactivado temporalmente.
-}
-*/
-
-
 input, textarea{
     &.ng-invalid.ng-touched {
         border-color: red;
@@ -84,9 +32,14 @@ input, textarea{
 .btn-cancelar{
     border: none;
     padding: 8px;
+    color: #333;
+    border-radius: 15px;
+
 
 }
 .btn-guardar{
     border: none;
     padding: 8px;
+    color:aliceblue;
+    background-color: #03d684;
 }
