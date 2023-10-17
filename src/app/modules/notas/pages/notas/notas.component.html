@@ -12,7 +12,7 @@
             </div>
             <div class="notas-container" style="padding: 10px;">
 
-              <app-notaind [titulo]="'Título de la nota :3'" [contenido]="'Contenido de la nota :D'"></app-notaind>
+              <app-notaind *ngFor="let nota of notas" [titulo]="'Título de la nota :3'" [contenido]="'Contenido de la nota :D'"></app-notaind>
               
 
             </div>
@@ -27,8 +27,7 @@
   </div>
 
 <app-notasmodal [showModal]="showModal" (onClose)="closeDialog()"></app-notasmodal>
-<app-notasmodal [showModal]="showModal" (onClose)="closeDialog()"></app-notasmodal>
-<app-notasmodal [showModal]="showModal" (onClose)="closeDialog()"></app-notasmodal>
+
 
 <app-navbar></app-navbar>
 
