@@ -13,7 +13,7 @@ export class NotasmodalComponent implements OnInit {
   @Input() showModal: boolean;
   @Output() onClose = new EventEmitter<void>();
 
-  //la estructura usada
+  //Modelo de la nota
   nota: Nota;
 
 
@@ -25,7 +25,7 @@ export class NotasmodalComponent implements OnInit {
 
   //creo el metodo
   onSubmit(form: NgForm){
-    console.log(form)
+    //guardar la nota 
   }
 
 }
