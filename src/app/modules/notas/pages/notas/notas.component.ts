@@ -21,7 +21,7 @@ export class NotasComponent {
 
   ngOnInit() {
     //recuperar todas las notas del servicio
-
+    this.notasService.getAll();
   }
 
 }
