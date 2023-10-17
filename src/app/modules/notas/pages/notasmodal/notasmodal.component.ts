@@ -17,6 +17,7 @@ export class NotasmodalComponent implements OnInit {
 
   //Modelo de la nota
   nota: Nota;
+  notaId: number;
 
 
   constructor(private notasService: NotasService, private router: Router, private route: ActivatedRoute) { }
