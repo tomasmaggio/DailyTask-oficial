@@ -34,6 +34,10 @@ export class NotasService {
       nota.body = body;
     }
 
+    //metodo eliminar nota
+    delete(id:number) {
+      this.notas.splice(id, 1);
+    }
 
 
 }
