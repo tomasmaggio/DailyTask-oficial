@@ -27,9 +27,14 @@ export class NotasmodalComponent implements OnInit {
 
   //creo el metodo
   onSubmit(form: NgForm){
+    //el modal se cierra al apretar 'guardar'
+    this.showModal = false 
     //guardar la nota y cargarlas dinamicamente al listado de notas
     this.notasService.add(form.value);
-    this.router.navigateByUrl('/')
+    this.router.navigateByUrl('/notas')
+  }
+  cancelarNota() {
+    this.showModal = false;
   }
 
 }

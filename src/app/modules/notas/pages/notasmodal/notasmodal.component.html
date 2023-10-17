@@ -27,7 +27,7 @@
 
             <div class="field">
                 <div class="control">
-                    <button type="button" class="btn-cancelar" >Cancelar</button>
+                    <button type="button" class="btn-cancelar" (click)="cancelarNota()">Cancelar</button>
                 </div>
                 <div class="control">
                     <button type="submit" class="btn-guardar" [disabled]="!notaForm.valid">Guardar</button>
