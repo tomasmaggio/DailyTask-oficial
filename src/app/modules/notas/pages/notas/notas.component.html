@@ -12,7 +12,7 @@
             </div>
             <div class="notas-container" style="padding: 10px;">
 
-              <app-notaind *ngFor="let nota of notas" [titulo]="'Título de la nota :3'" [contenido]="'Contenido de la nota :D'"></app-notaind>
+              <app-notaind *ngFor="let nota of notas" [titulo]="nota.titulo" [contenido]="nota.body"></app-notaind>
               
 
             </div>
