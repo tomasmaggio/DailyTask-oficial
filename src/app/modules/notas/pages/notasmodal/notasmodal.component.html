@@ -1,7 +1,10 @@
-<p-dialog header="Nueva nota" [visible]="showModal" [modal]="true" (onHide)="onClose.emit()"
-    class="custom-modal">
 
+
+
+
+<p-dialog  [visible]="showModal"  [modal]="true" (onHide)="onClose.emit()" class="custom-modal">
     <div class="form-container">
+        <header style="text-align: center; padding: 5px;">Nueva nota</header>
         <form #notaForm="ngForm" (ngSubmit)="onSubmit(notaForm)">
 
             <div class="inp-inputs">

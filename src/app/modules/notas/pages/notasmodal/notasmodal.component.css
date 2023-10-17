@@ -31,7 +31,7 @@ textarea {
 .ng-star-inserted {
     background-color: rgb(255, 255, 255);
     padding: 15px;
-    border: 1px solid #0000001a;
+    border: 1px solid #0000002c;
     height: 100%;
     width: 100%;
     padding-top: 0 !important;
@@ -84,20 +84,27 @@ textarea {
     margin: 0;
 }
 .inp-titulo {
-    width: 100px;
+    width: 400px;
+    border-radius: 4px;
+    border: 1px solid #0000002c;
+
 }
 .inp-color{
-    
-    width: 200px;
+    width: 400px;
+    padding: 2px;
+    border-radius: 4px;
+    border: 1px solid #0000002c;
+
 }
-.inp-textarea, .ng-untouched, .ng-pristine, .ng-valid{
+.inp-textarea{
     width: 600px;
-}
-.control-titulo, .control-textarea {
-    padding-top: 0 ;
+    height: 200px;
+    border-radius: 4px;
+    border: 1px solid #0000002c;
+
 }
 
-.control-color, .control-titulo, .control-textarea {
-    margin: 0;
-    padding: 0px;
+
+.control-color{
+    padding-top: 25px;
 }

@@ -8,6 +8,7 @@ import { NotasService } from 'src/app/shared/notas.service';
   styleUrls: ['./notas.component.css']
 })
 export class NotasComponent {
+  visible: boolean = false;
   showModal = false;
   openModal() {
     this.showModal = true;
