@@ -41,6 +41,7 @@ input, textarea{
 .btn-guardar{
     border: none;
     padding: 8px;
+    margin: 2px;
     color:aliceblue;
     background-color: #03d684;
     border-radius: 6px;
