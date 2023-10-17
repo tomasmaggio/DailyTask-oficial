@@ -9,13 +9,13 @@ import { NotasService } from 'src/app/shared/notas.service';
 })
 export class NotasComponent {
   showModal = false;
-  openModal() { 
-    this.showModal = true; 
+  openModal() {
+    this.showModal = true;
 
   }
-  closeDialog() { 
-    this.showModal = false; 
-    
+  closeDialog() {
+    this.showModal = false;
+
   }
 
 

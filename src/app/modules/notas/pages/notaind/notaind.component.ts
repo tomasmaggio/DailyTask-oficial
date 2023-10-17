@@ -14,7 +14,7 @@ export class NotaindComponent implements AfterViewInit {
   @ViewChild('notaContenido') notaContenido!: ElementRef<HTMLElement>;
 
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2) { }
 
   ngAfterViewInit() {
     this.actualizarDesvanecimiento();

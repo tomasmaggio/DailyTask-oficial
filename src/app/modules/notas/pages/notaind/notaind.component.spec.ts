@@ -11,9 +11,9 @@ describe('NotaindComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotaindComponent ]
+      declarations: [NotaindComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
