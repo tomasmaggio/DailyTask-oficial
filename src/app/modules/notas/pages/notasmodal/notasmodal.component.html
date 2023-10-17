@@ -4,26 +4,28 @@
     <div class="form-container">
         <form #notaForm="ngForm" (ngSubmit)="onSubmit(notaForm)">
 
-            <div class="field">
-                <label class="label"></label>
-                <div class="control">
-                    <input type="text" name="titulo" [ngModel]="nota.titulo" required class="inp-titulo" placeholder="Titulo">
-                    <!-- el required es para que el titulo sea requerido si o si -->
-
+            <div class="inp-inputs">
+                <div class="field">
+                    <label class="label"></label>
+                    <div class="control">
+                        <input type="text" name="titulo" [ngModel]="nota.titulo" required class="inp-titulo" placeholder="Titulo">
+                        <!-- el required es para que el titulo sea requerido si o si -->
+    
+                    </div>
                 </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Color</label>
-                <div class="control">
-                    <input type="color" class="inp-color" placeholder="Color">
+    
+                <div class="field">
+                    <label class="label">Color</label>
+                    <div class="control">
+                        <input type="color" class="inp-color" placeholder="Color">
+                    </div>
                 </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Body</label>
-                <div class="control">
-                    <textarea class="inp-textarea" name="body" [ngModel]="nota.body" placeholder="Su anotación aquí!"></textarea>
+    
+                <div class="field">
+                    <label class="label">Body</label>
+                    <div class="control">
+                        <textarea class="inp-textarea" name="body" [ngModel]="nota.body" placeholder="Su anotación aquí!"></textarea>
+                    </div>
                 </div>
             </div>
 
