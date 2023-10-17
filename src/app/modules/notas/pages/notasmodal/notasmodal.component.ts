@@ -4,6 +4,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
 
+
 @Component({
   selector: 'app-notasmodal',
   templateUrl: './notasmodal.component.html',
@@ -44,11 +45,16 @@ export class NotasmodalComponent implements OnInit {
     this.showModal = false
 
 
-    
+    if(this.nuevo){
+      //guardar la nota y cargarlas dinamicamente al listado de notas
+      this.notasService.add(form.value);
+      this.router.navigateByUrl('/notas')
+    }else{
+      this.notasService.update(this.notaId, form.value.titulo, form.value.body);
+    }
 
-    //guardar la nota y cargarlas dinamicamente al listado de notas
-    this.notasService.add(form.value);
-    this.router.navigateByUrl('/notas')
+
+    
   }
   cancelarNota() {
     this.showModal = false;
