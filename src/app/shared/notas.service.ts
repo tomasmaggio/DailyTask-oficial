@@ -15,6 +15,10 @@ export class NotasService {
       return this.notas[id];
     }
 
+    getAll(){
+      return this.notas;
+    }
+
     getId(nota: Nota) {
       return this.notas.indexOf(nota);
     }
