@@ -5,35 +5,55 @@
 }
 
 /* Estilos para los elementos de formulario dentro del modal */
-.form-container{
-
+/* Estilos para el contenedor del formulario */
+/*
+.form-container {
+    // Esto está desactivado temporalmente.
 }
+*/
 
+/* Estilos para el p-dialog con la clase custom-modal */
+/*
 p-dialog.custom-modal {
-
+    // Esto está desactivado temporalmente.
 }
+*/
 
+/* Estilos para los elementos con la clase field dentro de custom-modal */
+/*
 .custom-modal .field {
-    
-    margin-bottom: 30px; /* Espaciado entre campos */
+    // Esto está desactivado temporalmente.
+    /*margin-bottom: 30px; // Espaciado entre campos
 }
+*/
 
+/* Estilos para elementos con la clase label dentro de custom-modal */
+/*
 .custom-modal .label {
-
+    // Esto está desactivado temporalmente.
 }
+*/
 
+/* Estilos para elementos con la clase input dentro de custom-modal */
+/*
 .custom-modal .input {
-    
+    // Esto está desactivado temporalmente.
 }
+*/
 
+/* Estilos para elementos con la clase textarea dentro de custom-modal */
+/*
 .custom-modal .textarea {
-    
+    // Esto está desactivado temporalmente.
 }
+*/
 
 /* Estilos para otros elementos dentro del modal, como el botón de cierre */
+/*
 .custom-modal .ui-dialog-titlebar {
-    
+    // Esto está desactivado temporalmente.
 }
+*/
 
 
 input, textarea{

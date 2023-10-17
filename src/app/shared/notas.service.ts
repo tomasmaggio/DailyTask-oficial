@@ -27,6 +27,13 @@ export class NotasService {
       return index
     }
 
+    //metodo actualizar nota
+    update(id:number, titulo:string, body:string) {
+      let nota = this.notas[id];
+      nota.titulo = titulo;
+      nota.body = body;
+    }
+
 
 
 }
