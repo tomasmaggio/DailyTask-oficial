@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotasmodalComponent } from './modules/notas/pages/notasmodal/notasmodal.component';
+import { NotasModule } from './modules/notas/notas.module';
 
 const routes: Routes = [
   //lazyloading
@@ -26,7 +27,7 @@ const routes: Routes = [
 },
 
 
-
+{ path: 'notas/:id', component: NotasmodalComponent },
 
 
 {

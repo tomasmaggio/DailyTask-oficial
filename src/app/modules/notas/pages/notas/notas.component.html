@@ -15,6 +15,7 @@
 
               <app-notaind 
                 *ngFor="let nota of notas; index as i"
+                routerLink="i"
                 [titulo]="nota.titulo" 
                 [contenido]="nota.body">
               </app-notaind>
@@ -32,7 +33,5 @@
   </div>
 
 <app-notasmodal [showModal]="showModal" (onClose)="closeDialog()"></app-notasmodal>
-
-
 <app-navbar></app-navbar>
 
