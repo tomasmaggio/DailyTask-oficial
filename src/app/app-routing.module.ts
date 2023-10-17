@@ -26,11 +26,6 @@ const routes: Routes = [
 },
 
 
-//ruta provisoria solo para ir testeando el modal (si estas viendo esto en la rama main, es porque me olvide de borrarla, por favor borrala!!!!!)
-{
-  path:':id',component:NotasmodalComponent
-},
-//Borrar!!!
 
 
 

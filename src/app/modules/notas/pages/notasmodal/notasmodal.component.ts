@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
 
@@ -19,9 +19,13 @@ export class NotasmodalComponent implements OnInit {
   nota: Nota;
 
 
-  constructor(private notasService: NotasService, private router: Router) { }
+  constructor(private notasService: NotasService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+
+    //queremos saber si estamos creando una nota nueva o si estamos editando una nota existente
+
+
     this.nota = new Nota();
   }
 
