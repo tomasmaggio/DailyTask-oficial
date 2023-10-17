@@ -27,6 +27,7 @@ export class NotasmodalComponent implements OnInit {
   //creo el metodo
   onSubmit(form: NgForm){
     //guardar la nota 
+    this.notasService.add(form.value);
   }
 
 }
