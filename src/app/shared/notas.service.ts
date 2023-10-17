@@ -10,4 +10,10 @@ export class NotasService {
 
 constructor() { }
 
+//metodos para administrar los datos que están dentro
+get(id: number) {
+  return this.notas[id];
+}
+
+
 }
