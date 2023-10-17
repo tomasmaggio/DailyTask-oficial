@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Nota } from 'src/app/shared/nota.model';
 
 @Component({
   selector: 'app-notas',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./notas.component.css']
 })
 export class NotasComponent {
+  //opciones del modal
   showModal = false;
 
   openModal() {
@@ -15,4 +17,14 @@ export class NotasComponent {
   closeDialog() {
     this.showModal = false;
   }
+
+  //notas
+  notas: Nota[] = new Array<Nota>();
+
+
+  constructor(){ }
+
+  ngOnInit(){
+  }
+
 }
