@@ -15,5 +15,9 @@ get(id: number) {
   return this.notas[id];
 }
 
+getId(nota: Nota) {
+  return this.notas.indexOf(nota);
+}
+
 
 }
