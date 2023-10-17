@@ -87,5 +87,6 @@ input, textarea{
 
 }
 .btn-guardar{
-
+    border: none;
+    padding: 8px;
 }
