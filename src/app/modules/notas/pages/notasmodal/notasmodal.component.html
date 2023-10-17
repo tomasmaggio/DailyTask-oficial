@@ -1,32 +1,31 @@
-<p-dialog header="Nueva nota" [visible]="showModal" [modal]="true" [style]="{ width: '50vw' }" (onHide)="onClose.emit()"
+<p-dialog header="Nueva nota" [visible]="showModal" [modal]="true" [style]="{ width: '45vw' }" (onHide)="onClose.emit()"
     class="custom-modal">
 
     <div class="form-container">
         <form #notaForm="ngForm" (ngSubmit)="onSubmit(notaForm)">
 
             <div class="inp-inputs">
-                <div class="field">
+                
                     <label class="label"></label>
-                    <div class="control">
+                    <div class="control-titulo">
                         <input type="text" name="titulo" [ngModel]="nota.titulo" required class="inp-titulo" placeholder="Titulo">
                         <!-- el required es para que el titulo sea requerido si o si -->
     
                     </div>
-                </div>
+                
     
-                <div class="field">
-                    <label class="label">Color</label>
-                    <div class="control">
+                                  
+                    <div class="control-color">
                         <input type="color" class="inp-color" placeholder="Color">
                     </div>
-                </div>
+                
     
-                <div class="field">
-                    <label class="label">Body</label>
-                    <div class="control">
+                
+                    <label class="label"></label>
+                    <div class="control-textarea">
                         <textarea class="inp-textarea" name="body" [ngModel]="nota.body" placeholder="Su anotación aquí!"></textarea>
                     </div>
-                </div>
+                
             </div>
 
             <div class="field-btn">

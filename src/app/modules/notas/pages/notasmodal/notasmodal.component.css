@@ -3,7 +3,7 @@
     /* Cambia el color de fondo del modal a gris claro */
     border: 2px solid #333;
     /* Agrega un borde al modal */
-    padding: 20px;
+    padding: 0;
     /* Agrega relleno al contenido del modal */
 }
 
@@ -30,8 +30,11 @@ textarea {
 .p-dialog-resizable,
 .ng-star-inserted {
     background-color: rgb(255, 255, 255);
-    padding: 10px;
+    padding: 15px;
+    border: 1px solid #0000001a;
+    padding-top: 0 !important;
 }
+
 
 
 /* -------------------------- estilo de los botones ------------------------- */
@@ -69,6 +72,21 @@ textarea {
 
 
 /* --------------------------------- inputs --------------------------------- */
+.inp-inputs{
+    padding: 0;
+}
+.field{
+    padding: 0;
+    margin: 0;
+}
 .inp-titulo{
     width: 50vh;
+}
+.control-titulo, .control-textarea {
+    padding-top: 0 ;
+}
+
+.control-color, .control-titulo, .control-textarea {
+    margin: 0;
+    padding: 0px;
 }
