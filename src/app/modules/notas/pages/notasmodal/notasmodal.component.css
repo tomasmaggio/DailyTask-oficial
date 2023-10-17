@@ -77,13 +77,21 @@ textarea {
 /* --------------------------------- inputs --------------------------------- */
 .inp-inputs{
     padding: 0;
+    
 }
 .field{
     padding: 0;
     margin: 0;
 }
-.inp-titulo{
-    width: 50vh;
+.inp-titulo {
+    width: 100px;
+}
+.inp-color{
+    
+    width: 200px;
+}
+.inp-textarea, .ng-untouched, .ng-pristine, .ng-valid{
+    width: 600px;
 }
 .control-titulo, .control-textarea {
     padding-top: 0 ;
