@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
 
@@ -25,15 +25,27 @@ export class NotasmodalComponent implements OnInit {
   ngOnInit() {
 
     //queremos saber si estamos creando una nota nueva o si estamos editando una nota existente
-
+    this.route.params.subscribe((params: Params) => {
+      if (params['id']) {
+        this.nota = this.notasService.get(params['id']);
+        this.notaId = params['id'];
+        this.nuevo = false;
+      } else {
+        this.nuevo = true;
+      }
+    })
 
     this.nota = new Nota();
   }
 
   //creo el metodo
-  onSubmit(form: NgForm){
+  onSubmit(form: NgForm) {
     //el modal se cierra al apretar 'guardar'
-    this.showModal = false 
+    this.showModal = false
+
+
+    
+
     //guardar la nota y cargarlas dinamicamente al listado de notas
     this.notasService.add(form.value);
     this.router.navigateByUrl('/notas')
