@@ -32,9 +32,10 @@ input, textarea{
 .btn-cancelar{
     border: none;
     padding: 8px;
+    margin: 2px;
     color: #333;
-    border-radius: 15px;
-
+    border-radius: 6px;
+    background-color: rgb(230, 230, 230)
 
 }
 .btn-guardar{
@@ -42,6 +43,6 @@ input, textarea{
     padding: 8px;
     color:aliceblue;
     background-color: #03d684;
-    border-radius: 15px;
+    border-radius: 6px;
 
 }
