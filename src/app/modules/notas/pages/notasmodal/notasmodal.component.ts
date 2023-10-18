@@ -5,6 +5,7 @@ import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
 
 
+
 @Component({
   selector: 'app-notasmodal',
   templateUrl: './notasmodal.component.html',
@@ -44,7 +45,6 @@ export class NotasmodalComponent implements OnInit {
     //el modal se cierra al apretar 'guardar'
     this.showModal = false
 
-
     if (this.nuevo) {
       //guardar la nota y cargarlas dinamicamente al listado de notas
       this.notasService.add(form.value);
@@ -53,11 +53,15 @@ export class NotasmodalComponent implements OnInit {
       this.notasService.update(this.notaId, form.value.titulo, form.value.body);
     }
 
-
+    form.resetForm();
+    // Cierra el modal
+    this.showModal = false;
 
   }
   cancelarNota() {
     this.showModal = false;
   }
+
+ 
 
 }
