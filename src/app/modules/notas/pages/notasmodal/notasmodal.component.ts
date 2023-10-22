@@ -53,6 +53,7 @@ export class NotasmodalComponent implements OnInit {
       this.notasService.update(this.notaId, form.value.titulo, form.value.body);
     }
 
+    //restablece el modal
     form.resetForm();
     // Cierra el modal
     this.showModal = false;

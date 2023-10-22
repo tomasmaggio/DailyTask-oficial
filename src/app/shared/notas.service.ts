@@ -10,12 +10,13 @@ export class NotasService {
 
   constructor() { }
 
-  //metodos para administrar los datos que están dentro
-  get(id: number) {
+  /* ----------- metodos para administrar los datos que están dentro ---------- */
+
+  get(id: number) { //Este método devuelve una nota específica según su id. Es útil para obtener una nota en particular.
     return this.notas[id];
   }
 
-  getAll() {
+  getAll() { //Este método devuelve todas las notas almacenadas en el servicio. Es útil para cargar la lista completa de notas.
     return this.notas;
   }
 
