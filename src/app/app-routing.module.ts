@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotasmodalComponent } from './modules/notas/pages/notasmodal/notasmodal.component';
 import { NotasModule } from './modules/notas/notas.module';
+import { NotasComponent } from './modules/notas/pages/notas/notas.component';
 
 const routes: Routes = [
   //lazyloading
