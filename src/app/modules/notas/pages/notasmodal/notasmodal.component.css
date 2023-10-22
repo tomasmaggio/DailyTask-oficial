@@ -7,14 +7,10 @@
     /* Agrega relleno al contenido del modal */
 }
 
-/* Estilo para input y textarea con clase ng-invalid y ng-touched */
-input.ng-invalid.ng-touched,
+input.ng-invalid.ng-touched, 
 textarea.ng-invalid.ng-touched {
-    border-color: red;
+  border-color: red; 
 }
-
-
-
 
 .p-element,
 .p-dialog-header,
