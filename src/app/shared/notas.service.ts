@@ -33,13 +33,14 @@ export class NotasService {
 
   //metodo actualizar nota
   update(id: number, titulo: string, body: string) {
+    //Este método actualiza una nota existente según su id con los nuevos valores de título y cuerpo. Es útil para editar notas existentes.
     let nota = this.notas[id];
     nota.titulo = titulo;
     nota.body = body;
   }
 
   //metodo eliminar nota
-  delete(id: number) {
+  delete(id: number) { //Este método elimina una nota según su id. Es útil para eliminar notas.
     this.notas.splice(id, 1);
   }
 
