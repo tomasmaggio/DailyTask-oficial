@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-notaind',
@@ -10,6 +10,8 @@ export class NotaindComponent implements AfterViewInit {
   @Input() titulo: string;
   @Input() contenido: string;
   @Input() link: string;
+
+  @Output() eliminarEvento: EventEmitter<void> = new EventEmitter<void>()
 
   @ViewChild('desvanecer') desvanecer!: ElementRef<HTMLElement>;
   @ViewChild('notaContenido') notaContenido!: ElementRef<HTMLElement>;
@@ -33,4 +35,10 @@ export class NotaindComponent implements AfterViewInit {
       this.renderer.setStyle(this.desvanecer.nativeElement, 'display', 'none');
     }
   }
+
+
+  enBotonXClick() {
+
+  }
+
 }
