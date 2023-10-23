@@ -28,6 +28,7 @@ export class NotasmodalComponent implements OnInit {
 
     //queremos saber si estamos creando una nota nueva o si estamos editando una nota existente
     this.route.params.subscribe((params: Params) => {
+      this.nota = new Nota();
       if (params['id']) {
         this.nota = this.notasService.get(params['id']);
         this.notaId = params['id'];
@@ -37,7 +38,6 @@ export class NotasmodalComponent implements OnInit {
       }
     })
 
-    this.nota = new Nota();
   }
 
   //creo el metodo
