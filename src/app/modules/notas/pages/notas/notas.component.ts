@@ -32,7 +32,7 @@ export class NotasComponent {
   }
 
   eliminarNota(id: number){
-    
+   this.notasService.delete(id); 
   }
 
 }

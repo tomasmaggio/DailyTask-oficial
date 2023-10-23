@@ -16,11 +16,12 @@
               <app-notaind 
                 *ngFor="let nota of notas; index as i"
                 [link]="'/notas/' + i"
+                (eliminar)="eliminarNota(i)"
                 [titulo]="nota.titulo" 
                 [contenido]="nota.body">
               </app-notaind>
               
-              
+
 
             </div>
 
