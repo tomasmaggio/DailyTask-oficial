@@ -44,6 +44,10 @@
   font-size: 30px;
   color: #fff;
 }
+.edit-btn-style:hover{
+  background-color: hsla(0, 0%, 100%, 0.094);
+}
+
 
 
 .x-btn-style {
