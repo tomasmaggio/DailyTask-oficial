@@ -4,7 +4,6 @@
         <form #notaForm="ngForm" (ngSubmit)="onSubmit(notaForm)">
 
             <div class="inp-inputs">
-                
                     <label class="label"></label>
                     <div class="control-titulo">
                         <input type="text" name="titulo" [ngModel]="nota.titulo" required class="inp-titulo" autocomplete="off" placeholder="Titulo">
@@ -12,21 +11,15 @@
     
                     </div>
                 
-    
-                                  
                     <div class="control-color">
                         <input type="color" class="inp-color" placeholder="Color">
                     </div>
-                
-    
-                
+
                     <label class="label"></label>
                     <div class="control-textarea">
                         <textarea class="inp-textarea" name="body" [ngModel]="nota.body" placeholder="Su anotación aquí!"></textarea>
                     </div>
-                
             </div>
-
             <div class="field-btn">
                 <div class="control-btn">
                     <button type="button" class="btn-cancelar" (click)="cancelarNota()">Cancelar</button>
@@ -35,10 +28,6 @@
                     <button type="submit" class="btn-guardar" [disabled]="!notaForm.valid">Guardar</button>
                 </div>
             </div>
-
-
-
         </form>
     </div>
-
 </p-dialog>
