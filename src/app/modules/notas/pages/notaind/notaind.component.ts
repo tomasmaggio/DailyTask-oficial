@@ -21,6 +21,9 @@ export class NotaindComponent implements AfterViewInit {
   @Output() editar: EventEmitter<number> = new EventEmitter<number>();
 
 
+  enBotonEditarClick() {
+    this.editar.emit();
+  }
 
   constructor(private renderer: Renderer2) { }
 
@@ -49,5 +52,7 @@ export class NotaindComponent implements AfterViewInit {
   enBotonXClick() {
     this.eliminarEvento.emit();
   }
+
+
 
 }
