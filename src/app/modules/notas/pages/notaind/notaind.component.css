@@ -25,6 +25,7 @@
   overflow-y: auto;
   color: #fff;
   text-align: start;
+  word-wrap: break-word; /* Rompe palabras largas */
 }
 
 .desvanecer-contenido {
@@ -98,4 +99,6 @@
 .contenido-expandido {
   max-height: none; /* Esto permite que el contenido se expanda completamente */
   overflow: visible; /* Muestra el contenido completo */
+  white-space: pre-wrap; /* Muestra los saltos de línea */
+
 }
