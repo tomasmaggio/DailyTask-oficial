@@ -18,6 +18,9 @@ export class NotaindComponent implements AfterViewInit {
   @ViewChild('desvanecer') desvanecer!: ElementRef<HTMLElement>;
   @ViewChild('notaContenido') notaContenido!: ElementRef<HTMLElement>;
 
+  @Output() editar: EventEmitter<number> = new EventEmitter<number>();
+
+
 
   constructor(private renderer: Renderer2) { }
 

@@ -12,7 +12,7 @@
             <div class="notas-container" style="padding: 10px;">
               <p>- No se muestra el modal cuando hago click en la nota para editarla<br>- Ajustar el font weight del body</p>
               <app-notaind 
-                *ngFor="let nota of notas; index as i"
+                *ngFor="let nota of notas; let i = index"
                 [link]="'/notas/' + i"
                 (eliminar)="eliminarNota(i)"
                 [titulo]="nota.titulo" 
