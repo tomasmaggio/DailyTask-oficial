@@ -48,6 +48,10 @@
   background-color: hsla(0, 0%, 100%, 0.094);
 }
 
+.edit-btn{
+  display: none;
+}
+
 
 
 .x-btn-style {
