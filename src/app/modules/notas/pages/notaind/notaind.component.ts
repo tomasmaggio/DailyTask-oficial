@@ -6,6 +6,8 @@ import { Component, OnInit, ViewChild, ElementRef, Renderer2, AfterViewInit, Inp
   styleUrls: ['./notaind.component.css']
 })
 export class NotaindComponent implements AfterViewInit {
+  expanded: boolean = false; //nota inicialmente no expandida
+
 
   @Input() titulo: string;
   @Input() contenido: string;
@@ -21,6 +23,10 @@ export class NotaindComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.actualizarDesvanecimiento();
+  }
+
+  toggleExpanding() {
+    this.expanded = !this.expanded;
   }
 
   private actualizarDesvanecimiento() {

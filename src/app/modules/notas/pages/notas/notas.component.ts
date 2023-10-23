@@ -10,7 +10,7 @@ import { NotasService } from 'src/app/shared/notas.service';
 export class NotasComponent {
   visible: boolean = false;
   showModal = false;
-  expanded: boolean = false;
+
   openModal() {
     this.showModal = true;
 
@@ -19,6 +19,7 @@ export class NotasComponent {
     this.showModal = false;
 
   }
+
 
 
   //notas
@@ -35,5 +36,6 @@ export class NotasComponent {
   eliminarNota(id: number){
    this.notasService.delete(id); 
   }
+
 
 }

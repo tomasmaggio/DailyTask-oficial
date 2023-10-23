@@ -4,6 +4,7 @@
   background-color: #1967D2;
   padding: 20px;
   margin: 10px;
+  cursor: pointer;
 }
 
 .nota-ind:hover {
@@ -20,7 +21,7 @@
 .nota-ind-contenido {
   /* font-weight: 400; */
   position: relative;
-  max-height: 75px;
+  max-height: auto;
   overflow-y: auto;
   color: #fff;
   text-align: start;
@@ -91,4 +92,10 @@
   display: block;
   cursor: pointer;
 
+}
+
+
+.contenido-expandido {
+  max-height: none; /* Esto permite que el contenido se expanda completamente */
+  overflow: visible; /* Muestra el contenido completo */
 }

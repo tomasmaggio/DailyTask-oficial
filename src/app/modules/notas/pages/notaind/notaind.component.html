@@ -1,4 +1,4 @@
-<div class="nota-ind">
+<div class="nota-ind" (click)="toggleExpanding()">
   
   <a >
     <div class="nota-ind-titulo">
@@ -6,7 +6,9 @@
     </div>
   
     <div #notaContenido class="nota-ind-contenido">
-      <p>{{contenido}}</p>
+      <div class="contenido-expandido" *ngIf="expanded">
+        <p>{{contenido}}</p>
+      </div>
       <div #desvanecer class="desvanecer-contenido"></div>
     </div>
   </a>
