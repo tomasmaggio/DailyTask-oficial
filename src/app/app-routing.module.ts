@@ -26,11 +26,6 @@ const routes: Routes = [
   path:'notas',
   loadChildren:()=>import('./modules/notas/notas.module').then( m=> m.NotasModule)
 },
-
-
-{ path: 'notas/:id', component: NotasmodalComponent },
-//notas/:id
-
 {
   path:'',
   loadChildren:()=>import('./modules/usuario/usuario.module').then( m=> m.UsuarioModule)
