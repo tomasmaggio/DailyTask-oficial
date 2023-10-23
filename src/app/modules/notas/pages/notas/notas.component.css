@@ -15,15 +15,11 @@
 
 .rectangulo {
   border: 4px solid #000;
-  /* Establece un borde de 2px sólido de color negro */
   border-radius: 80px;
   border-color: transparent;
   width: 100%;
-  /* Ancho del rectángulo */
-  height: auto;
-  /* Alto del rectángulo */
+  height: 650px;
   padding: 20px;
-  /* Espacio entre el borde y el contenido interno */
 }
 
 .rectangulo-titulo {
@@ -46,7 +42,17 @@
   margin-top: 5px;
 }
 
-
+/* -------------------- scroll del container de las notas ------------------- */
 .notas-container {
-  max-height: 800px;
+  height: 210px; /*(510px)*/
+  overflow-y: auto; 
+}
+
+.notas-container::-webkit-scrollbar {
+  width: 4px; /* Ancho de la barra de desplazamiento */
+}
+
+.notas-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del "pulgar" de la barra de desplazamiento */
+  border-radius: 6px; /* Bordes redondeados del pulgar */
 }
