@@ -11,11 +11,9 @@ export class NotasComponent {
   visible: boolean = false;
   showModal = false;
   selectedNotaId: number | null = null;
+  i: number;
 
-  openModal(id: number) {
-    this.selectedNotaId = id;
-    this.showModal = true;
-  }
+  
 
   
   closeDialog() {
@@ -40,5 +38,8 @@ export class NotasComponent {
    this.notasService.delete(id); 
   }
 
-
+  openModal(id: number) { 
+    this.selectedNotaId = id;
+    this.showModal = true;
+  }
 }
