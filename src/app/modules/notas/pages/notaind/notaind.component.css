@@ -50,6 +50,7 @@
 
 .edit-btn{
   display: none;
+  position: absolute;
 }
 
 
