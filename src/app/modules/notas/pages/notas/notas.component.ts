@@ -10,6 +10,7 @@ import { NotasService } from 'src/app/shared/notas.service';
 export class NotasComponent {
   visible: boolean = false;
   showModal = false;
+  expanded: boolean = false;
   openModal() {
     this.showModal = true;
 
