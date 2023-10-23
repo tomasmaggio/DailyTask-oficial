@@ -29,7 +29,7 @@ const routes: Routes = [
 
 
 { path: 'notas/:id', component: NotasmodalComponent },
-
+//notas/:id
 
 {
   path:'',
