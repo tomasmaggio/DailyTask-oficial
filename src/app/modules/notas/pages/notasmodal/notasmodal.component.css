@@ -1,17 +1,17 @@
-
-
-input.ng-invalid.ng-touched, 
-textarea.ng-invalid.ng-touched {
-  border-color: red; 
-}
-
-input.ng-invalid.ng-touched:focus,
-textarea.ng-invalid.ng-touched:focus {
-  box-shadow: 0px 0px 0px 2px rgba(255, 0, 0, 1); 
+.custom-modal{
+    background: #fff;
+    width: 60%;
+    height: 80%;
 }
 
 
 
+.form-container{
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #0000002c;
+    padding: 12px;
+}
 
 
 /* -------------------------- estilo de los botones ------------------------- */
@@ -75,7 +75,16 @@ textarea.ng-invalid.ng-touched:focus {
 
 }
 
-
 .control-color{
     padding-top: 25px;
+}
+
+input.ng-invalid.ng-touched, 
+textarea.ng-invalid.ng-touched {
+  border-color: red; 
+}
+
+input.ng-invalid.ng-touched:focus,
+textarea.ng-invalid.ng-touched:focus {
+  box-shadow: 0px 0px 0px 2px rgba(255, 0, 0, 1); 
 }
