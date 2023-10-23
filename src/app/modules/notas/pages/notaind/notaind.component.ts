@@ -9,6 +9,7 @@ export class NotaindComponent implements AfterViewInit {
 
   @Input() titulo: string;
   @Input() contenido: string;
+  @Input() link: string;
 
   @ViewChild('desvanecer') desvanecer!: ElementRef<HTMLElement>;
   @ViewChild('notaContenido') notaContenido!: ElementRef<HTMLElement>;
