@@ -11,8 +11,8 @@ export class NotaindComponent implements AfterViewInit {
   @Input() contenido: string;
   @Input() link: string;
 
-  @Output() eliminarEvento: EventEmitter<void> = new EventEmitter<void>();
-
+  @Output('eliminar') eliminarEvento: EventEmitter<void> = new EventEmitter<void>(); //defino la palabra 'eliminar' para permitir al componente principal vincularse 
+                                                                                     //con el evento usando la palabra 'eliminar' enves de 'eliminarEvento'
   @ViewChild('desvanecer') desvanecer!: ElementRef<HTMLElement>;
   @ViewChild('notaContenido') notaContenido!: ElementRef<HTMLElement>;
 
