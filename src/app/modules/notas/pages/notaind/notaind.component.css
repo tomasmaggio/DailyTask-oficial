@@ -1,3 +1,5 @@
+
+
 .nota-ind {
   position: relative;
   border-radius: 40px;
@@ -18,8 +20,8 @@
   text-align: start;
 }
 
+
 .nota-ind-contenido {
-  /* font-weight: 400; */
   position: relative;
   max-height: auto;
   overflow-y: auto;
