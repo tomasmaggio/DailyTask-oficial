@@ -12,6 +12,8 @@ export class NotasComponent {
   showModal = false;
   selectedNotaId: number | null = null;
   i: number;
+  modoEdicion: boolean = false; // Propiedad para controlar el modo de edición
+
 
   
 
@@ -40,8 +42,15 @@ export class NotasComponent {
    this.notasService.delete(id); 
   }
 
-  openModal(id: number) { 
-    this.selectedNotaId = id;
+  openModal() { 
     this.showModal = true;
   }
+
+  openEditarModal(id: number) {
+    this.nota = this.notasService.get(id);
+    this.modoEdicion = true;
+    this.showModal = true;
+  }
+
+  
 }
