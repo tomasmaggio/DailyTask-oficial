@@ -11,7 +11,7 @@ export class NotaindComponent implements AfterViewInit {
   @Input() contenido: string;
   @Input() link: string;
 
-  @Output() eliminarEvento: EventEmitter<void> = new EventEmitter<void>()
+  @Output() eliminarEvento: EventEmitter<void> = new EventEmitter<void>();
 
   @ViewChild('desvanecer') desvanecer!: ElementRef<HTMLElement>;
   @ViewChild('notaContenido') notaContenido!: ElementRef<HTMLElement>;
@@ -38,7 +38,7 @@ export class NotaindComponent implements AfterViewInit {
 
 
   enBotonXClick() {
-
+    this.eliminarEvento.emit();
   }
 
 }
