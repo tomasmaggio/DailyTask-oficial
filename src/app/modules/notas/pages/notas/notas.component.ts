@@ -12,11 +12,12 @@ export class NotasComponent {
   showModal = false;
   selectedNotaId: number | null = null;
 
-  openModal(id:number) {
+  openModal(id: number) {
     this.selectedNotaId = id;
     this.showModal = true;
-
   }
+
+  
   closeDialog() {
     this.showModal = false;
 
