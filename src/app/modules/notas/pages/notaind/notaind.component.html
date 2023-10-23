@@ -1,6 +1,6 @@
 <div class="nota-ind">
   
-  <a [routerLink]="link" style="all:unset">
+  <a >
     <div class="nota-ind-titulo">
       <h5>{{titulo}}</h5>
     </div>
@@ -14,7 +14,10 @@
   <div class="x-btn" (click)="enBotonXClick()">
     <button class="x-btn-style"><i class='bx bx-x'></i></button>
   </div>
-  <div class="edit-btn">
-    <button class="edit-btn-style"><i class='bx bxs-pencil'></i></button>
-  </div>
+  <a [routerLink]="link" style="all:unset">
+    <div class="edit-btn">
+      <button class="edit-btn-style"><i class='bx bxs-pencil'></i></button>
+    </div>
+  </a>
+  
 </div>
