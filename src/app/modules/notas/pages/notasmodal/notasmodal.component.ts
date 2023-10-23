@@ -48,10 +48,11 @@ export class NotasmodalComponent implements OnInit {
     if (this.nuevo) {
       //guardar la nota y cargarlas dinamicamente al listado de notas
       this.notasService.add(form.value);
-      this.router.navigateByUrl('/notas')
     } else {
       this.notasService.update(this.notaId, form.value.titulo, form.value.body);
     }
+
+    this.router.navigateByUrl('/notas')
 
     //restablece el modal
     form.resetForm();
