@@ -46,9 +46,10 @@
 /* -------------------- scroll del container de las notas ------------------- */
 .notas-container {
   height: 510px; /*(510px)*/
+  scroll-behavior: smooth;
   overflow-y: auto; 
   border-radius: 20px;
-  
+
 }
 
 .notas-container::-webkit-scrollbar {
