@@ -12,7 +12,8 @@ export class NotasComponent {
   showModal = false;
   selectedNotaId: number | null = null;
 
-  openModal() {
+  openModal(id:number) {
+    this.selectedNotaId = id;
     this.showModal = true;
 
   }
