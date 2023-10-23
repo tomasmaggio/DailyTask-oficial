@@ -46,13 +46,25 @@
 .notas-container {
   height: 210px; /*(510px)*/
   overflow-y: auto; 
+  border-radius: 20px;
+  
 }
 
 .notas-container::-webkit-scrollbar {
-  width: 4px; /* Ancho de la barra de desplazamiento */
+  width: 6px; /* Ancho de la barra de desplazamiento */
 }
 
 .notas-container::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color del "pulgar" de la barra de desplazamiento */
+  background-color: #3A4C94; /* Color del "pulgar" de la barra de desplazamiento */
   border-radius: 6px; /* Bordes redondeados del pulgar */
+}
+
+.notas-container::-webkit-scrollbar-track {
+  background-color: #738CCF; /* Color de fondo de la barra de desplazamiento */
+  border-radius: 6px;
+  padding: 2px;
+}
+.notas-container::-webkit-scrollbar-thumb:hover {
+  background-color: #3A4C94; /* Color del "pulgar" de la barra de desplazamiento */
+
 }
