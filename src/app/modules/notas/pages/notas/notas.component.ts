@@ -31,4 +31,8 @@ export class NotasComponent {
     this.notas = this.notasService.getAll();
   }
 
+  eliminarNota(id: number){
+    
+  }
+
 }
