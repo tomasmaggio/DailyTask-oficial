@@ -1,7 +1,4 @@
-.custom-modal {
-    height: 80%;
-    width: 60%;
-}
+
 
 input.ng-invalid.ng-touched, 
 textarea.ng-invalid.ng-touched {
@@ -52,10 +49,7 @@ textarea.ng-invalid.ng-touched:focus {
 
 
 /* --------------------------------- inputs --------------------------------- */
-.inp-inputs{
-    padding: 0;
-    
-}
+
 .field{
     padding: 0;
     margin: 0;
