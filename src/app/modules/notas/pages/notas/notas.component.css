@@ -42,9 +42,10 @@
   margin-top: 5px;
 }
 
+
 /* -------------------- scroll del container de las notas ------------------- */
 .notas-container {
-  height: 210px; /*(510px)*/
+  height: 510px; /*(510px)*/
   overflow-y: auto; 
   border-radius: 20px;
   
@@ -68,3 +69,4 @@
   background-color: #3A4C94; /* Color del "pulgar" de la barra de desplazamiento */
 
 }
+
