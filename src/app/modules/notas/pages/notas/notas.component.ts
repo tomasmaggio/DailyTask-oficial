@@ -32,6 +32,8 @@ export class NotasComponent {
   ngOnInit() {
     //recuperar todas las notas del servicio
     this.notas = this.notasService.getAll();
+    this.i = 0; // Asigna el valor inicial al índice
+
   }
 
   eliminarNota(id: number){
