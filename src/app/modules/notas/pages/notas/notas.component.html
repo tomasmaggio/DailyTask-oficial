@@ -15,7 +15,7 @@
 
               <app-notaind 
                 *ngFor="let nota of notas; index as i"
-                [routerLink]="'/notas/' + i"
+                [link]="'/notas/' + i"
                 [titulo]="nota.titulo" 
                 [contenido]="nota.body">
               </app-notaind>
