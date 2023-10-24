@@ -47,6 +47,15 @@ import { NotasService } from 'src/app/shared/notas.service';
         animate('120ms ease-out', style({
           transform: 'scale(0.68)',
           opacity: 0
+        })),
+        animate('150ms ease-out', style({
+          height: 0,
+          opacity: 0,
+          paddingTop: 0,
+          paddingBottom: 0,
+          paddingRight: 0,
+          paddingLeft: 0,
+          'margin-bottom':0,
         }))
       ])
     ])
