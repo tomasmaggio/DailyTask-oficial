@@ -16,6 +16,7 @@
                 *ngFor="let nota of notas; let i = index"
                 [link]="'/notas/' + i"
                 (eliminar)="eliminarNota(i)"
+                [@itemAnim]
                 [titulo]="nota.titulo" 
                 [contenido]="nota.body"
                 (editar)="openModal()">
