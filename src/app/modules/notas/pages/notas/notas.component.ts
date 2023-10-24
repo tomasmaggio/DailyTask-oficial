@@ -34,6 +34,12 @@ import { NotasService } from 'src/app/shared/notas.service';
           paddingLeft: '*',
         })),
         animate(68)
+      ]),
+
+      transition('* => void',[
+        animate(50, style({
+          
+        }))
       ])
     ])
   ]
