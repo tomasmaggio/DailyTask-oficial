@@ -38,6 +38,13 @@ import { NotasService } from 'src/app/shared/notas.service';
 
       transition('* => void',[
         animate(50, style({
+          transform: 'scale(1.05)'
+        })),
+        animate(50, style({
+          transform: 'scale(1)',
+          opacity: 0.75
+        })),
+        animate('120ms ease-out', style({
           
         }))
       ])
