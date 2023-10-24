@@ -1,4 +1,4 @@
-import { style, transition, trigger } from '@angular/animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
@@ -19,8 +19,21 @@ import { NotasService } from 'src/app/shared/notas.service';
           'margin-bottom': 0,
 
           //se va a expandir por fuera del padding
-          padding: 0
-        })
+          paddingTop: 0,
+          paddingBottom: 0,
+          paddingRight: 0,
+          paddingLeft: 0,
+        }),
+        //animacion del spacing (height y margin)
+        animate('50ms', style({
+          height: '*',
+          'margin-bottom': '*',
+          paddingTop: '*',
+          paddingBottom: '*',
+          paddingRight: '*',
+          paddingLeft: '*',
+        })),
+        animate(68)
       ])
     ])
   ]
