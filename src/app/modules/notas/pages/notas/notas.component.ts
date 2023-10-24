@@ -5,7 +5,10 @@ import { NotasService } from 'src/app/shared/notas.service';
 @Component({
   selector: 'app-notas',
   templateUrl: './notas.component.html',
-  styleUrls: ['./notas.component.css']
+  styleUrls: ['./notas.component.css'],
+  animations:[
+    
+  ]
 })
 export class NotasComponent {
   visible: boolean = false;
@@ -13,18 +16,10 @@ export class NotasComponent {
   selectedNotaId: number | null = null;
   i: number;
   modoEdicion: boolean = false; // Propiedad para controlar el modo de edición
-
-
-  
-
-  
   closeDialog() {
     this.showModal = false;
 
   }
-
-
-
   //notas
   notas: Nota[] = new Array<Nota>();
 

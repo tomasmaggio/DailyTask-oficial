@@ -2,15 +2,16 @@
       <div class="col-md-9 columna1 d-flex align-items-center">        
         <div class="rectangulo">
             
-            <div class=" row rectangulo-titulo">
-                <div class="col"><p style="font-size: 30px;">Notas</p></div>
-                <div class="col" style="text-align: end;"><button (click)="openModal()" class="btn-agregar"><i class='bx bx-plus'></i></button></div>
+          <div class="rectangulo-titulo d-flex align-items-center">
+            <div class="col"><p style="font-size: 30px;">Notas</p></div>
+            <div class="col text-end">
+                <button (click)="openModal()" class="btn-agregar"><i class='bx bx-plus'></i></button>
             </div>
+          </div>
             <div class="col text-center">
                 <input class="barra-busqueda-input" type="search">          
             </div>
             <div class="notas-container" style="padding: 10px;">
-              <p>- No se muestra el modal cuando hago click en la nota para editarla<br>- Ajustar el font weight del body</p>
               <app-notaind
                 *ngFor="let nota of notas; let i = index"
                 [link]="'/notas/' + i"
@@ -20,7 +21,7 @@
                 (editar)="openModal()">
               </app-notaind>
             </div>
-
+            <p>- No se muestra el modal cuando hago click en la nota para editarla<br>- Ajustar el font weight del body</p>
         </div>
       </div>
       <div class="col-md-3 columna2 d-flex justify-content-start align-items-start">

@@ -17,6 +17,7 @@
   width: 100%;
   height: 650px;
   padding: 20px;
+  
 }
 .rectangulo-titulo {
   margin-bottom: 30px;
@@ -28,6 +29,16 @@
 }
 
 /* ------------------------------ boton e input ----------------------------- */
+/* Aplicar estilos al botón de cancelar en el campo de búsqueda */
+input[type="search"]::-webkit-search-cancel-button {
+  width: 20px; /* Ancho del botón */
+  height: 20px; /* Altura del botón */
+  background-color: transparent; /* Fondo transparente */
+  color: #ff2323; /* Color del icono "X" */
+  font-size: 16px; /* Tamaño de fuente del icono "X" */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar el cursor al puntero cuando se coloca sobre el botón */
+}
 
 .barra-busqueda-input {
   width: 88%;
@@ -41,16 +52,18 @@
 }
 
 .btn-agregar{
-  background: red;
+  background: transparent;
   border: none;
   height: 40px;
-  width: 40px;
+  width: 45px;
+  
 }
 
 .bx-plus{
   font-size: 34px; 
   color: #3A4C94;
-  
+  display: flex;
+  align-items: center;
 }
 
 /* -------------------- scroll del container de las notas ------------------- */
@@ -59,7 +72,6 @@
   scroll-behavior: smooth;
   overflow-y: auto; 
   border-radius: 20px;
-
 }
 
 .notas-container::-webkit-scrollbar {
