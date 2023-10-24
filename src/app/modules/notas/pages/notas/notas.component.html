@@ -4,7 +4,7 @@
             
             <div class=" row rectangulo-titulo">
                 <div class="col"><p style="font-size: 30px;">Notas</p></div>
-                <div class="col" style="text-align: end;"><button (click)="openModal(i)" class="btn btn-primary boton">+</button></div>
+                <div class="col" style="text-align: end;"><button (click)="openModal()" class="btn-agregar"><i class='bx bx-plus'></i></button></div>
             </div>
             <div class="col text-center">
                 <input class="barra-busqueda-input" type="search">          
@@ -17,7 +17,7 @@
                 (eliminar)="eliminarNota(i)"
                 [titulo]="nota.titulo" 
                 [contenido]="nota.body"
-                (editar)="openModal(i)">
+                (editar)="openModal()">
               </app-notaind>
             </div>
 

@@ -46,11 +46,6 @@ export class NotasComponent {
     this.showModal = true;
   }
 
-  openEditarModal(id: number) {
-    this.nota = this.notasService.get(id);
-    this.modoEdicion = true;
-    this.showModal = true;
-  }
 
   
 }
