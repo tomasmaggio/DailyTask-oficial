@@ -1,20 +1,15 @@
-
-
+/* --------------------------------- formato -------------------------------- */
 .container {
   padding-left: 5px;
   overflow: hidden;
   height: 100vh;
 }
-
-
 .columna1 {
   padding: 50px;
 }
-
 .columna2 {
   padding-top: 50px;
 }
-
 .rectangulo {
   border: 4px solid #000;
   border-radius: 80px;
@@ -23,7 +18,6 @@
   height: 650px;
   padding: 20px;
 }
-
 .rectangulo-titulo {
   margin-bottom: 30px;
   color: #3A4C94;
@@ -32,6 +26,8 @@
   height: 14px;
   margin-left: 40px;
 }
+
+/* ------------------------------ boton e input ----------------------------- */
 
 .barra-busqueda-input {
   width: 88%;
@@ -44,6 +40,9 @@
   margin-top: 5px;
 }
 
+.btn-agregar{
+    
+}
 
 /* -------------------- scroll del container de las notas ------------------- */
 .notas-container {
