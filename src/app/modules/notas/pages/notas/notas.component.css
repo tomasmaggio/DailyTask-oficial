@@ -41,7 +41,10 @@
 }
 
 .btn-agregar{
-    
+  background: red;
+  border: none;
+  height: 40px;
+  width: 40px;
 }
 
 /* -------------------- scroll del container de las notas ------------------- */
