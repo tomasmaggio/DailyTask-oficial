@@ -1,3 +1,4 @@
+import { style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
@@ -7,7 +8,17 @@ import { NotasService } from 'src/app/shared/notas.service';
   templateUrl: './notas.component.html',
   styleUrls: ['./notas.component.css'],
   animations:[
-    
+    trigger('itemAnim',[
+      //animacion de entrada
+      transition('void => *', [
+        //estado inicial
+        style({
+          height: 0,
+          opacity: 0,
+          transform: 'scale(0.85)'
+        })
+      ])
+    ])
   ]
 })
 export class NotasComponent {
