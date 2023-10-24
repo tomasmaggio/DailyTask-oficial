@@ -15,7 +15,11 @@ import { NotasService } from 'src/app/shared/notas.service';
         style({
           height: 0,
           opacity: 0,
-          transform: 'scale(0.85)'
+          transform: 'scale(0.85)',
+          'margin-bottom': 0,
+
+          //se va a expandir por fuera del padding
+          padding: 0
         })
       ])
     ])
