@@ -130,8 +130,8 @@ export class NotasComponent {
     return Array.from(unicoResultado);
   }
 
-  notasRelevantes(){
-
+  notasRelevantes(query: any){
+    query = query.toLowercase().trim();
   }
 
 
