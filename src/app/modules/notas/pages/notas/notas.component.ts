@@ -106,9 +106,21 @@ export class NotasComponent {
    this.notasService.delete(id); 
   }
 
+  //filtro para la barra de busqueda
   filtro(query:string){
-    query
+    query = query.toLowerCase().trim();
+    
+    //buscar por palabras individuales
+    let terms: string[] = query.split(''); //separar en espacios
   }
+
+  //remover terminos de busqueda duplicados
+  removerDuplicados(arr: Array<any>) : Array<any> {
+    let unicoResultado: Set<any> = new Set<any>();
+  }
+
+
+
 
   openModal(id?: number) {
     if (id !== undefined) {
