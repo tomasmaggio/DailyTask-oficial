@@ -117,6 +117,11 @@ export class NotasComponent {
   //remover terminos de busqueda duplicados
   removerDuplicados(arr: Array<any>) : Array<any> {
     let unicoResultado: Set<any> = new Set<any>();
+
+    //recorrer el array y agarrar los items
+    arr.forEach(e => unicoResultado.add(e));
+
+    return Array.from(unicoResultado);
   }
 
 
