@@ -11,7 +11,7 @@
             <div class="col text-center">
                 <input class="barra-busqueda-input" type="search">          
             </div>
-            <div class="notas-container" style="padding: 10px;">
+            <div class="notas-container" [@listAnim] style="padding: 10px;">
               <ng-container *ngIf="notas.length; else noNotasMessage">
                 <app-notaind
                   *ngFor="let nota of notas; let i = index"
