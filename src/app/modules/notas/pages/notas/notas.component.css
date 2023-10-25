@@ -126,3 +126,14 @@ input[type="search"]::-webkit-search-cancel-button {
 
 }
 
+
+
+/* --------------------------------- mensaje -------------------------------- */
+.mensaje-p {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-top: 100px;
+  background-color: #55555513;
+  
+}

@@ -12,17 +12,21 @@
                 <input class="barra-busqueda-input" type="search">          
             </div>
             <div class="notas-container" style="padding: 10px;">
-              <app-notaind
-                *ngFor="let nota of notas; let i = index"
-                [link]="'/notas/' + i"
-                (eliminar)="eliminarNota(i)"
-                [@itemAnim]
-                [titulo]="nota.titulo" 
-                [contenido]="nota.body"
-                (editar)="openModal(i)">
-              </app-notaind>
+              <ng-container *ngIf="notas.length; else noNotasMessage">
+                <app-notaind
+                  *ngFor="let nota of notas; let i = index"
+                  [link]="'/notas/' + i"
+                  (eliminar)="eliminarNota(i)"
+                  [@itemAnim]
+                  [titulo]="nota.titulo" 
+                  [contenido]="nota.body"
+                  (editar)="openModal(i)">
+                </app-notaind>
+              </ng-container>
+              <ng-template #noNotasMessage>
+                <p class="mensaje-p">Aún no hay notas</p>
+              </ng-template>
             </div>
-            <p>- No se muestra el modal cuando hago click en la nota para editarla<br>- Ajustar el font weight del body</p>
         </div>
       </div>
       <div class="col-md-3 columna2 d-flex justify-content-start align-items-start">
