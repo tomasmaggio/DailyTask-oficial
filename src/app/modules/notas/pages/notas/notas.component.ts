@@ -105,6 +105,7 @@ export class NotasComponent {
 
   eliminarNota(id: number){
    this.notasService.delete(id); 
+   this.noHayNotas = this.notas.length === 0;
   }
 
   openModal(id?: number) {
