@@ -130,7 +130,7 @@ export class NotasComponent {
     return Array.from(unicoResultado);
   }
 
-  notasRelevantes(query: string){
+  notasRelevantes(query: string) : Array<Nota>{
     query = query.toLowerCase().trim();
     let notasRelevantes = this.notas.filter(nota => {
       if (nota.body.toLowerCase().includes(query) || nota.titulo.toLowerCase().includes(query)){
@@ -138,6 +138,8 @@ export class NotasComponent {
       } 
       return false;
     })
+
+    return notasRelevantes;
   }
 
 
