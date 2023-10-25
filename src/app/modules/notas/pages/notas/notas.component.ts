@@ -70,7 +70,9 @@ import { NotasService } from 'src/app/shared/notas.service';
           stagger(100, [
             animate('0.2s ease')
           ])
-        ])
+        ], {
+          optional: true
+        })
       ])
     ])
   ]
@@ -78,11 +80,11 @@ import { NotasService } from 'src/app/shared/notas.service';
 export class NotasComponent {
   visible: boolean = false;
   showModal = false;
-  selectedNotaId: number | null = null;
   i: number;
-  modoEdicion: boolean = false; // Propiedad para controlar el modo de edición
-  notaId: number | null = null; // ID de la nota que estás editando
-
+  noHayNotas = false;
+  selectedNotaId: number | null = null;
+  modoEdicion: boolean = false; 
+  notaId: number | null = null; 
 
   closeDialog() {
     this.showModal = false;
