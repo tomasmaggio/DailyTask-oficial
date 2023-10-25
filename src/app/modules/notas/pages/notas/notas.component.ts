@@ -1,4 +1,4 @@
-import { animate, query, style, transition, trigger } from '@angular/animations';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
@@ -62,7 +62,15 @@ import { NotasService } from 'src/app/shared/notas.service';
 
     trigger('listAnim', [
       transition('* => *', [
-        query('enter')
+        query(':enter', [
+          style({
+            opacity: 0,
+            height: 0
+          }),
+          stagger(100, [
+            animate('0.2s ease')
+          ])
+        ])
       ])
     ])
   ]
