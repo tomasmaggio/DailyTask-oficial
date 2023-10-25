@@ -109,12 +109,16 @@ export class NotasComponent {
   //filtro para la barra de busqueda
   filtro(query:string){
     query = query.toLowerCase().trim();
+    let todosResultados: Nota[] = new Array<Nota>();
     
     //buscar por palabras individuales
     let terms: string[] = query.split(''); //separar en espacios
 
     //remover terminos de busqueda duplicados
     terms = this.removerDuplicados(terms);
+
+    //compilar todos los resultados revelantes
+
   }
 
   removerDuplicados(arr: Array<any>) : Array<any> {
