@@ -130,8 +130,14 @@ export class NotasComponent {
     return Array.from(unicoResultado);
   }
 
-  notasRelevantes(query: any){
-    query = query.toLowercase().trim();
+  notasRelevantes(query: string){
+    query = query.toLowerCase().trim();
+    let notasRelevantes = this.notas.filter(nota => {
+      if (nota.body.toLowerCase().includes(query) || nota.titulo.toLowerCase().includes(query)){
+        return true;
+      } 
+      return false;
+    })
   }
 
 
