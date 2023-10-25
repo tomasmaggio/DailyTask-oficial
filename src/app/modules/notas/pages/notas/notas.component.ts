@@ -112,9 +112,11 @@ export class NotasComponent {
     
     //buscar por palabras individuales
     let terms: string[] = query.split(''); //separar en espacios
+
+    //remover terminos de busqueda duplicados
+    terms = this.removerDuplicados(terms);
   }
 
-  //remover terminos de busqueda duplicados
   removerDuplicados(arr: Array<any>) : Array<any> {
     let unicoResultado: Set<any> = new Set<any>();
 
