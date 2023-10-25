@@ -44,7 +44,7 @@ import { NotasService } from 'src/app/shared/notas.service';
           transform: 'scale(1)',
           opacity: 0.75
         })),
-        animate('120ms ease-out', style({
+        animate('100ms ease-out', style({
           transform: 'scale(0.68)',
           opacity: 0
         })),
@@ -67,6 +67,9 @@ export class NotasComponent {
   selectedNotaId: number | null = null;
   i: number;
   modoEdicion: boolean = false; // Propiedad para controlar el modo de edición
+  notaId: number | null = null; // ID de la nota que estás editando
+
+
   closeDialog() {
     this.showModal = false;
 
@@ -88,8 +91,16 @@ export class NotasComponent {
    this.notasService.delete(id); 
   }
 
-  openModal() { 
-    this.showModal = true;
+  openModal(id?: number) {
+    if (id !== undefined) {
+      // Si se proporciona un ID, estamos en modo de edición
+      this.selectedNotaId = id;
+      this.showModal = true;
+    } else {
+      // Si no se proporciona un ID, estamos en modo de creación
+      this.selectedNotaId = null;
+      this.showModal = true;
+    }
   }
 
 
