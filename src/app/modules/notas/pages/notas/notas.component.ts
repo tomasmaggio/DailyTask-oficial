@@ -103,8 +103,9 @@ export class NotasComponent {
     this.notasFiltradas = this.notasService.getAll();
   }
 
-  eliminarNota(id: number){
-   this.notasService.delete(id); 
+  eliminarNota(nota: Nota){
+    let notaId = this.notasService.getId(nota);
+   this.notasService.delete(notaId);  
   }
 
   //filtro para la barra de busqueda
