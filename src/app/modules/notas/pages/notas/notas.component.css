@@ -49,9 +49,11 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 2px;
   padding-inline: 16px;
   margin-top: 5px;
+  
 }
 .barra-busqueda-input:hover{
-  cursor: pointer;
+  cursor: text;
+  transform: scale(1.03);
 }
 
 
@@ -61,11 +63,11 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 40px;
   width: 45px;
 }
-.btn-agregar:hover {
+.btn-agregar:hover{
   transform: scale(1.2); /* Aumenta el tamaño 1.2 veces al pasar el cursor sobre el botón */
 }
 
-.btn-agregar, .rectangulo-titulo p {
+.btn-agregar, .rectangulo-titulo p, .barra-busqueda-input {
   transition: transform 0.2s; /* Agrega una transición suave para el cambio de tamaño */
 }
 
