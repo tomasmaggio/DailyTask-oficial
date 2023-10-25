@@ -106,8 +106,8 @@ export class NotasComponent {
    this.notasService.delete(id); 
   }
 
-  filtro(){
-    
+  filtro(query:string){
+    query
   }
 
   openModal(id?: number) {
