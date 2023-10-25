@@ -1,4 +1,4 @@
-import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { animate, query, stagger, style, transition, trigger, state } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Nota } from 'src/app/shared/nota.model';
 import { NotasService } from 'src/app/shared/notas.service';
@@ -81,7 +81,6 @@ export class NotasComponent {
   visible: boolean = false;
   showModal = false;
   i: number;
-  noHayNotas = false;
   selectedNotaId: number | null = null;
   modoEdicion: boolean = false; 
   notaId: number | null = null; 
@@ -93,7 +92,7 @@ export class NotasComponent {
   //notas
   notas: Nota[] = new Array<Nota>();
 
-
+  
   constructor(private notasService: NotasService) { }
 
   ngOnInit() {
@@ -105,7 +104,6 @@ export class NotasComponent {
 
   eliminarNota(id: number){
    this.notasService.delete(id); 
-   this.noHayNotas = this.notas.length === 0; //En el método para eliminar notas, verifico si no quedan notas y actualiza la variable noHayNotas
   }
 
   openModal(id?: number) {
@@ -119,7 +117,6 @@ export class NotasComponent {
       this.showModal = true;
     }
   }
-
 
   
 }
