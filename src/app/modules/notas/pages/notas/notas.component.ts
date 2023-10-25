@@ -130,6 +130,10 @@ export class NotasComponent {
     return Array.from(unicoResultado);
   }
 
+  notasRelevantes(){
+
+  }
+
 
 
 
