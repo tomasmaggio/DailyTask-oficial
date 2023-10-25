@@ -106,6 +106,10 @@ export class NotasComponent {
    this.notasService.delete(id); 
   }
 
+  filtro(){
+    
+  }
+
   openModal(id?: number) {
     if (id !== undefined) {
       // Si se proporciona un ID, estamos en modo de edición
