@@ -155,6 +155,10 @@ export class NotasComponent {
     return notasRelevantes;
   }
 
+  mostrarPorRelevancia(){
+    
+  }
+
 
 
 
