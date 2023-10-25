@@ -129,6 +129,7 @@ export class NotasComponent {
     let unicoResultado = this.removerDuplicados(todosResultados)
     this.notasFiltradas = unicoResultado;
 
+    this.mostrarPorRelevancia(todosResultados);
   }
 
   removerDuplicados(arr: Array<any>) : Array<any> {
@@ -155,8 +156,29 @@ export class NotasComponent {
     return notasRelevantes;
   }
 
-  mostrarPorRelevancia(){
-    
+  mostrarPorRelevancia(buscarResultados: Nota[]) {
+    const notaContObj: { [notaId: number]: number } = {};
+  
+    for (const nota of buscarResultados) {
+      const notaId = this.notasService.getId(nota);
+  
+      if (notaContObj[notaId]) {
+        notaContObj[notaId] += 1;
+      } else {
+        notaContObj[notaId] = 1;
+      }
+    }
+  
+    // Ordenar las notas por relevancia
+    this.notasFiltradas = this.notasFiltradas.sort((a: Nota, b: Nota) => {
+      const aId = this.notasService.getId(a);
+      const bId = this.notasService.getId(b);
+  
+      const aCount = notaContObj[aId] || 0; // Añadir una verificación para evitar valores nulos
+      const bCount = notaContObj[bId] || 0; // Añadir una verificación para evitar valores nulos
+  
+      return bCount - aCount;
+    });
   }
 
 
