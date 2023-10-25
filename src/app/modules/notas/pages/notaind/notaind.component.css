@@ -5,19 +5,17 @@
   padding: 20px;
   margin: 10px;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .nota-ind:hover {
-  box-shadow: 0px 0px 0px 4px #1967D2;
-  transition: 0.2s ease;
+  transform: scale(1.02);
 }
-
 
 .nota-ind-titulo {
   color: #fff;
   text-align: start;
 }
-
 
 .nota-ind-contenido {
   position: relative;
@@ -25,7 +23,7 @@
   overflow-y: auto;
   color: #fff;
   text-align: start;
-  word-wrap: break-word; /* Rompe palabras largas */
+  word-wrap: break-word;
 }
 
 .desvanecer-contenido {
@@ -37,68 +35,49 @@
   pointer-events: none;
 }
 
-.edit-btn-style{
-  background: transparent;
-  border: none;
-  height: 40px;
-  width: 40px;
-  border-radius: 20%;
-  font-size: 20px;
-  color: #fff;
-}
-.edit-btn-style:hover{
-  background-color: hsla(0, 0%, 100%, 0.094);
-}
-
-.edit-btn{
+.x-btn, .edit-btn {
   display: none;
   position: absolute;
   top: 12px;
   right: 50px;
-  
 }
-.nota-ind:hover .edit-btn{
+
+.x-btn {
+  top: 10px;
+  right: 15px;
+}
+
+.nota-ind:hover .x-btn, .nota-ind:hover .edit-btn {
   display: block;
   cursor: pointer;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease 0.5s, transform 0.3s ease 0.5s;
 }
 
-
-
-.x-btn-style {
+.x-btn-style, .edit-btn-style {
   background: transparent;
   border: none;
   height: 40px;
   width: 40px;
   border-radius: 20%;
-  font-size: 30px;
   color: #fff;
 }
 
-.x-btn-style:hover {
+.edit-btn-style {
+  font-size: 20px;
+}
+
+.x-btn-style {
+  font-size: 30px;
+}
+
+.x-btn-style:hover, .edit-btn-style:hover {
   background-color: hsla(0, 0%, 100%, 0.094);
 }
 
-.x-btn {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  /* transition: opacity 0.2s ease-out;
-  transition-delay: 0.2s; 
-  opacity: 0; */
-}
-
-
-.nota-ind:hover .x-btn {
-  display: block;
-  cursor: pointer;
-
-}
-
-
 .contenido-expandido {
-  max-height: none; /* Esto permite que el contenido se expanda completamente */
-  overflow: visible; /* Muestra el contenido completo */
-  white-space: pre-wrap; /* Muestra los saltos de línea */
-
+  max-height: none;
+  overflow: visible;
+  white-space: pre-wrap;
 }
