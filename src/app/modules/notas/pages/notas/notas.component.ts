@@ -7,8 +7,8 @@ import { NotasService } from 'src/app/shared/notas.service';
   selector: 'app-notas',
   templateUrl: './notas.component.html',
   styleUrls: ['./notas.component.css'],
-  animations:[
-    trigger('itemAnim',[
+  animations: [
+    trigger('itemAnim', [
       //animacion de entrada
       transition('void => *', [
         //estado inicial
@@ -36,7 +36,7 @@ import { NotasService } from 'src/app/shared/notas.service';
         animate(68)
       ]),
 
-      transition('* => void',[
+      transition('* => void', [
         animate(50, style({
           transform: 'scale(1.05)'
         })),
@@ -55,7 +55,7 @@ import { NotasService } from 'src/app/shared/notas.service';
           paddingBottom: 0,
           paddingRight: 0,
           paddingLeft: 0,
-          'margin-bottom':0,
+          'margin-bottom': 0,
         }))
       ])
     ]),
@@ -82,8 +82,8 @@ export class NotasComponent {
   showModal = false;
   i: number;
   selectedNotaId: number | null = null;
-  modoEdicion: boolean = false; 
-  notaId: number | null = null; 
+  modoEdicion: boolean = false;
+  notaId: number | null = null;
 
   closeDialog() {
     this.showModal = false;
@@ -93,7 +93,7 @@ export class NotasComponent {
   notas: Nota[] = new Array<Nota>();
   notasFiltradas: Nota[] = new Array<Nota>();
 
-  
+
   constructor(private notasService: NotasService) { }
 
   ngOnInit() {
@@ -103,16 +103,16 @@ export class NotasComponent {
     this.notasFiltradas = this.notasService.getAll();
   }
 
-  eliminarNota(nota: Nota){
+  eliminarNota(nota: Nota) {
     let notaId = this.notasService.getId(nota);
-   this.notasService.delete(notaId);  
+    this.notasService.delete(notaId);
   }
 
   //filtro para la barra de busqueda
-  filtro(query:string){
+  filtro(query: string) {
     query = query.toLowerCase().trim();
     let todosResultados: Nota[] = new Array<Nota>();
-    
+
     //buscar por palabras individuales
     let terms: string[] = query.split(''); //separar en espacios
 
@@ -126,14 +126,14 @@ export class NotasComponent {
       todosResultados = [...todosResultados, ...resultados]
     });
 
-    
+
     let unicoResultado = this.removerDuplicados(todosResultados)
     this.notasFiltradas = unicoResultado;
 
     this.mostrarPorRelevancia(todosResultados);
   }
 
-  removerDuplicados(arr: Array<any>) : Array<any> {
+  removerDuplicados(arr: Array<any>): Array<any> {
     let unicoResultado: Set<any> = new Set<any>();
 
     //recorrer el array y agarrar los items
@@ -142,15 +142,15 @@ export class NotasComponent {
     return Array.from(unicoResultado);
   }
 
-  notasRelevantes(query: string) : Array<Nota>{
+  notasRelevantes(query: string): Array<Nota> {
     query = query.toLowerCase().trim();
     let notasRelevantes = this.notas.filter(nota => {
-      if (nota.titulo && nota.titulo.toLowerCase().includes(query)){
+      if (nota.titulo && nota.titulo.toLowerCase().includes(query)) {
         return true;
       }
-      if(nota.body && nota.titulo.toLowerCase().includes(query)){
+      if (nota.body && nota.titulo.toLowerCase().includes(query)) {
         return true;
-      } 
+      }
       return false;
     })
 
@@ -159,25 +159,25 @@ export class NotasComponent {
 
   mostrarPorRelevancia(buscarResultados: Nota[]) {
     const notaContObj: { [notaId: number]: number } = {};
-  
+
     for (const nota of buscarResultados) {
       const notaId = this.notasService.getId(nota);
-  
+
       if (notaContObj[notaId]) {
         notaContObj[notaId] += 1;
       } else {
         notaContObj[notaId] = 1;
       }
     }
-  
+
     // Ordenar las notas por relevancia
     this.notasFiltradas = this.notasFiltradas.sort((a: Nota, b: Nota) => {
       const aId = this.notasService.getId(a);
       const bId = this.notasService.getId(b);
-  
+
       const aCount = notaContObj[aId] || 0; // Añadir una verificación para evitar valores nulos
       const bCount = notaContObj[bId] || 0; // Añadir una verificación para evitar valores nulos
-  
+
       return bCount - aCount;
     });
   }
@@ -197,5 +197,5 @@ export class NotasComponent {
     }
   }
 
-  
+
 }

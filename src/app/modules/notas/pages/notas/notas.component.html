@@ -15,7 +15,7 @@
               <ng-container *ngIf="notas.length; else noNotasMessage">
                 <app-notaind
                   *ngFor="let nota of notasFiltradas;"
-                  [link]="'/notas/' + i"
+                  [link]="'/notas/' + nota"
                   (eliminar)="eliminarNota(nota)"
                   [@itemAnim]
                   [titulo]="nota.titulo" 
