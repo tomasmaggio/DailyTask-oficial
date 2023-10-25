@@ -9,12 +9,12 @@
             </div>
           </div>
             <div class="col text-center">
-                <input class="barra-busqueda-input" type="search">          
+                <input class="barra-busqueda-input" type="text" (keyup)="filtro($any($event.target).value)" placeholder="Buscar...">          
             </div>
             <div class="notas-container" [@listAnim] style="padding: 10px;">
               <ng-container *ngIf="notas.length; else noNotasMessage">
                 <app-notaind
-                  *ngFor="let nota of notas; let i = index"
+                  *ngFor="let nota of notasFiltradas; let i = index"
                   [link]="'/notas/' + i"
                   (eliminar)="eliminarNota(i)"
                   [@itemAnim]

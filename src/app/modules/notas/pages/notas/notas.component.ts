@@ -91,6 +91,7 @@ export class NotasComponent {
   }
   //notas
   notas: Nota[] = new Array<Nota>();
+  notasFiltradas: Nota[] = new Array<Nota>();
 
   
   constructor(private notasService: NotasService) { }
@@ -99,7 +100,7 @@ export class NotasComponent {
     //recuperar todas las notas del servicio
     this.notas = this.notasService.getAll();
     this.i = 0; // Asigna el valor inicial al índice
-
+    this.notasFiltradas = this.notas;
   }
 
   eliminarNota(id: number){
@@ -118,6 +119,15 @@ export class NotasComponent {
     terms = this.removerDuplicados(terms);
 
     //compilar todos los resultados revelantes
+    terms.forEach(term => {
+      let resultados: Nota[] = this.notasRelevantes(term)
+
+      todosResultados = [...todosResultados, ...resultados]
+    });
+
+    
+    let unicoResultado = this.removerDuplicados(todosResultados)
+    this.notasFiltradas = unicoResultado;
 
   }
 
@@ -133,7 +143,10 @@ export class NotasComponent {
   notasRelevantes(query: string) : Array<Nota>{
     query = query.toLowerCase().trim();
     let notasRelevantes = this.notas.filter(nota => {
-      if (nota.body.toLowerCase().includes(query) || nota.titulo.toLowerCase().includes(query)){
+      if (nota.titulo && nota.titulo.toLowerCase().includes(query)){
+        return true;
+      }
+      if(nota.body && nota.titulo.toLowerCase().includes(query)){
         return true;
       } 
       return false;
