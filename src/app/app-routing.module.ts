@@ -86,11 +86,10 @@ const routes: Routes = [
       ),
   },
 
-   {
-     path: '',
-     redirectTo: 'bienvenida',
-     pathMatch: 'full'
-   },
+  {
+    path: '**',
+    redirectTo: 'bienvenida',
+  }
 ];
 
 @NgModule({
