@@ -1,111 +1,134 @@
 /* ---------------------------------- Login --------------------------------- */
 /* ---------------------------------- Login --------------------------------- */
-.full-height{ /*El row ocupará el 100% de la pagina*/
-    height: 100vh; /* 100% del alto de la ventana (viewport height) */
+.full-height {
+  /*El row ocupará el 100% de la pagina*/
+  height: 100vh;
+  /* 100% del alto de la ventana (viewport height) */
 }
 
 
-.columna1, .columna2 {
-    display: flex;            /* Convierto los elementos en elementos flexibles */
-    flex-direction: column;   /* Establezco la dirección de los elementos internos en columna */
-    justify-content:center;   /* Centramos verticalmente el contenido a lo largo del eje principal */
-    align-items: center;      /* Centramos horizontalmente el contenido a lo largo del eje secundario */
-    height: 100%;             /* Hace que el elemento ocupe todo el alto del div padre */
+.columna1,
+.columna2 {
+  display: flex;
+  /* Convierto los elementos en elementos flexibles */
+  flex-direction: column;
+  /* Establezco la dirección de los elementos internos en columna */
+  justify-content: center;
+  /* Centramos verticalmente el contenido a lo largo del eje principal */
+  align-items: center;
+  /* Centramos horizontalmente el contenido a lo largo del eje secundario */
+  height: 100%;
+  /* Hace que el elemento ocupe todo el alto del div padre */
 }
 
 
 
 /* -------------------------------- columna 1 ------------------------------- */
-.contenido-logo{
-    height: 500px;
+.contenido-logo {
+  height: 500px;
 }
 
-.imagen-logo{
-    width: 25vh;
-    margin: 50px;
+.imagen-logo {
+  width: 25vh;
+  margin: 50px;
 }
 
-.columna1 h1, .columna1 h6 {
-    color: #3A4C94;
+.columna1 h1,
+.columna1 h6 {
+  color: #3A4C94;
 }
 
 
 /* -------------------------------- columna 2 ------------------------------- */
 .columna2 {
-    display: flex; /* Establece el contenedor como elemento flexible */
-    flex-direction: column; /* Apila los elementos internos en una columna */
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center; /* Centra horizontalmente el contenido */
-    height: 100%; /* Ocupa todo el alto del contenedor padre */
-    /* Agrega otros estilos necesarios para la columna 2 */
+  display: flex;
+  /* Establece el contenedor como elemento flexible */
+  flex-direction: column;
+  /* Apila los elementos internos en una columna */
+  justify-content: center;
+  /* Centra verticalmente el contenido */
+  align-items: center;
+  /* Centra horizontalmente el contenido */
+  height: 100%;
+  /* Ocupa todo el alto del contenedor padre */
+  /* Agrega otros estilos necesarios para la columna 2 */
 }
 
 
 /* Estilo para el rectángulo sin relleno y con bordes */
 .rectangulo {
-    border: 4px solid #000; /* Establece un borde de 2px sólido de color negro */
-    border-radius: 20px;
-    border-color: #3A4C94;
-    width: auto; /* Ancho del rectángulo */
-    height: auto; /* Alto del rectángulo */
-    padding: 20px; /* Espacio entre el borde y el contenido interno */
-    /* Agrega otros estilos necesarios para el rectángulo */
+  border: 4px solid #000;
+  /* Establece un borde de 2px sólido de color negro */
+  border-radius: 20px;
+  border-color: #3A4C94;
+  width: auto;
+  /* Ancho del rectángulo */
+  height: auto;
+  /* Alto del rectángulo */
+  padding: 20px;
+  /* Espacio entre el borde y el contenido interno */
+  /* Agrega otros estilos necesarios para el rectángulo */
 }
 
-.comencemos-textos h2{
-    color: #3A4C94;
-}
-.comencemos-textos h6{
-    color: #999999;
+.comencemos-textos h2 {
+  color: #3A4C94;
 }
 
-.label-check{ 
-    font-size: 17px; 
-}
-.form-check{
-    text-align: start;
+.comencemos-textos h6 {
+  color: #999999;
 }
 
-.form-check-input{
+.label-check {
+  font-size: 17px;
+}
+
+.form-check {
+  text-align: start;
+}
+
+.form-check-input {
   width: 15px;
   height: 15px;
-  
+
 }
 
-.olv-contra{
-    padding-left: 120px;
-    display: inline-block;
-    text-decoration: none;
-    color: #3A4C94;
+.olv-contra {
+  padding-left: 120px;
+  display: inline-block;
+  text-decoration: none;
+  color: #3A4C94;
 }
 
 
-.btn-comencemos{
-    background-color: #3A4C94;
-    color: #ffffff;
-    font-size: 19px;
-    border-radius: 13px;
-    width: 384px;
-    height: 47px;
-    border: none;
+.btn-comencemos {
+  background-color: #3A4C94;
+  color: #ffffff;
+  font-size: 19px;
+  border-radius: 13px;
+  width: 384px;
+  height: 47px;
+  border: none;
 }
 
 
 
 /* Estilos para el enlace */
 .a-google {
-    display: inline-block; /* Muestra el enlace como bloque en línea */
-    text-decoration: none; /* Elimina la decoración de subrayado */
-    padding: 20px;
+  display: inline-block;
+  /* Muestra el enlace como bloque en línea */
+  text-decoration: none;
+  /* Elimina la decoración de subrayado */
+  padding: 20px;
 }
-  
-.a-redirigir-registro{
-    display: inline-block;
-    text-decoration: none;
-    color: #3A4C94;
+
+.a-redirigir-registro {
+  display: inline-block;
+  text-decoration: none;
+  color: #3A4C94;
 }
-.a-terminos{
-    color: #3A4C94;
+
+.a-terminos {
+  color: #3A4C94;
 }
 
 /* --------------------------------- inputs --------------------------------- */
@@ -121,72 +144,107 @@
 
 /* Estilo del campo de entrada de texto */
 input {
-    box-sizing: border-box; /* Caja de borde que incluye el relleno y el borde en el ancho total */
-    width: 100%; /* Ancho completo del contenedor */
-    height: calc(3em + 2px); /* Altura del campo de entrada */
-    margin: 0 0 1em; /* Margen inferior para separar elementos */
-    padding: 6px; /* Relleno interno del campo de entrada */
-    border: 1px solid #bababa; /* Borde del campo de entrada */
-    border-radius: 15px; /* Esquinas redondeadas del borde */
-    background: #fff; /* Fondo blanco */
-    font-size: 16px; /* Tamaño de fuente */
-    resize: none; /* Evitar que el usuario pueda redimensionar el campo de entrada */
-    outline: none; /* Eliminar el borde de enfoque por defecto */
-  }
-  
-  /* Estilo del campo de entrada de texto cuando tiene el foco */
-  input:focus {
-    border-color: #00bafa; /* Cambio de color del borde al obtener el foco */
-  }
-  
-  /* Estilo del marcador de posición cuando el campo de entrada tiene el foco */
-  input:focus + label[placeholder]:before {
-    color: #0091da; /* Cambio de color del marcador de posición cuando el campo está enfocado */
-  }
-  
-  /* Estilo del marcador de posición cuando el campo de entrada tiene el foco o contiene un valor válido */
-  input:focus + label[placeholder]:before,
-  input:valid + label[placeholder]:before {
-    transition-duration: .2s; /* Duración de la transición */
-    transform: translate(0, -1.6em) scale(0.9, 0.9);	/* Desplazamiento y reducción del tamaño del marcador de posición */
-    font-weight: bold; /* Hacer que el texto del marcador de posición sea más negrita */
-  }
-  
-  /* Estilo del campo de entrada de texto cuando contiene un valor válido */
-  input:valid {
-    border-color: #3A4C94; /* Cambio de color del borde cuando el valor es válido */
-  }
-  
-  /* Estilo del marcador de posición cuando el campo de entrada contiene un valor válido */
-  input:valid + label[placeholder]:before {
-    color: #3A4C94; /* Cambio de color del marcador de posición cuando el valor es válido */
-  }
-  
-  /* Estilo del marcador de posición cuando el campo de entrada es inválido y tiene un atributo 'alt' definido */
-  input:invalid + label[placeholder][alt]:before {
-    content: attr(alt); /* Mostrar el contenido del atributo 'alt' como el marcador de posición */
-  }
-  
-  /* Estilo de la etiqueta del marcador de posición */
-  input + label[placeholder] {
-    display: block;	/* Hacer que la etiqueta sea un bloque */
-    pointer-events: none; /* Evitar eventos de puntero en la etiqueta */
-    line-height: 1.25em; /* Altura de línea de la etiqueta */
-    margin-top: calc(-3em - 2px); /* Margen superior para ajustar la posición del marcador de posición */
-    margin-bottom: calc((3em - 1em) + 2px); /* Margen inferior para ajustar la posición del marcador de posición */
-  }
-  
-  /* Estilo del contenido del marcador de posición */
-  input + label[placeholder]:before {
-    content: attr(placeholder); /* Mostrar el atributo 'placeholder' como contenido del marcador de posición */
-    display: inline-block; /* Hacer que el marcador de posición sea en línea con el texto */
-    margin: 0 calc(0.5em + 2px); /* Margen del marcador de posición */
-    padding: 0 2px; /* Relleno interno del marcador de posición */
-    color: #7d7d7d; /* Color del texto del marcador de posición */
-    white-space: nowrap; /* Evitar el salto de línea en el texto del marcador de posición */
-    transition: 0.3s ease-in-out; /* Transición suave para el marcador de posición */
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff); /* Fondo con degradado */
-    background-size: 100% 5px; /* Tamaño del degradado */
-    background-repeat: no-repeat; /* No repetir el fondo */
-    background-position: center; /* Posición del fondo */
-  }
+  box-sizing: border-box;
+  /* Caja de borde que incluye el relleno y el borde en el ancho total */
+  width: 100%;
+  /* Ancho completo del contenedor */
+  height: calc(3em + 2px);
+  /* Altura del campo de entrada */
+  margin: 0 0 1em;
+  /* Margen inferior para separar elementos */
+  padding: 6px;
+  /* Relleno interno del campo de entrada */
+  border: 1px solid #bababa;
+  /* Borde del campo de entrada */
+  border-radius: 15px;
+  /* Esquinas redondeadas del borde */
+  background: #fff;
+  /* Fondo blanco */
+  font-size: 16px;
+  /* Tamaño de fuente */
+  resize: none;
+  /* Evitar que el usuario pueda redimensionar el campo de entrada */
+  outline: none;
+  /* Eliminar el borde de enfoque por defecto */
+}
+
+/* Estilo del campo de entrada de texto cuando tiene el foco */
+input:focus {
+  border-color: #00bafa;
+  /* Cambio de color del borde al obtener el foco */
+}
+
+/* Estilo del marcador de posición cuando el campo de entrada tiene el foco */
+input:focus+label[placeholder]:before {
+  color: #0091da;
+  /* Cambio de color del marcador de posición cuando el campo está enfocado */
+}
+
+/* Estilo del marcador de posición cuando el campo de entrada tiene el foco o contiene un valor válido */
+input:focus+label[placeholder]:before,
+input:valid+label[placeholder]:before {
+  transition-duration: .2s;
+  /* Duración de la transición */
+  transform: translate(0, -1.6em) scale(0.9, 0.9);
+  /* Desplazamiento y reducción del tamaño del marcador de posición */
+  font-weight: bold;
+  /* Hacer que el texto del marcador de posición sea más negrita */
+}
+
+/* Estilo del campo de entrada de texto cuando contiene un valor válido */
+input:valid {
+  border-color: #3A4C94;
+  /* Cambio de color del borde cuando el valor es válido */
+}
+
+/* Estilo del marcador de posición cuando el campo de entrada contiene un valor válido */
+input:valid+label[placeholder]:before {
+  color: #3A4C94;
+  /* Cambio de color del marcador de posición cuando el valor es válido */
+}
+
+/* Estilo del marcador de posición cuando el campo de entrada es inválido y tiene un atributo 'alt' definido */
+input:invalid+label[placeholder][alt]:before {
+  content: attr(alt);
+  /* Mostrar el contenido del atributo 'alt' como el marcador de posición */
+}
+
+/* Estilo de la etiqueta del marcador de posición */
+input+label[placeholder] {
+  display: block;
+  /* Hacer que la etiqueta sea un bloque */
+  pointer-events: none;
+  /* Evitar eventos de puntero en la etiqueta */
+  line-height: 1.25em;
+  /* Altura de línea de la etiqueta */
+  margin-top: calc(-3em - 2px);
+  /* Margen superior para ajustar la posición del marcador de posición */
+  margin-bottom: calc((3em - 1em) + 2px);
+  /* Margen inferior para ajustar la posición del marcador de posición */
+}
+
+/* Estilo del contenido del marcador de posición */
+input+label[placeholder]:before {
+  content: attr(placeholder);
+  /* Mostrar el atributo 'placeholder' como contenido del marcador de posición */
+  display: inline-block;
+  /* Hacer que el marcador de posición sea en línea con el texto */
+  margin: 0 calc(0.5em + 2px);
+  /* Margen del marcador de posición */
+  padding: 0 2px;
+  /* Relleno interno del marcador de posición */
+  color: #7d7d7d;
+  /* Color del texto del marcador de posición */
+  white-space: nowrap;
+  /* Evitar el salto de línea en el texto del marcador de posición */
+  transition: 0.3s ease-in-out;
+  /* Transición suave para el marcador de posición */
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  /* Fondo con degradado */
+  background-size: 100% 5px;
+  /* Tamaño del degradado */
+  background-repeat: no-repeat;
+  /* No repetir el fondo */
+  background-position: center;
+  /* Posición del fondo */
+}
