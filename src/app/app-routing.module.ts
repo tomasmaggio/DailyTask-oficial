@@ -6,6 +6,12 @@ import { NotasComponent } from './modules/notas/pages/notas/notas.component';
 
 const routes: Routes = [
 
+  {
+    path: '',
+    redirectTo: 'bienvenida',
+    pathMatch: 'full'
+  }, 
+
 {
   path:'',
   loadChildren:()=>import('./modules/auth/auth.module').then( m=> m.AuthModule)
@@ -47,11 +53,7 @@ const routes: Routes = [
 },
 
 
-{
-  path: '',
-  redirectTo: 'bienvenida',
-  pathMatch: 'full'
-}, 
+
 
 ];
 
