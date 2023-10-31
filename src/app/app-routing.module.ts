@@ -5,30 +5,31 @@ import { NotasModule } from './modules/notas/notas.module';
 import { NotasComponent } from './modules/notas/pages/notas/notas.component';
 
 const routes: Routes = [
-  //lazyloading
 
 {
   path:'',
   loadChildren:()=>import('./modules/auth/auth.module').then( m=> m.AuthModule)
 },
+
 {
   path:'inicio',
   loadChildren:()=>import('./modules/inicio/inicio.module').then( m=> m.InicioModule)
 },
+
 {
   path:'calendario',
   loadChildren:()=>import('./modules/calendario/calendario.module').then( m=> m.CalendarioModule)
 },
+
 {
   path:'guardados',
   loadChildren:()=>import('./modules/guardados/guardados.module').then( m=> m.GuardadosModule)
 },
+
 {
   path:'notas',
   loadChildren:()=>import('./modules/notas/notas.module').then( m=> m.NotasModule)
 },
-
-
 
 {
   path:'',
@@ -40,56 +41,43 @@ const routes: Routes = [
   loadChildren:()=>import('./modules/bienvenida/bienvenida.module').then( m=> m.BienvenidaModule)
 },
 
+{
+  path: '',
+  loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
+},
+
+{
+  path: 'inicio',
+  loadChildren: () => import('./modules/inicio/inicio.module').then((m) => m.InicioModule),
+},
+
+{
+  path: 'calendario', 
+  loadChildren: () => import('./modules/calendario/calendario.module').then((m) => m.CalendarioModule),
+},
+
+{
+  path: 'guardados',
+  loadChildren: () => import('./modules/guardados/guardados.module').then((m) => m.GuardadosModule),
+},
+
+{
+  path: 'notas',
+  loadChildren: () => import('./modules/notas/notas.module').then((m) => m.NotasModule),
+},
+
+{
+  path: '',
+  loadChildren: () => import('./modules/usuario/usuario.module').then((m) => m.UsuarioModule),
+},
 
 
+{
+  path: '',
+  redirectTo: 'bienvenida',
+  pathMatch: 'full'
+}, 
 
-  {
-    path: '',
-    loadChildren: () =>
-      import('./modules/auth/auth.module').then((m) => m.AuthModule),
-  },
-  {
-    path: 'inicio',
-    loadChildren: () =>
-      import('./modules/inicio/inicio.module').then((m) => m.InicioModule),
-  },
-  {
-    path: 'calendario',
-    loadChildren: () =>
-      import('./modules/calendario/calendario.module').then(
-        (m) => m.CalendarioModule
-      ),
-  },
-  {
-    path: 'guardados',
-    loadChildren: () =>
-      import('./modules/guardados/guardados.module').then(
-        (m) => m.GuardadosModule
-      ),
-  },
-  {
-    path: 'notas',
-    loadChildren: () =>
-      import('./modules/notas/notas.module').then((m) => m.NotasModule),
-  },
-  {
-    path: '',
-    loadChildren: () =>
-      import('./modules/usuario/usuario.module').then((m) => m.UsuarioModule),
-  },
-
-  {
-    path: 'bienvenida',
-    loadChildren: () =>
-      import('./modules/bienvenida/bienvenida.module').then(
-        (m) => m.BienvenidaModule
-      ),
-  },
-
-  {
-    path: '**',
-    redirectTo: 'bienvenida',
-  }
 ];
 
 @NgModule({
