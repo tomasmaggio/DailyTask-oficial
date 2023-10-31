@@ -1,11 +1,4 @@
 /* -------------------------------- row 1 ------------------------------- */
-.icono:hover{
-    cursor:pointer;
-    transition: transform 0.3s ease;
-    transform: scale(1.1);
-    color: #415bb4;
-}
-
 
 .boton1{
     background-color: transparent;
