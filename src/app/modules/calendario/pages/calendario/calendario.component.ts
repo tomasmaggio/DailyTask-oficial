@@ -70,10 +70,10 @@ export class CalendarioComponent {
       $('#ejemploModal').modal('toggle');
 
 
-      $('#guardarbtn').click(function(){
-          var titulo = $('titulo').val();
-          console.log('titulo');
-      })
+      $('#guardarbtn').on('click', function() {
+        var titulo = $('#titulo').val();
+        console.log(titulo);
+    });
 
       
     },

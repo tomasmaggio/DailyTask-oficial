@@ -1,15 +1,18 @@
   <div class="modal fade" id="ejemploModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
+
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #626262;">Nuevo evento</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        
         <div class="modal-body">
           <input type="text" id="titulo" class="form-control" placeholder="titulo"><br>
           <input type="time" id="tiempo" class="form-control" value="12:00"><br> <!-- el value nos ayudara a que el date muestre la fecha segun donde el usuario haya hecho click -->
           <input type="color" class="form-control" value="#3A4C94">
         </div>
+
         <div class="modal-footer">
           <button type="button" class="cancelar-btn" data-bs-dismiss="modal">Cancelar</button>
           <button type="button" id="guardarbtn" class="guardar-btn">Guardar</button>
@@ -17,4 +20,5 @@
       </div>
     </div>
   </div>
+  
 
