@@ -4,9 +4,10 @@
 
 .rectangulo{
   border: 4px solid #3A4C94;
-  height: 90%;
+  height: 83%;
   width: 90%;
   border-radius: 10%;
+  margin-left: 2%;
   /* margin-top: 11%; */
 }
 
@@ -16,7 +17,7 @@
 
 .tareas-pendientes-div{
   margin-top: 8%;
-  margin-left: 9%;
+  margin-left: 11%;
 }
 
 .calendario-div{
