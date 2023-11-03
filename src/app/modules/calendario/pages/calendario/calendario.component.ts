@@ -66,17 +66,21 @@ export class CalendarioComponent {
     unselectAuto: true,
 
     //funcion para abrir el modal
-    select: function(arg){
+    select: function(arg) {
+      // Este es un controlador de eventos que se ejecuta cuando se selecciona algo en FullCalendar (una fecha).
+  
+      // Abre el modal con el id "ejemploModal" utilizando jQuery.
       $('#ejemploModal').modal('toggle');
-
-
+  
+      // Agrega un controlador de eventos para el evento 'click' en el elemento con id "guardarbtn".
       $('#guardarbtn').on('click', function() {
-        var titulo = $('#titulo').val();
-        console.log(titulo);
-    });
-
-      
-    },
+          // Obtiene el valor del campo de entrada con id "titulo" y lo almacena en la variable "titulo".
+          var titulo = $('#titulo').val();
+  
+          // Muestra el valor del campo "titulo" en la consola.
+          console.log(titulo);
+      });
+  },
 
     
 
