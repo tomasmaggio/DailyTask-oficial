@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import * as $ from 'jquery';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 //aqui se importan los plugins del fullcalendar (primero hay que instalarlos https://fullcalendar.io/docs/plugin-index)
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es';
+import { Calendar } from '@fullcalendar/core';
 
 
 
@@ -82,7 +82,7 @@ export class CalendarioComponent {
 
       $('#guardarbtn').click(function(){
           var titulo = $('titulo').val();
-          console.log('titulo');
+          console.log(titulo);
       })
 
       
