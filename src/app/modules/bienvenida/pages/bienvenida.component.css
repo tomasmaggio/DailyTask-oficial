@@ -4,6 +4,12 @@
     background-color: transparent;
     border: none;
     color: #3a4c94;
+    transition: transform 0.3s ease;
+}
+
+.boton1:hover{
+    transform: scale(1.1);
+    color: #415bb4;
 }
 
 .boton2{
@@ -12,7 +18,15 @@
     background-color: #3A4C94;
     color: #ffffff;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
+
+.boton2:hover{
+    transform: scale(1.1);
+    background-color: #415bb4;
+}
+
+
 
 
 
@@ -48,6 +62,11 @@
     display: flex;
     width:410px; /* 450px para mas grande */
     border-radius: 40px 40px 100px 40px;
+    transition: transform 0.3s ease;
+}
+
+.img-chica:hover{
+    transform: scale(1.02);
 }
 
 
@@ -71,7 +90,13 @@ line-height: 2; /* Ajusta el espaciado vertical entre las líneas del texto */
     border-radius: 30px 30px 60px 30px;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
     -moz-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
-    box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);}
+    box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+    transition: transform 0.3s ease;
+}
+
+.card-over-image:hover{
+    transform: scale(1.1);
+}
 
 .card-over-image-2 {
     position: absolute;
@@ -85,6 +110,11 @@ line-height: 2; /* Ajusta el espaciado vertical entre las líneas del texto */
     -webkit-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
 -moz-box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
 box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
+transition: transform 0.3s ease;
+
+}
+.card-over-image-2:hover{
+    transform: scale(1.1);
 }
 
 
@@ -105,6 +135,11 @@ box-shadow: 0px 0px 20px 0px rgba(115,140,207,1);
     font-size: 16px;
     text-align: left;
     -webkit-text-stroke: #ffffff; /* Grosor y color del relleno */
+    transition: transform 0.3s ease;
+}
+
+.boton3:hover{
+    transform: scale(1.1);
 }
 
 /* ultima parte */

@@ -1,3 +1,15 @@
 .container{
     padding-left: 5px;
+
+}
+
+.img-chica{
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+}
+.row-1{
+
 }

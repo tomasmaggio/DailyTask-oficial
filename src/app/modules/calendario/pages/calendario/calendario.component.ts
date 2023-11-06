@@ -4,6 +4,7 @@ import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es';
+import { Calendar } from '@fullcalendar/core';
 
 
 
@@ -19,39 +20,48 @@ export class CalendarioComponent {
   events: any[] = [
     {
       title: 'Corte de pelo de panchito',
-      start: '2023-09-07'
+      start: '2023-11-07',
+      color: '#1967D2'
     },
     {
        title: 'Clases de Alemán',
-       start: '2023-09-08'
+       start: '2023-11-08',
+       color: '#F72A25'
     },
     {
        title: 'Yoga',
-       start: '2023-09-12'
+       start: '2023-11-12',
+       color:'#FBBC04'
     },
     {
       title: 'Yoga',
-      start: '2023-08-29'
+      start: '2023-11-29',
+      color:'#FBBC04'
    },
    {
     title: 'Yoga',
-    start: '2023-09-05'
+    start: '2023-11-05',
+    color:'#FBBC04'
   },
   {
     title: 'Yoga',
-    start: '2023-09-19'
+    start: '2023-11-19',
+    color:'#FBBC04'
   },
   {
     title: 'Yoga',
-    start: '2023-09-26'
+    start: '2023-11-26',
+    color:'#FBBC04'
   },
     {
       title: 'Cumpleaños de juan',
-      start: '2023-09-29'
+      start: '2023-11-29',
+      color:'#1967D2'
    }  
   ];
 
   calendarOptions: CalendarOptions = {
+    
 
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
@@ -72,11 +82,13 @@ export class CalendarioComponent {
 
       $('#guardarbtn').click(function(){
           var titulo = $('titulo').val();
-          console.log('titulo');
+          console.log(titulo);
       })
 
       
     },
+
+    
 
     
 
