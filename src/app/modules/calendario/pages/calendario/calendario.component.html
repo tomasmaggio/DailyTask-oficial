@@ -1,19 +1,39 @@
 <div class="container">
-    <div class="col">
-        <div class="rectangulo-titulo">
-            <h4>Tareas pendientes</h4>
+    <div class="row">
+        <div class="col-6">
+            <div class="tareas-pendientes-div">
+                <p class="tareas-pendientes">Tareas pendientes</p>
+            </div>
+            <div class="rectangulo" style="padding-top: 10px;">
+                <div class="evento-pend">
+                    <div class="info" style="padding: 15px; color: aliceblue;">
+                        <h1 style="font-size: 25px;">Corte de pelo de panchito</h1>
+                        <p>Martes 7 de Noviembre - 10hs</p>
+                    </div>
+                </div>
+                <div class="evento-pend" style="background-color: #F72A25;">
+                    <div class="info" style="padding: 15px; color: aliceblue;">
+                        <h1 style="font-size: 25px;">Clases de alemán</h1>
+                        <p>Miércoles 8 de Noviembre - 16hs</p>
+                    </div>
+                </div>
+                <div class="evento-pend" style="background-color: #FBBC04;">
+                    <div class="info" style="padding: 15px; color: aliceblue;">
+                        <h1 style="font-size: 25px;">Yoga</h1>
+                        <p>Domingo 5 de Noviembre - 9hs</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rectangulo">
-            
-        </div>
-    </div>
-
-    <div class="col">
-        <div class="columna2">
-            <div style="width: 1000px;">
+        <div class="col-6 calendario-div">
+            <div style="width: 700px;">
                 <full-calendar [options]="calendarOptions"></full-calendar>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<app-modal></app-modal>
 <app-navbar></app-navbar>

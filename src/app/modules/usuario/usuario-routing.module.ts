@@ -5,7 +5,7 @@ import { ConfigUsuarioComponent } from './pages/config-usuario/config-usuario.co
 
 const routes: Routes = [
 
-  {path: 'usuario', component:UsuarioComponent},
+  {path: '', component:UsuarioComponent},
   {path: 'config-usuario', component:ConfigUsuarioComponent}
 
 ];
