@@ -14,9 +14,9 @@
 
 /* ---------------------------------- tabla --------------------------------- */
 .tabla-usuarios {
-    overflow: auto;
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
     width: 100%;
-    
+    max-height: 450px;
 }
 
 .tabla-usuarios table {
@@ -62,6 +62,20 @@
     padding: 5px;
 }
 
+/* ------------------- barra de desplazamiento de la tabla ------------------ */
+/* Personalización de la barra de desplazamiento en navegadores WebKit */
+.tabla-usuarios table::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+.tabla-usuarios table::-webkit-scrollbar-thumb {
+    background: #3A4C94; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+.tabla-usuarios table::-webkit-scrollbar-track {
+    background: #E5E5E5; /* Color de fondo de la barra de desplazamiento */
+}
 
 /* --------------------------------- botones head -------------------------------- */
 .agregar-usuario-btn{
