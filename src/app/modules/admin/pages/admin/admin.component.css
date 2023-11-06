@@ -16,6 +16,7 @@
 .tabla-usuarios {
     overflow: auto;
     width: 100%;
+    
 }
 
 .tabla-usuarios table {
@@ -25,7 +26,16 @@
     table-layout: fixed;
     border-collapse: collapse;
     border-spacing: 1px;
-    text-align: left;
+    
+    text-align: center;
+}
+/* Estilos específicos para la columna "Nombre" */
+.tabla-usuarios table td:first-child, .tabla-usuarios table th:first-child {
+    text-align: left; /* Alinear a la izquierda en lugar de centrar */
+}
+/*Estilos parar la columna de editar*/
+.tabla-usuarios table td:last-child, .tabla-usuarios table th:last-child {
+    text-align: end; /* Alinear a la izquierda en lugar de centrar */
 }
 
 .tabla-usuarios caption {
