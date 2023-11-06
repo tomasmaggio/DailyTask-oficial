@@ -36,6 +36,7 @@
 /*Estilos parar la columna de editar*/
 .tabla-usuarios table td:last-child, .tabla-usuarios table th:last-child {
     text-align: end; /* Alinear a la izquierda en lugar de centrar */
+    padding-right: 20px;
 }
 
 .tabla-usuarios caption {
