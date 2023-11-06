@@ -9,3 +9,40 @@
 .subtitulo{
     font-size: 30px;
 }
+
+
+
+/* ---------------------------------- tabla --------------------------------- */
+.tabla-usuarios {
+    overflow: auto;
+    width: 100%;
+}
+
+.tabla-usuarios table {
+    border: 1px solid #DEDEDF;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+.tabla-usuarios caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.tabla-usuarios th {
+    border: 1px solid #DEDEDF;
+    background-color: #3A4C94;
+    color: #FFF;
+    padding: 5px;
+}
+
+.tabla-usuarios td {
+    border: 1px solid #DEDEDF;
+    background-color: #E5E5E5;
+    color: #000000;
+    padding: 5px;
+}
