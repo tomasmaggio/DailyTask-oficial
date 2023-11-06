@@ -86,3 +86,14 @@
 }
 
 /* ----------------------- botones editar de la tabla ----------------------- */
+.editar-btn{
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
+}
+
+.eliminar-btn{
+    height: 35px;
+    width: 35px;
+    margin-left: 5px;
+}
