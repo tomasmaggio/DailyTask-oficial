@@ -23,3 +23,11 @@
 .calendario-div{
   margin-top: 4%;
 }
+
+.evento-pend{
+  margin: 4%;
+  height: 22%;
+  background-color: #4b6dc5;
+  border-radius: 25px;
+
+}

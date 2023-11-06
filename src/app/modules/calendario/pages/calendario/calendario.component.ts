@@ -57,7 +57,47 @@ export class CalendarioComponent {
       title: 'Cumpleaños de juan',
       start: '2023-11-29',
       color:'#1967D2'
-   }  
+   },
+   {
+    title: 'Corte de pelo de panchito',
+    start: '2023-12-07',
+    color: '#1967D2'
+  },
+  {
+     title: 'Clases de Alemán',
+     start: '2023-12-08',
+     color: '#F72A25'
+  },
+  {
+     title: 'Yoga',
+     start: '2023-12-12',
+     color:'#FBBC04'
+  },
+  {
+    title: 'Yoga',
+    start: '2023-12-29',
+    color:'#FBBC04'
+ },
+ {
+  title: 'Yoga',
+  start: '2023-12-05',
+  color:'#FBBC04'
+},
+{
+  title: 'Yoga',
+  start: '2023-12-19',
+  color:'#FBBC04'
+},
+{
+  title: 'Yoga',
+  start: '2023-12-26',
+  color:'#FBBC04'
+},
+  {
+    title: 'Cumpleaños de juan',
+    start: '2023-12-29',
+    color:'#1967D2'
+ }  
   ];
 
   calendarOptions: CalendarOptions = {
