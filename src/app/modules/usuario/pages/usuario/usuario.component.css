@@ -3,19 +3,19 @@
 
 }
 
-.imagen1{
-    position: fixed;
+.imagen-1{
+    margin-top: 15px;
+    width: 120%;
+    min-height: 50%;
 }
 
-
-/*{
-    background: lightblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000;
+.texto-1{
+    color: #3a4c94;
+    margin-right: 30px;
+    padding-top: 35px;
+     
 }
-*/
+
 .row-1{
 
 }
