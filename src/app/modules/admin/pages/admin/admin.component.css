@@ -32,11 +32,15 @@
 /* Estilos específicos para la columna "Nombre" */
 .tabla-usuarios table td:first-child, .tabla-usuarios table th:first-child {
     text-align: left; /* Alinear a la izquierda en lugar de centrar */
+    padding-left: 20px;
 }
 /*Estilos parar la columna de editar*/
 .tabla-usuarios table td:last-child, .tabla-usuarios table th:last-child {
     text-align: end; /* Alinear a la izquierda en lugar de centrar */
     padding-right: 20px;
+}
+.tabla-usuarios table th:last-child{
+    padding-right: 35px;
 }
 
 .tabla-usuarios caption {
@@ -93,8 +97,12 @@
     border-radius: 7px;
     height: 35px;
     width: 35px;
-    margin-right: 5px;
+    margin-right: 5px; 
 }
+.editar-btn i{
+    vertical-align: middle;
+}
+
 
 .eliminar-btn{
     border: none;
@@ -104,4 +112,7 @@
     height: 35px;
     width: 35px;
     margin-left: 5px;
+}
+.eliminar-btn i{
+    vertical-align: middle;
 }
