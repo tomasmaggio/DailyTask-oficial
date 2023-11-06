@@ -87,12 +87,20 @@
 
 /* ----------------------- botones editar de la tabla ----------------------- */
 .editar-btn{
+    border: none;
+    background-color: #FFC700; 
+    color: #FFF;
+    border-radius: 7px;
     height: 35px;
     width: 35px;
     margin-right: 5px;
 }
 
 .eliminar-btn{
+    border: none;
+    background-color: #FF0000;  
+    color: #FFF;   
+    border-radius: 7px;
     height: 35px;
     width: 35px;
     margin-left: 5px;
