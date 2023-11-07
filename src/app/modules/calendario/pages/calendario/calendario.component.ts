@@ -21,7 +21,9 @@ export class CalendarioComponent {
     {
       title: 'Corte de pelo de panchito',
       start: '2023-11-07',
-      color: '#1967D2'
+      color: '#1967D2',
+      
+      
     },
     {
        title: 'Clases de Alemán',
