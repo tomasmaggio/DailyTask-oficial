@@ -104,8 +104,15 @@ body{
 }
 
 
+.sidebar .icon-admin-btn{
+    color: #3A4C94;
+}
 
 
+.sidebar li a:hover .icon-admin-btn,
+.sidebar li a:hover .text{
+    color: #5f87d2;
+}
 
 
 
@@ -208,7 +215,7 @@ body.dark .sidebar header .toggle{
 
 
 
-
+/* ----------------------------- icono de admin ----------------------------- */
 
 
 

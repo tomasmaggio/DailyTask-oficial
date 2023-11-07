@@ -38,8 +38,13 @@ const routes: Routes = [
   },
 
   {
-    path: '', //usuario
+    path: 'usuario', //usuario
     loadChildren: () => import('./modules/usuario/usuario.module').then(m => m.UsuarioModule)
+  },
+
+  {
+    path: 'admin',
+    loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)
   },
 
   {
@@ -51,6 +56,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
+  
 
   //comodin para redirigir la vista si la url no es la indicada
   {

@@ -1,0 +1,150 @@
+.container{
+    padding-left: 10px;
+    margin-top: 3%;
+}
+
+.titulo{
+    color: #3a4c94;
+}
+.subtitulo{
+    font-size: 30px;
+}
+
+
+
+/* ---------------------------------- tabla --------------------------------- */
+.tabla-usuarios {
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+    width: 100%;
+    max-height: 450px;
+}
+
+.tabla-usuarios table {
+    border: 1px solid #DEDEDF;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    
+    text-align: center;
+}
+/* Estilos específicos para la columna "Nombre" */
+.tabla-usuarios table td:first-child, .tabla-usuarios table th:first-child {
+    text-align: left; /* Alinear a la izquierda en lugar de centrar */
+    padding-left: 20px;
+}
+/*Estilos parar la columna de editar*/
+.tabla-usuarios table td:last-child, .tabla-usuarios table th:last-child {
+    text-align: end; /* Alinear a la izquierda en lugar de centrar */
+    padding-right: 20px;
+}
+.tabla-usuarios table th:last-child{
+    padding-right: 35px;
+}
+
+.tabla-usuarios caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.tabla-usuarios th {
+    border: 1px solid #DEDEDF;
+    background-color: #3A4C94;
+    color: #FFF;
+    padding: 5px;
+}
+
+.tabla-usuarios td {
+    border: 1px solid #DEDEDF;
+    background-color: #E5E5E5;
+    color: #000000;
+    padding: 5px;
+}
+
+/* ------------------- barra de desplazamiento de la tabla ------------------ */
+/* Personalización de la barra de desplazamiento en navegadores WebKit */
+.tabla-usuarios table::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+.tabla-usuarios table::-webkit-scrollbar-thumb {
+    background: #3A4C94; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+.tabla-usuarios table::-webkit-scrollbar-track {
+    background: #E5E5E5; /* Color de fondo de la barra de desplazamiento */
+}
+
+/* --------------------------------- botones head -------------------------------- */
+.agregar-usuario-btn{
+    border: none;
+    background-color: #3A4C94;
+    color: #FFF;
+    border-radius: 9px;
+    padding: 8px;
+    margin-right: 10px; /* Agrega un margen derecho de 10px al primer botón */
+    transition: transform 0.2s;
+}
+.agregar-usuario-btn i {
+    vertical-align: middle;
+}
+.agregar-usuario-btn:hover{
+    transform: scale(1.01);
+    background-color: #415bb4;
+}
+
+
+.cerrar-sesion-btn {
+    border: 4px solid red;
+    background-color: transparent;
+    color: red;
+    border-radius: 9px;
+    padding: 6px;
+    margin-left: 10px; /* Agrega un margen izquierdo de 10px al segundo botón */
+    transition: transform 0.2s;
+}
+.cerrar-sesion-btn i{
+    vertical-align: middle;
+}
+.cerrar-sesion-btn:hover{
+    transform: scale(1.01);
+    background-color: #FF0000;
+    color: #FFF;
+}
+
+
+
+/* ----------------------- botones editar de la tabla ----------------------- */
+.editar-btn{
+    border: none;
+    background-color: #FFC700; 
+    color: #FFF;
+    border-radius: 7px;
+    height: 35px;
+    width: 35px;
+    margin-right: 5px; 
+    transition: transform 0.2s;
+}
+.editar-btn i{
+    vertical-align: middle;
+}
+
+.editar-btn:hover, .eliminar-btn:hover{
+    transform: scale(1.1);
+}
+
+.eliminar-btn{
+    border: none;
+    background-color: #FF0000;  
+    color: #FFF;   
+    border-radius: 7px;
+    height: 35px;
+    width: 35px;
+    margin-left: 5px;
+    transition: transform 0.2s;
+}
+.eliminar-btn i{
+    vertical-align: middle;
+}
