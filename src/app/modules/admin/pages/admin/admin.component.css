@@ -112,11 +112,15 @@
     height: 35px;
     width: 35px;
     margin-right: 5px; 
+    transition: transform 0.2s;
 }
 .editar-btn i{
     vertical-align: middle;
 }
 
+.editar-btn:hover, .eliminar-btn:hover{
+    transform: scale(1.1);
+}
 
 .eliminar-btn{
     border: none;
@@ -126,6 +130,7 @@
     height: 35px;
     width: 35px;
     margin-left: 5px;
+    transition: transform 0.2s;
 }
 .eliminar-btn i{
     vertical-align: middle;
