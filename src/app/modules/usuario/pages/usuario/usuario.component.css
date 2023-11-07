@@ -5,7 +5,7 @@
 
 .imagen-1{
     margin-top: 15px;
-    width: 120%;
+    width: 130%;
     min-height: 50%;
 }
 
@@ -16,6 +16,56 @@
      
 }
 
-.row-1{
-
+.texto-2{
+    padding-bottom: 40px;
 }
+
+.rectangle-row {
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    padding: 20px 0; 
+} 
+
+.rectangle {
+    /*width: 50%;*/
+    padding-top: 30px;
+    width: 700px;
+    border-radius: 30px;
+    height: 300px;
+}
+
+.texto-3{
+    color: #3a4c94;
+    margin-left: 30px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.boton1{
+    background-color: transparent;
+    border: none;
+    color: #3a4c94;
+    transition: transform 0.3s ease;
+    padding-top: 150px;
+}
+
+.boton1:hover{
+    transform: scale(1.1);
+    color: #415bb4;
+}
+
+.boton2{
+    border: none;
+    padding: 11px;
+    background-color: #3A4C94;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.boton2:hover{
+    transform: scale(1.1);
+    background-color: #415bb4;
+}
+
