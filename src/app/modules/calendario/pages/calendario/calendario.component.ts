@@ -4,6 +4,7 @@ import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es';
+import { BrowserModule } from '@angular/platform-browser';
 import { Calendar } from '@fullcalendar/core';
 
 
@@ -36,35 +37,10 @@ export class CalendarioComponent {
        color:'#FBBC04'
     },
     {
-      title: 'Yoga',
-      start: '2023-11-29',
-      color:'#FBBC04'
-   },
-   {
-    title: 'Yoga',
-    start: '2023-11-05',
-    color:'#FBBC04'
-  },
-  {
-    title: 'Yoga',
-    start: '2023-11-19',
-    color:'#FBBC04'
-  },
-  {
-    title: 'Yoga',
-    start: '2023-11-26',
-    color:'#FBBC04'
-  },
-    {
       title: 'Cumpleaños de juan',
       start: '2023-11-29',
       color:'#1967D2'
    },
-   {
-    title: 'Corte de pelo de panchito',
-    start: '2023-12-07',
-    color: '#1967D2'
-  },
   {
      title: 'Clases de Alemán',
      start: '2023-12-08',
@@ -101,6 +77,8 @@ export class CalendarioComponent {
     color:'#1967D2'
  }  
   ];
+  
+  
 
   calendarOptions: CalendarOptions = {
     
