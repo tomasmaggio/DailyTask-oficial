@@ -37,35 +37,64 @@
 
 .texto-3{
     color: #3a4c94;
-    margin-left: 30px;
+    margin-left: 50px;
     padding-top: 15px;
     cursor: pointer;
 }
 
 .boton1{
-    background-color: transparent;
     border: none;
-    color: #3a4c94;
+    padding: 11px;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #3a4c94;
     transition: transform 0.3s ease;
-    padding-top: 150px;
 }
 
 .boton1:hover{
     transform: scale(1.1);
-    color: #415bb4;
+    color: #ffffff;
 }
 
 .boton2{
     border: none;
     padding: 11px;
-    background-color: #3A4C94;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: transform 0.3s ease;
+    margin-left: 15px;
 }
 
 .boton2:hover{
     transform: scale(1.1);
-    background-color: #415bb4;
+    color: rgb(255, 4, 4);
 }
 
+.botones{
+    padding-top: 130px;
+    margin-left: 40px;
+}
+
+
+
+
+
+
+/* Oculta los elementos al principio */
+#elemento1, #elemento2 {
+    display: none;
+}
+
+/* Estilo del botón "Editar" */
+#botonEditar {
+    background-color: #3a4c94;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Mostrar elementos cuando el checkbox está marcado */
+#toggleElementos:checked ~ #elemento1,
+#toggleElementos:checked ~ #elemento2 {
+    display: block;
+}
