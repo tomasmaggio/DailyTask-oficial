@@ -3,13 +3,98 @@
 
 }
 
-.img-chica{
-    background: lightblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000;
+.imagen-1{
+    margin-top: 15px;
+    width: 130%;
+    min-height: 50%;
 }
-.row-1{
 
+.texto-1{
+    color: #3a4c94;
+    margin-right: 30px;
+    padding-top: 35px;
+     
+}
+
+.texto-2{
+    padding-bottom: 40px;
+}
+
+.rectangle-row {
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    padding: 20px 0; 
+} 
+
+.rectangle {
+    /*width: 50%;*/
+    padding-top: 30px;
+    width: 700px;
+    border-radius: 30px;
+    height: 300px;
+}
+
+.texto-3{
+    color: #3a4c94;
+    margin-left: 50px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.boton1{
+    border: none;
+    padding: 11px;
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #3a4c94;
+    transition: transform 0.3s ease;
+}
+
+.boton1:hover{
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+.boton2{
+    border: none;
+    padding: 11px;
+    color: #ffffff;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+}
+
+.boton2:hover{
+    transform: scale(1.1);
+    color: rgb(255, 4, 4);
+}
+
+.botones{
+    padding-top: 130px;
+    margin-left: 40px;
+}
+
+
+
+
+
+
+/* Oculta los elementos al principio */
+#elemento1, #elemento2 {
+    display: none;
+}
+
+/* Estilo del botón "Editar" */
+#botonEditar {
+    background-color: #3a4c94;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Mostrar elementos cuando el checkbox está marcado */
+#toggleElementos:checked ~ #elemento1,
+#toggleElementos:checked ~ #elemento2 {
+    display: block;
 }
