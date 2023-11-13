@@ -146,6 +146,10 @@ body{
     transform: scale(1.12);
 }
 
+.logo-text:hover{
+    cursor: pointer;
+}
+
 
 .sidebar header .image-text{
     display: flex;

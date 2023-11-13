@@ -59,10 +59,10 @@ const routes: Routes = [
   
 
   //comodin para redirigir la vista si la url no es la indicada
-  {
-    path: '**',
-    redirectTo: 'inicio', 
-  }
+  // {
+  //   path: '**',
+  //   redirectTo: 'inicio', 
+  // }
 
 
 

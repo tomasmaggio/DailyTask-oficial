@@ -108,7 +108,18 @@ export class NotasComponent {
     this.notasService.delete(notaId);
   }
 
-  //filtro para la barra de busqueda
+
+
+
+  /* -------------------- filtro para la barra de busqueda -------------------- */   /* -------------------- filtro para la barra de busqueda -------------------- */
+
+  /* -------------------- filtro para la barra de busqueda -------------------- */  /* -------------------- filtro para la barra de busqueda -------------------- */
+
+  /* -------------------- filtro para la barra de busqueda -------------------- */  /* -------------------- filtro para la barra de busqueda -------------------- */
+
+  /* -------------------- filtro para la barra de busqueda -------------------- */  /* -------------------- filtro para la barra de busqueda -------------------- */
+
+
   filtro(query: string) {
     query = query.toLowerCase().trim();
     let todosResultados: Nota[] = new Array<Nota>();
@@ -125,8 +136,7 @@ export class NotasComponent {
 
       todosResultados = [...todosResultados, ...resultados]
     });
-
-
+    
     let unicoResultado = this.removerDuplicados(todosResultados)
     this.notasFiltradas = unicoResultado;
 
@@ -186,6 +196,7 @@ export class NotasComponent {
 
 
   openModal(id?: number) {
+    
     if (id !== undefined) {
       // Si se proporciona un ID, estamos en modo de edición
       this.selectedNotaId = id;
