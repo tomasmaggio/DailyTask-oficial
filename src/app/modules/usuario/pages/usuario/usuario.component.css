@@ -97,7 +97,7 @@
     position: absolute;
     top: 50%; /* Ajusta la posición vertical según sea necesario */
     left: 50%; /* Ajusta la posición horizontal según sea necesario */
-    transform: translate(-50%, -50%);
+    transform: translate(-60%, -40%);
     z-index: 1; /* Asegura que el botón esté por encima de la imagen */
 }  
 
