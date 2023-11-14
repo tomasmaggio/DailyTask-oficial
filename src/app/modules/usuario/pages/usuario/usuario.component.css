@@ -18,11 +18,10 @@
 
 .texto-2{
     padding-bottom: 40px;
-    display: flex;
 }
 .btn-editar{
-    display: flex;
-
+    font-size: 25px;
+    
 }
 
 .rectangle-row {
