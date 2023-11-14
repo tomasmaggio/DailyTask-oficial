@@ -7,6 +7,7 @@
     margin-top: 15px;
     width: 130%;
     min-height: 50%;
+    margin-left: -10%;
 }
 
 .texto-1{
@@ -17,11 +18,18 @@
 }
 
 .texto-2{
+    position: relative;
     padding-bottom: 40px;
 }
-.btn-editar{
+.icon-editar{
     font-size: 25px;
-    
+}
+.btn-editar{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-65%);
 }
 
 .rectangle-row {
@@ -78,7 +86,24 @@
     margin-left: 40px;
 }
 
+.imagen-container {
+    position: relative;
+}
 
+.btn-editar-imagen {
+    border: none;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 50%; /* Ajusta la posición vertical según sea necesario */
+    left: 50%; /* Ajusta la posición horizontal según sea necesario */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Asegura que el botón esté por encima de la imagen */
+}  
+
+.icon-editar-img{
+    font-size: 70px;
+}
 
 
 

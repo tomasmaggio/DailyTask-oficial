@@ -11,4 +11,8 @@ export class UsuarioComponent {
   toggleMostrarBotones() {
     this.mostrarBotones = !this.mostrarBotones;
   }
+
+  editarImagen (){
+    console.log("edicion funcionando")
+  }
 }
