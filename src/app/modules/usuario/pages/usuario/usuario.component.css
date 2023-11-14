@@ -93,8 +93,3 @@
     cursor: pointer;
 }
 
-/* Mostrar elementos cuando el checkbox está marcado */
-#toggleElementos:checked ~ #elemento1,
-#toggleElementos:checked ~ #elemento2 {
-    display: block;
-}
