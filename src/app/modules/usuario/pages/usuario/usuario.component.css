@@ -12,10 +12,25 @@
 
 .texto-1{
     color: #3a4c94;
-    margin-right: 30px;
     padding-top: 35px;
-     
 }
+
+.icon-editar-h1{
+    color: #3a4c94;
+    font-size: 30px;
+}
+.btn-editar-h1{
+    border: none;
+    background: none;
+    margin-top: 34px;
+    transition: transform 0.3s ease;
+}
+
+.container-h1{
+    display: flex;
+    align-items: center;
+}
+
 
 .texto-2{
     position: relative;
@@ -30,6 +45,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-65%);
+    transition: transform 0.3s ease;
+
 }
 
 .rectangle-row {
@@ -52,6 +69,8 @@
     padding-top: 15px;
     cursor: pointer;
 }
+
+
 
 .boton1{
     border: none;
@@ -99,6 +118,7 @@
     left: 50%; /* Ajusta la posición horizontal según sea necesario */
     transform: translate(-60%, -40%);
     z-index: 1; /* Asegura que el botón esté por encima de la imagen */
+    transition: transform 0.3s ease;
 }  
 
 .icon-editar-img{
