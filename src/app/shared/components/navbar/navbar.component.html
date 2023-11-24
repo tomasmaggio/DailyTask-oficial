@@ -2,8 +2,8 @@
 
     <nav class="sidebar" [ngClass]="{'close': isSidebarClosed}">
         <header>
-            <div routerLink="/inicio" class="image-text">
-                <span class="image">
+            <div  class="image-text">
+                <span class="image" routerLink="/inicio">
                     <img src="../../../../assets/Logo/logo-azul.png" alt="" style="cursor: pointer;">
                 </span>
                 <div class="text logo-text">
@@ -13,7 +13,7 @@
             </div>
             <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()"></i>
         </header>
-        <div class="menu-bar">
+        <div class="menu-bar" (click)="toggleSidebar()" >
             <div class="menu">
                 
                 <ul class="menu-links">
