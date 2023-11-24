@@ -3,12 +3,16 @@ import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 //aqui se importan los plugins del fullcalendar (primero hay que instalarlos https://fullcalendar.io/docs/plugin-index)
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-
+import format from 'date-fns/format';
 import esLocale from '@fullcalendar/core/locales/es';
+import es from 'date-fns/locale/es';
 import { BrowserModule } from '@angular/platform-browser';
 import { Calendar } from '@fullcalendar/core';
 
-
+function obtenerAbreviaturaDia(fecha: Date): string {
+  const dias = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+  return dias[fecha.getDay()];
+}
 
 
 @Component({
@@ -161,8 +165,11 @@ export class CalendarioComponent {
 
   ];
 
+  
 
   calendarOptions: CalendarOptions = {
+    
+
 
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
@@ -209,6 +216,11 @@ export class CalendarioComponent {
 
   handleEventMouseEnter(info: any): void {
     const eventColor = info.event.backgroundColor || info.event.borderColor || '';
+      // Formatear la fecha en el formato deseado con la abreviatura del día
+    const formattedDate = info.event.start
+    ? format(new Date(info.event.start), "'- 'EEE dd LLL - h:mm a", { locale: es })
+    : '';
+
     const tooltip = `<div class="calendarTooltip" style="
     padding-left:10px; 
     text-align: start;
@@ -221,8 +233,7 @@ export class CalendarioComponent {
     color: white; 
     position:absolute;
     z-index:10001;">
-    ${info.event.title}</div>`;
-    
+    ${info.event.title} ${formattedDate}</div>`;
     
     const $tool = $(tooltip).appendTo('body');
 
