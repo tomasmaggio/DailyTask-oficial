@@ -40,129 +40,6 @@ export class CalendarioComponent {
       start: '2023-11-09',
       color: '#0b5394'
    },
-   {
-    title: 'Estudiar',
-    start: '2023-11-09',
-    color: '#f1c232'
-   },
-   {
-    title: 'GYM 🏋️',
-    start: '2023-11-11',
-    color: '#F72A25'
-   },
-   {
-    title: 'Reunión',
-    start: '2023-11-10T08:30:00',
-    color:'#1967D2'
-  },
-  {
-    title: 'Reunión',
-    start: '2023-11-10T10:30:00',
-    color:'#1967D2'
-  },
-    {
-       title: 'Yoga',
-       start: '2023-11-12T10:30:00',
-       color:'#FBBC04'
-    },
-    {
-      title: 'Cumpleaños de juan',
-      start: '2023-11-29',
-      color:'#1967D2'
-   },
-   {
-    title: 'Clase de Inglés',
-    start: '2023-11-24',
-    color:'#FBBC04'
-  },
-  {
-    title: 'Clase de Matemática',
-    start: '2023-11-24',
-    color:'#3ab544'
-  },
-  {
-    title: 'Partido',
-    start: '2023-11-25T12:30:00',
-    color:'#FBBC04'
-  },
-  {
-    title: 'Asado',
-    start: '2023-11-25T22:30:00',
-    color:'#f1c232'
-  },
-  {
-    title: 'Cumpleaños de juan',
-    start: '2023-12-29',
-    color:'#1967D2'
-  },
-  {
-    title: 'Cita con el dentista',
-    start: '2023-10-12T09:00:00',
-    color: '#3ab544',
-  },
-  {
-    title: 'Feria de libros en la ciudad',
-    start: '2023-10-15',
-    end: '2023-10-17',
-    color: '#F72A25',
-  },
-  {
-    title: 'Visita al museo de arte moderno',
-    start: '2023-10-20T14:30:00',
-    color: '#0b5394',
-  },
-  {
-    title: 'Clase de cocina italiana',
-    start: '2023-10-25T18:00:00',
-    color: '#f1c232',
-  },
-  {
-    title: 'Excursión de senderismo',
-    start: '2023-10-29',
-    color: '#1967D2',
-  },
-  {
-    title: 'Noche de juegos de mesa con amigos',
-    start: '2023-10-31T19:00:00',
-    color: '#FBBC04',
-  },
-  // Diciembre
-  {
-    title: 'Decorar la casa para Navidad',
-    start: '2023-12-01',
-    color: '#3ab544',
-  },
-  {
-    title: 'Comprar árbol de Navidad',
-    start: '2023-12-05',
-    color: '#F72A25',
-  },
-  {
-    title: 'Cena de empresa',
-    start: '2023-12-15T20:00:00',
-    color: '#f1c232',
-  },
-  {
-    title: 'Noche de juegos en familia',
-    start: '2023-12-22',
-    color: '#FBBC04',
-  },
-  {
-    title: 'Últimas compras navideñas',
-    start: '2023-12-24',
-    color: '#1967D2',
-  },
-  {
-    title: 'Nochebuena',
-    start: '2023-12-24T18:00:00',
-    color: '#FBBC04',
-  },
-  {
-    title: 'Fiesta de Fin de Año',
-    start: '2023-12-31T22:00:00',
-    color: '#f1c232',
-  },
-
   ];
 
   
@@ -187,17 +64,17 @@ export class CalendarioComponent {
     
 
     //funcion para abrir el modal
-    select: function(arg){
-      $('#ejemploModal').modal('toggle');
+     select: function(arg){
+       $('#ejemploModal').modal('toggle');
 
 
-      $('#guardarbtn').click(function(){
-          var titulo = $('titulo').val();
-          console.log(titulo);
-      })
+       $('#guardarbtn').click(function(){
+           var titulo = $('titulo').val();
+           console.log(titulo);
+       })
 
       
-    },
+     },
 
   
     //Drag & Drop
@@ -214,6 +91,8 @@ export class CalendarioComponent {
   
   };
 
+
+//Funcion para mostrar el Tooltip cada que se le pasa el cursor por encima de un evento en en el calendario
   handleEventMouseEnter(info: any): void {
     const eventColor = info.event.backgroundColor || info.event.borderColor || '';
       // Formatear la fecha en el formato deseado con la abreviatura del día
