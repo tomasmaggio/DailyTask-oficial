@@ -1,20 +1,67 @@
 /* -------------------------------- row 1 ------------------------------- */
+.icono{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icono:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
 
 .boton1 {
     background-color: transparent;
+    padding: 11px;
     border: none;
     color: #3a4c94;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton1:hover{
+    color: #738CCF !important;
+    background-color: transparent;
+    box-shadow: 0 4px 16px #738CCF;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
 }
 
 .boton2 {
     border: none;
     padding: 11px;
     background-color: #3A4C94;
-    color: #ffffff;
+    color: #ffffff ;
     border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+.boton2:hover{
+    color: #738CCF !important;
+    background-color: transparent;
+    box-shadow: 0 4px 16px #738CCF;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
 
+.boton3 {
+    border: none;
+    padding: 11px;
+    background-color: #3A4C94;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton3:hover{
+    color: #738CCF !important;
+    background-color: transparent;
+    box-shadow: 0 4px 16px #738CCF;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
 /* -------------------------------- row 2 ------------------------------- */
 
 
