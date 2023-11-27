@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./usuario.component.css']
 })
 export class UsuarioComponent {
+  mostrarBotones: boolean = false;
 
+  toggleMostrarBotones() {
+    this.mostrarBotones = !this.mostrarBotones;
+  }
+
+  editarImagen (){
+    console.log("edicion funcionando")
+  }
 }
