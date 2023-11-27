@@ -40,6 +40,51 @@ export class CalendarioComponent {
       start: '2023-11-09',
       color: '#0b5394'
    },
+   {
+    title: 'Corte de pelo de panchito 🐶',
+    start: '2023-11-07',
+    color: '#1967D2',
+  },
+  {
+     title: 'Clases de Alemán',
+     start: '2023-11-08',
+     color: '#F72A25'
+  },
+  {
+    title: 'Llevar el carro al mecánico',
+    start: '2023-11-09',
+    color: '#0b5394'
+ },
+ {
+  title: 'Corte de pelo de panchito 🐶',
+  start: '2023-11-07',
+  color: '#1967D2',
+},
+{
+   title: 'Clases de Alemán',
+   start: '2023-11-08',
+   color: '#F72A25'
+},
+{
+  title: 'Llevar el carro al mecánico',
+  start: '2023-11-09',
+  color: '#0b5394'
+},
+{
+  title: 'Corte de pelo de panchito 🐶',
+  start: '2023-11-07',
+  color: '#1967D2',
+},
+{
+   title: 'Clases de Alemán',
+   start: '2023-11-08',
+   color: '#F72A25'
+},
+{
+  title: 'Llevar el carro al mecánico',
+  start: '2023-11-09',
+  color: '#0b5394'
+},
   ];
 
   

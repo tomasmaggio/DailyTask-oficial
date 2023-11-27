@@ -21,20 +21,31 @@ export class NotasService {
   }
 
   getId(nota: Nota) { //Este método devuelve el id de una nota a partir de la nota misma. 
-    return this.notas.indexOf(nota); //Es útil para obtener el id de una nota antes de realizar operaciones como actualización o eliminación.
+    //Es útil para obtener el id de una nota antes de realizar operaciones como actualización o eliminación.
+    return this.notas.indexOf(nota);
   }
 
-  add(nota: Nota) {
-    // Este método agrega una nueva nota al arreglo de notas y devuelve el id de la nota recién agregada. Es útil para crear nuevas notas.
+
+
+  add(nota: Nota) { // Este método agrega una nueva nota al arreglo de notas y devuelve el id de la nota recién agregada. Es útil para crear nuevas notas.
+    // Agrega una nueva nota al arreglo de notas, con el metodo push para agregarla al final del arreglo
     let newLength = this.notas.push(nota);
+
+    // Calcula el índice de la nota recién agregada
     let index = newLength - 1;
+
+    // Devuelve el índice de la nota recién agregada
     return index
   }
 
+
+
   //metodo actualizar nota
-  update(id: number, titulo: string, body: string) {
-    //Este método actualiza una nota existente según su id con los nuevos valores de título y cuerpo. Es útil para editar notas existentes.
+  update(id: number, titulo: string, body: string) { //Este método actualiza una nota existente según su id con los nuevos valores de título y body.
+    // Obtiene la nota existente por su ID
     let nota = this.notas[id];
+
+    // Actualiza el título y el cuerpo de la nota
     nota.titulo = titulo;
     nota.body = body;
   }

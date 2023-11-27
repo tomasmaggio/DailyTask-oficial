@@ -1,23 +1,28 @@
+<!-- [visible]="showModal": Vincula la visibilidad del diálogo al valor de la propiedad showModal. -->
+<!-- (onHide)="onClose.emit()": Emite el evento onClose cuando el modal se cierra. -->
 <p-dialog [visible]="showModal" [modal]="true" (onHide)="onClose.emit()" class="custom-modal" [closable]="false">
     <div class="form-container">
         <header style="text-align: center; padding: 5px;">Nueva nota</header>
+
+<!-- #notaForm Define el formulario que se enviará al hacer clic en el botón "Guardar". Llama a la función onSubmit cuando se envía el formulario. -->
         <form #notaForm="ngForm" (ngSubmit)="onSubmit(notaForm)">
 
             <div class="inp-inputs">
                     <label class="label"></label>
                     <div class="control-titulo">
-                        <input type="text" name="titulo" [ngModel]="nota.titulo" required class="inp-titulo" autocomplete="off" placeholder="Titulo">
+                        <input type="text" name="titulo" [ngModel]="nuevo ? '' : nota.titulo" required class="inp-titulo" autocomplete="off" placeholder="Titulo">
                         <!-- el required es para que el titulo sea requerido si o si -->
     
                     </div>
                 
                     <div class="control-color">
-                        <input type="color" class="inp-color" placeholder="Color">
+                        <label for="color"></label>
+                        <input type="color" name="color" value="#1967D2" [(ngModel)]="nota.color" class="inp-color" placeholder="Color"  >
                     </div>
 
                     <label class="label"></label>
                     <div class="control-textarea">
-                        <textarea class="inp-textarea" name="body" [ngModel]="nota.body" placeholder="Su anotación aquí!"></textarea>
+                        <textarea class="inp-textarea" name="body" [ngModel]="nuevo ? '' : nota.body" placeholder="Su anotación aquí!"></textarea>
                     </div>
             </div>
             <div class="field-btn">
@@ -25,6 +30,7 @@
                     <button type="button" class="btn-cancelar" (click)="cancelarNota()">Cancelar</button>
                 </div>
                 <div class="control-btn">
+                    <!-- botón que envía el formulario. Está deshabilitado si el formulario no es válido. -->
                     <button type="submit" class="btn-guardar" [disabled]="!notaForm.valid">Guardar</button>
                 </div>
             </div>
