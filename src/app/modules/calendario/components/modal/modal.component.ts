@@ -22,7 +22,13 @@ export class ModalComponent {
   }
 
   guardarEvento(){
-    console.log('Titulo del evento', this.event.title)
+    console.log('Titulo del evento', this.event.title);
+
+    //utilizo el servicio compartido para agregar el evento
+    this.SharedDataService.addEvent(this.event)
+
   }
+
+
 
 }

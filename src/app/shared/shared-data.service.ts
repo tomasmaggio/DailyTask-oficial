@@ -12,4 +12,9 @@ export class SharedDataService {
   sendEvent(event: any) {
     this.eventSource.next(event);
   }
+
+  //metodo para agregar eventos en el calendario
+  addEvent(event:any){
+    this.sendEvent(event);
+  }
 }

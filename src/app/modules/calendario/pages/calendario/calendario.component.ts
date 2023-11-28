@@ -10,6 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Calendar } from '@fullcalendar/core';
 
 import { SharedDataService } from 'src/app/shared/shared-data.service';
+import { event } from 'jquery';
 
 function obtenerAbreviaturaDia(fecha: Date): string {
   const dias = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
@@ -30,6 +31,19 @@ export class CalendarioComponent {
 
 
   constructor(private SharedDataService: SharedDataService){}
+
+
+  ngOnInit(){
+    //me suscribo al servicio compartido para recibir eventos
+    this.SharedDataService.event$.subscribe(event => {
+
+      //agrego el evento a la lista de eventos
+      this.events = [...this.events, event]
+
+      //actualizo los eventos del calendario
+      this.calendarOptions.events = this.events;
+    });
+  }
 
 
   events: any[] = [
