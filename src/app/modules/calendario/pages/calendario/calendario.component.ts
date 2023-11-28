@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 //aqui se importan los plugins del fullcalendar (primero hay que instalarlos https://fullcalendar.io/docs/plugin-index)
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -15,6 +15,7 @@ function obtenerAbreviaturaDia(fecha: Date): string {
 }
 
 
+
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
@@ -22,7 +23,13 @@ function obtenerAbreviaturaDia(fecha: Date): string {
 })
 export class CalendarioComponent {
 
+  title: string = '';
+  start: string = '';
+  id: string = '';
+
   @ViewChild('fullcalendar') fullcalendar!: CalendarioComponent;
+  @ViewChild('ejemploModal') modalElement!: ElementRef;
+
 
   events: any[] = [
     {
@@ -142,10 +149,24 @@ export class CalendarioComponent {
 
       
      },
+     dateClick: function (info) {
+      const startInput = document.getElementById('start') as HTMLInputElement | null;
+      const idInput = document.getElementById('id') as HTMLInputElement | null;
+      const btnguardar = document.getElementById('btn-guardar') as HTMLElement | null;
+      const tituloModal = document.getElementById('tittle') as HTMLElement | null;
+    
+      if (startInput && idInput && btnguardar && tituloModal) {
+        startInput.value = info.dateStr;
+        idInput.value = '';
+        btnguardar.textContent = 'Registrar';
+        tituloModal.textContent = 'Registrar Evento';
+    
+        // Muestra el modal directamente con jQuery
+        $('#ejemploModal').modal('show');
+      }
+    },
+   
 
-     
-
-  
     //Drag & Drop
     editable: true, //permite hacer los eventos editables (true)
     eventStartEditable: true,
@@ -159,6 +180,8 @@ export class CalendarioComponent {
     events: this.events
   
   };
+
+  
 
 
 //Funcion para mostrar el Tooltip cada que se le pasa el cursor por encima de un evento en en el calendario
