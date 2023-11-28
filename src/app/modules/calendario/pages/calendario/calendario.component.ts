@@ -47,67 +47,7 @@ export class CalendarioComponent {
     start: '2023-11-09',
     color: '#f1c232'
    },
-   {
-    title: 'GYM 🏋️',
-    start: '2023-11-11',
-    color: '#F72A25'
-   },
-   {
-    title: 'Reunión',
-    start: '2023-11-10T08:30:00',
-    color:'#1967D2'
-  },
-  {
-    title: 'Reunión',
-    start: '2023-11-10T10:30:00',
-    color:'#1967D2'
-  },
-    {
-       title: 'Yoga',
-       start: '2023-11-12T10:30:00',
-       color:'#FBBC04'
-    },
-    {
-      title: 'Cumpleaños de juan',
-      start: '2023-11-29',
-      color:'#1967D2'
-   },
-   {
-    title: 'Clase de Inglés',
-    start: '2023-11-24',
-    color:'#FBBC04'
-  },
-  {
-    title: 'Clase de Matemática',
-    start: '2023-11-24',
-    color:'#3ab544'
-  },
-  {
-    title: 'Partido',
-    start: '2023-11-25T12:30:00',
-    color:'#FBBC04'
-  },
-  {
-    title: 'Asado',
-    start: '2023-11-25T22:30:00',
-    color:'#f1c232'
-  },
-  {
-    title: 'Cumpleaños de juan',
-    start: '2023-12-29',
-    color:'#1967D2'
-  },
-  {
-    title: 'Cita con el dentista',
-    start: '2023-10-12T09:00:00',
-    color: '#3ab544',
-  },
-  {
-    title: 'Feria de libros en la ciudad',
-    start: '2023-10-15',
-    end: '2023-10-17',
-    color: '#F72A25',
-  },
+
    
   ];
 
