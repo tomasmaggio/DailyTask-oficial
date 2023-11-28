@@ -151,7 +151,7 @@ export class CalendarioComponent {
       if (startInput && titleInput) {
         startInput.value = info.dateStr;
     
-        // Aquí también puedes establecer el valor del input de título si es necesario
+        //establecer el valor del input de título si es necesario
         titleInput.value = "";
     
         // Muestra el modal directamente con jQuery
