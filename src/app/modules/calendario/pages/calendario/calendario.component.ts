@@ -104,21 +104,13 @@ export class CalendarioComponent {
 
       
      },
-     dateClick: (info) => {
+     dateClick: function (info) {
       const startInput = document.getElementById('start') as HTMLInputElement | null;
-      const titleInput = document.getElementById('title') as HTMLInputElement | null;
-
+      const titleInput = document.getElementById('tittle') as HTMLInputElement | null;
+    
       if (startInput && titleInput) {
         startInput.value = info.dateStr;
-        titleInput.value = '';
-
-        // Notifica al servicio con los datos del evento seleccionado
-        this.SharedDataService.sendEvent({
-          title: '',
-          start: info.dateStr,
-          color: '#3A4C94' // Puedes establecer un color predeterminado
-        });
-
+        titleInput.value = "";
         $('#ejemploModal').modal('show');
       }
     },
