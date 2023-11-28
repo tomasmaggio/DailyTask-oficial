@@ -9,6 +9,8 @@ import es from 'date-fns/locale/es';
 import { BrowserModule } from '@angular/platform-browser';
 import { Calendar } from '@fullcalendar/core';
 
+import { SharedDataService } from 'src/app/shared/shared-data.service';
+
 function obtenerAbreviaturaDia(fecha: Date): string {
   const dias = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
   return dias[fecha.getDay()];
