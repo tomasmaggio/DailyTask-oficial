@@ -143,6 +143,8 @@ export class CalendarioComponent {
       
      },
 
+     
+
   
     //Drag & Drop
     editable: true, //permite hacer los eventos editables (true)

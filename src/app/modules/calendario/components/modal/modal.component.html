@@ -8,14 +8,14 @@
       </div>
       
       <div class="modal-body">
-        <input type="text" id="titulo" class="form-control" placeholder="titulo"><br>
-        <input type="time" id="tiempo" class="form-control" value="12:00"><br> <!-- el value nos ayudara a que el date muestre la fecha segun donde el usuario haya hecho click -->
-        <input type="color" class="form-control" value="#3A4C94">
+        <input type="text" id="titulo" class="form-control" placeholder="titulo" autocomplete="off"><br>
+        <input type="time" id="tiempo" class="form-control" value="12:00" autocomplete="off"><br> <!-- el value nos ayudara a que el date muestre la fecha segun donde el usuario haya hecho click -->
+        <input type="color" class="form-control" value="#3A4C94" autocomplete="off">
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="cancelar-btn" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" id="guardarbtn" class="guardar-btn">Guardar</button>
+        <button type="button" id="cancelarbtn" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" id="guardarbtn" class="btn-guardar">Guardar</button>
       </div>
     </div>
   </div>
