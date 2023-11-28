@@ -15,17 +15,12 @@ function obtenerAbreviaturaDia(fecha: Date): string {
 }
 
 
-
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
   styleUrls: ['./calendario.component.css']
 })
 export class CalendarioComponent {
-
-  title: string = '';
-  start: string = '';
-  id: string = '';
 
   @ViewChild('fullcalendar') fullcalendar!: CalendarioComponent;
   @ViewChild('ejemploModal') modalElement!: ElementRef;
@@ -151,22 +146,25 @@ export class CalendarioComponent {
      },
      dateClick: function (info) {
       const startInput = document.getElementById('start') as HTMLInputElement | null;
-      const idInput = document.getElementById('id') as HTMLInputElement | null;
-      const btnguardar = document.getElementById('btn-guardar') as HTMLElement | null;
-      const tituloModal = document.getElementById('tittle') as HTMLElement | null;
+      const titleInput = document.getElementById('tittle') as HTMLInputElement | null;
     
-      if (startInput && idInput && btnguardar && tituloModal) {
+      if (startInput && titleInput) {
         startInput.value = info.dateStr;
-        idInput.value = '';
-        btnguardar.textContent = 'Registrar';
-        tituloModal.textContent = 'Registrar Evento';
+    
+        // Aquí también puedes establecer el valor del input de título si es necesario
+        titleInput.value = "";
     
         // Muestra el modal directamente con jQuery
         $('#ejemploModal').modal('show');
       }
-    },
-   
 
+    },
+    
+    
+
+     
+
+  
     //Drag & Drop
     editable: true, //permite hacer los eventos editables (true)
     eventStartEditable: true,
@@ -180,8 +178,6 @@ export class CalendarioComponent {
     events: this.events
   
   };
-
-  
 
 
 //Funcion para mostrar el Tooltip cada que se le pasa el cursor por encima de un evento en en el calendario
