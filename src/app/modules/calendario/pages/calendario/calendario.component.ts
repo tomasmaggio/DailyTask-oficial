@@ -84,15 +84,15 @@ export class CalendarioComponent {
 
 
        $('#guardarbtn').click(function(){
-           var titulo = $('titulo').val();
-           console.log(titulo);
+           var title = $('#title').val();
+           console.log(title);
        })
 
       
      },
      dateClick: (info) => {
       const startInput = document.getElementById('start') as HTMLInputElement | null;
-      const titleInput = document.getElementById('tittle') as HTMLInputElement | null;
+      const titleInput = document.getElementById('title') as HTMLInputElement | null;
 
       if (startInput && titleInput) {
         startInput.value = info.dateStr;

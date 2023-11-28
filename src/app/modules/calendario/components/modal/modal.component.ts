@@ -8,15 +8,21 @@ import { SharedDataService } from 'src/app/shared/shared-data.service';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
+  event: any = { title: '', start: '', color: '' }; // línea para inicializar 'event'
+
 
   constructor(private SharedDataService: SharedDataService){}
 
   ngOnInit(){
     //me suscribo al servicio para recibir eventos 
     this.SharedDataService.event$.subscribe(event => {
-
-      console.log(event)
+      this.event = event;
+      //console.log(event)
     })
+  }
+
+  guardarEvento(){
+    console.log('Titulo del evento', this.event.title)
   }
 
 }
