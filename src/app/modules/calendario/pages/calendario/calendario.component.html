@@ -1,7 +1,14 @@
 <div class="container">
   <div class="row">
-    <!-- Primer div para tareas pendientes -->
-    <div class="col-md-5 order-md-2">
+    <!-- Primer div para el calendario -->
+    <div class="col-md-6 calendario-div order-md-1">
+      <div style="width: 100%;">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+      </div>
+    </div>
+
+    <!-- Segundo div para tareas pendientes -->
+    <div class="col-md-6 order-md-2">
       <div class="tareas-pendientes-div">
         <p class="tareas-pendientes">Tareas pendientes</p>
       </div>
@@ -17,15 +24,9 @@
         </div>
       </div>
     </div>
-
-    <!-- Segundo div para el calendario -->
-    <div class="col-md-7 order-md-1 calendario-div">
-      <div style="width: 100%;">
-        <full-calendar [options]="calendarOptions"></full-calendar>
-      </div>
-    </div>
   </div>
 </div>
+
 
 
 

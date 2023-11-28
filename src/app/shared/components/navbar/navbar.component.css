@@ -365,27 +365,49 @@ body.dark .home .text{
 
 
 /* ------------------------------------ a ----------------------------------- */
-/* Mostrar el botón toggle en pantallas pequeñas */
-@media screen and (max-width: 768px) {
+/* Agrega la siguiente consulta de medios al final de tu archivo CSS */
 
-    .toggle-button {
-      display: block;
-    }
   
-    /* Ocultar inicialmente el navbar */
-    .sidebar {
-      left: -100%; 
-    }
-    
-    /* Ajustar ancho del navbar al 100% */
-    .sidebar {
-        width: 100%;
-        transition: width 0.3s ease;
-      }
-      
-      .sidebar.close {
-         width: 88px;
-      }
 
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

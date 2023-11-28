@@ -1,5 +1,7 @@
 
-
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
     <nav class="sidebar" [ngClass]="{'close': isSidebarClosed}">
         <header>
             <div  class="image-text">
@@ -12,6 +14,8 @@
                 </div>
             </div>
             <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()"></i>
+
+            
         </header>
         <div class="menu-bar" (click)="toggleSidebar()" >
             <div class="menu">

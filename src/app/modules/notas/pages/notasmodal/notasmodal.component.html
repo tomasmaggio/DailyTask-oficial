@@ -2,8 +2,7 @@
 <!-- (onHide)="onClose.emit()": Emite el evento onClose cuando el modal se cierra. -->
 <p-dialog [visible]="showModal" [modal]="true" (onHide)="onClose.emit()" class="custom-modal" [closable]="false">
     <div class="form-container">
-        <header style="text-align: center; padding: 5px;">Nueva nota</header>
-
+        <header style="text-align: center; padding: 5px;">Nota</header>
 <!-- #notaForm Define el formulario que se enviará al hacer clic en el botón "Guardar". Llama a la función onSubmit cuando se envía el formulario. -->
         <form #notaForm="ngForm" (ngSubmit)="onSubmit(notaForm)">
 
@@ -12,7 +11,6 @@
                     <div class="control-titulo">
                         <input type="text" name="titulo" [ngModel]="nuevo ? '' : nota.titulo" required class="inp-titulo" autocomplete="off" placeholder="Titulo">
                         <!-- el required es para que el titulo sea requerido si o si -->
-    
                     </div>
                 
                     <div class="control-color">
