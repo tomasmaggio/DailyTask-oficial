@@ -17,4 +17,6 @@ export class SharedDataService {
   addEvent(event:any){
     this.sendEvent(event);
   }
+
+  
 }

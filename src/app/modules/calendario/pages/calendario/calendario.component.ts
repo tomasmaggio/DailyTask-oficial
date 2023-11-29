@@ -1,15 +1,17 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
-//aqui se importan los plugins del fullcalendar (primero hay que instalarlos https://fullcalendar.io/docs/plugin-index)
+import { CalendarOptions } from '@fullcalendar/core'; // útil para el chequeo de tipos
+import { BrowserModule } from '@angular/platform-browser';
+import { Calendar } from '@fullcalendar/core';
+import { SharedDataService } from 'src/app/shared/shared-data.service';
+
+// Importaciones de plugins del FullCalendar
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+
+// Importaciones relacionadas con el manejo de fechas y locales
 import format from 'date-fns/format';
 import esLocale from '@fullcalendar/core/locales/es';
 import es from 'date-fns/locale/es';
-import { BrowserModule } from '@angular/platform-browser';
-import { Calendar } from '@fullcalendar/core';
-
-import { SharedDataService } from 'src/app/shared/shared-data.service';
 import { event } from 'jquery';
 
 function obtenerAbreviaturaDia(fecha: Date): string {
@@ -33,17 +35,23 @@ export class CalendarioComponent {
   constructor(private SharedDataService: SharedDataService){}
 
 
-  ngOnInit(){
-    //me suscribo al servicio compartido para recibir eventos
+  ngOnInit() {
+    // Suscribirse al servicio compartido para recibir eventos
     this.SharedDataService.event$.subscribe(event => {
+      // Verificar si el evento ya existe en la lista
+      const eventExists = this.events.some(e => e.start === event.start);
 
-      //agrego el evento a la lista de eventos
-      this.events = [...this.events, event]
+      if (!eventExists) {
+        // Agregar el evento a la lista de eventos
+        this.events = [...this.events, event];
 
-      //actualizo los eventos del calendario
-      this.calendarOptions.events = this.events;
+        // Actualizar los eventos en el calendario
+        this.calendarOptions.events = this.events;
+      }
     });
   }
+
+  
 
 
   events: any[] = [
@@ -104,16 +112,27 @@ export class CalendarioComponent {
 
       
      },
-     dateClick: function (info) {
+     
+     dateClick: (info) => {
       const startInput = document.getElementById('start') as HTMLInputElement | null;
-      const titleInput = document.getElementById('tittle') as HTMLInputElement | null;
-    
+      const titleInput = document.getElementById('title') as HTMLInputElement | null;
+
       if (startInput && titleInput) {
         startInput.value = info.dateStr;
-        titleInput.value = "";
+        titleInput.value = '';
+
+        // Notifica al servicio con los datos del evento seleccionado
+        this.SharedDataService.sendEvent({
+          title: '',
+          start: info.dateStr,
+          color: '#3A4C94' // Puedes establecer un color predeterminado
+        });
+
         $('#ejemploModal').modal('show');
       }
     },
+    
+
     
     
 

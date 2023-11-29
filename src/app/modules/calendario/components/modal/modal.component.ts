@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { event } from 'jquery';
+import { NgForm } from '@angular/forms';
 import { SharedDataService } from 'src/app/shared/shared-data.service';
 
 @Component({
@@ -10,6 +11,9 @@ import { SharedDataService } from 'src/app/shared/shared-data.service';
 export class ModalComponent {
   event: any = { title: '', start: '', color: '' }; // línea para inicializar 'event'
 
+  @ViewChild('eventoForm') eventoForm: NgForm;  // Obtener referencia al formulario
+
+
 
   constructor(private SharedDataService: SharedDataService){}
 
@@ -18,6 +22,7 @@ export class ModalComponent {
     this.SharedDataService.event$.subscribe(event => {
       this.event = event;
       //console.log(event)
+      
     })
   }
 
@@ -27,7 +32,10 @@ export class ModalComponent {
     //utilizo el servicio compartido para agregar el evento
     this.SharedDataService.addEvent(this.event)
 
+    
+
   }
+  
 
 
 
