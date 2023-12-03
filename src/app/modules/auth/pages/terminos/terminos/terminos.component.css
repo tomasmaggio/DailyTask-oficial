@@ -1,0 +1,83 @@
+.custom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    text-align: center;
+    height: 90%;
+}
+
+.custom-rectangle {
+    width: 550px;
+    padding: 20px;
+    border: 3.5px solid #3a4c94;
+    border-radius: 10px;
+    height: 90%;
+    overflow-y: auto;
+}
+
+
+.custom-rectangle::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-rectangle::-webkit-scrollbar-thumb {
+    background-color: #3a4c94;
+    border-radius: 10px;
+}
+
+.custom-rectangle::-webkit-scrollbar-track {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+
+
+
+.custom-button {
+    width: 100%; /* Para que tenga el mismo ancho que el rectángulo */
+    height: 30px;
+    margin-top: 20px;
+    background-color: #3a4c94;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #738ccf;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.titulo-term{
+    color: #3a4c94;
+    font-size: 20px;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #3a4c94;
+    padding:10px;
+    border-radius: 2px;
+    color: white;
+}
+
+.terms-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.terms-list-item {
+    margin-bottom: 10px;
+}
