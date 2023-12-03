@@ -28,11 +28,16 @@ export class ModalComponent {
 
   
 
-  guardarEvento(){
+  guardarEvento() {
     console.log('Evento guardado:', this.event.title);
 
-    //utilizo el servicio compartido para agregar el evento
-    this.SharedDataService.addEvent(this.event)
+    if (this.event.id) {
+      // Si el evento tiene un ID, significa que ya existe y debe ser editado
+      this.SharedDataService.editEvent(this.event);
+    } else {
+      // Si no tiene un ID, es un nuevo evento y se agrega normalmente
+      this.SharedDataService.addEvent(this.event);
+    }
 
     this.cerrarModal();
   }
