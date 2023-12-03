@@ -13,6 +13,7 @@ import format from 'date-fns/format';
 import esLocale from '@fullcalendar/core/locales/es';
 import es from 'date-fns/locale/es';
 import { event } from 'jquery';
+import { FullCalendarComponent } from '@fullcalendar/angular';
 
 function obtenerAbreviaturaDia(fecha: Date): string {
   const dias = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
@@ -28,26 +29,25 @@ function obtenerAbreviaturaDia(fecha: Date): string {
 })
 export class CalendarioComponent {
 
-  @ViewChild('fullcalendar') fullcalendar!: CalendarioComponent;
+  @ViewChild('fullcalendar') calendarComponent!: CalendarioComponent;
   @ViewChild('ejemploModal') modalElement!: ElementRef;
+  @ViewChild(FullCalendarComponent, { static: true }) fullcalendar!: FullCalendarComponent;
+
 
 
   constructor(private SharedDataService: SharedDataService){}
 
 
 
-  ngOnInit() {
-    // Suscribirse al servicio compartido para recibir eventos
+  ngAfterViewInit() {
+    // Ahora puedes acceder a la API de FullCalendar de manera segura
+    this.fullcalendar.getApi().gotoDate(new Date()); // Por ejemplo, aquí estamos yendo a la fecha actual
+
     this.SharedDataService.event$.subscribe(event => {
-      // Verificar si el evento ya existe en la lista
-      const eventExists = this.events.some(e => e.start === event.start);
+      const eventExists = this.fullcalendar.getApi().getEvents().some(e => e.start === event.start);
 
       if (!eventExists) {
-        // Agregar el evento a la lista de eventos
-        this.events = [...this.events, event];
-
-        // Actualizar los eventos en el calendario
-        this.calendarOptions.events = this.events;
+        this.fullcalendar.getApi().addEvent(event);
       }
     });
   }
