@@ -73,6 +73,9 @@ export class CalendarioComponent {
   }
 
   
+ ngOnInit(){
+  
+ }
 
 
 
