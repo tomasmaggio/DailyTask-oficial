@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { TerminosComponent } from './pages/terminos/terminos/terminos.component';
 
 const routes: Routes = [
   //rutas secundarias
     {path: 'login', component:LoginComponent},
-    {path: 'registro', component:RegistroComponent}
+    {path: 'registro', component:RegistroComponent},
+    {path: 'terminos', component:TerminosComponent}
 ];
 
 @NgModule({
