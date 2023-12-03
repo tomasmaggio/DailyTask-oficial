@@ -41,15 +41,17 @@ export class CalendarioComponent {
 
   ngAfterViewInit() {
     // Ahora puedes acceder a la API de FullCalendar de manera segura
-    this.fullcalendar.getApi().gotoDate(new Date()); // Por ejemplo, aquí estamos yendo a la fecha actual
+    if (this.fullcalendar && this.fullcalendar.getApi) {
+      this.fullcalendar.getApi().gotoDate(new Date()); // Por ejemplo, aquí estamos yendo a la fecha actual
 
-    this.SharedDataService.event$.subscribe(event => {
-      const eventExists = this.fullcalendar.getApi().getEvents().some(e => e.start === event.start);
+      this.SharedDataService.event$.subscribe(event => {
+        const eventExists = this.fullcalendar.getApi().getEvents().some(e => e.start === event.start);
 
-      if (!eventExists) {
-        this.fullcalendar.getApi().addEvent(event);
-      }
-    });
+        if (!eventExists) {
+          this.fullcalendar.getApi().addEvent(event);
+        }
+      });
+    }
   }
 
 
@@ -86,21 +88,19 @@ export class CalendarioComponent {
 
   calendarOptions: CalendarOptions = {
     
-
-
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
-    
-    
-    //idioma
-    locale: esLocale,
+    locale: esLocale,//idioma
+    selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
+    unselectAuto: true,//deseleccionar fechas automaticamente
 
-    //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
-    selectable: true, 
+    editable: true,//permite hacer los eventos editables
+    eventStartEditable: true,
 
-    //deseleccionar fechas automaticamente
-    unselectAuto: true,
-
+    select: (info) => {
+      // Evitar la creación automática de eventos vacíos al hacer clic en una fecha
+      this.fullcalendar.getApi().unselect();
+    },
     
 
     //funcion para abrir el modal
@@ -116,8 +116,8 @@ export class CalendarioComponent {
 
         // Notifica al servicio con los datos del evento seleccionado
         this.SharedDataService.sendEvent({
-          title: '',
           start: info.dateStr,
+          title: '',
           color: '' // 
         });
 
@@ -133,8 +133,6 @@ export class CalendarioComponent {
 
   
     //Drag & Drop
-    editable: true, //permite hacer los eventos editables (true)
-    eventStartEditable: true,
     eventDrop: (info) => {
       // código para actualizar fecha en BD
     },
