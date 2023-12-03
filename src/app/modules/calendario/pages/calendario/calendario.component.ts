@@ -57,22 +57,22 @@ export class CalendarioComponent {
   events: any[] = [
     {
       title: 'Corte de pelo de panchito 🐶',
-      start: '2023-11-07',
+      start: '2023-12-07',
       color: '#1967D2',
     },
     {
        title: 'Clases de Alemán',
-       start: '2023-11-08',
+       start: '2023-12-08',
        color: '#F72A25'
     },
     {
       title: 'Llevar el carro al mecánico',
-      start: '2023-11-09',
+      start: '2023-12-09',
       color: '#0b5394'
    },
    {
     title: 'Estudiar',
-    start: '2023-11-09',
+    start: '2023-12-09',
     color: '#f1c232'
    },
 
