@@ -5,16 +5,17 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedDataService {
-  private eventSource = new Subject<any>();
+  private eventSource = new Subject<any>(); //eventSource se utiliza para emitir eventos a otros componentes.
 
-  event$ = this.eventSource.asObservable();
+  event$ = this.eventSource.asObservable(); //Aquí se crea un Observable llamado event$ a partir del Subject (eventSource). 
+  //                                          El $ al final del nombre de la variable es una convención que indica que es un Observable.
 
-  sendEvent(event: any) {
-    this.eventSource.next(event);
+  sendEvent(event: any) { //sendEvent es un método que toma un evento como parámetro y lo emite utilizando el Subject.
+    this.eventSource.next(event); //Al llamar a next en eventSource, estás notificando a todos los suscriptores (observadores) que hay un nuevo evento disponible.
   }
 
   //metodo para agregar eventos en el calendario
-  addEvent(event:any){
+  addEvent(event:any){ //addEvent llama a sendEvent para agregar eventos al servicio
     this.sendEvent(event);
   }
 

@@ -35,6 +35,7 @@ export class CalendarioComponent {
   constructor(private SharedDataService: SharedDataService){}
 
 
+
   ngOnInit() {
     // Suscribirse al servicio compartido para recibir eventos
     this.SharedDataService.event$.subscribe(event => {
@@ -50,6 +51,8 @@ export class CalendarioComponent {
       }
     });
   }
+
+
 
   
 
@@ -101,31 +104,21 @@ export class CalendarioComponent {
     
 
     //funcion para abrir el modal
-     select: function(arg){
-       $('#ejemploModal').modal('toggle');
-
-
-       $('#guardarbtn').click(function(){
-           var title = $('#title').val();
-           console.log(title);
-       })
-
-      
-     },
-     
      dateClick: (info) => {
       const startInput = document.getElementById('start') as HTMLInputElement | null;
       const titleInput = document.getElementById('title') as HTMLInputElement | null;
+      const colorInput = document.getElementById('color') as HTMLInputElement ;
 
       if (startInput && titleInput) {
         startInput.value = info.dateStr;
         titleInput.value = '';
+        colorInput.value = '';
 
         // Notifica al servicio con los datos del evento seleccionado
         this.SharedDataService.sendEvent({
           title: '',
           start: info.dateStr,
-          color: '#3A4C94' // Puedes establecer un color predeterminado
+          color: '' // 
         });
 
         $('#ejemploModal').modal('show');
