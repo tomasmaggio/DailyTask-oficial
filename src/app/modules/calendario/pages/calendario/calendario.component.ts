@@ -35,9 +35,27 @@ export class CalendarioComponent {
 
 
 
-  constructor(private SharedDataService: SharedDataService){}
+  constructor(private SharedDataService: SharedDataService){
 
+    //suscripcion a eventos editados
+  this.SharedDataService.editedEvent$.subscribe(editedEvent => {
+    const calendarApi = this.fullcalendar.getApi();
+    const existingEvent = calendarApi.getEventById(editedEvent.id);
 
+    if (existingEvent){
+      existingEvent.setProp('title', editedEvent.title);
+      existingEvent.setProp('color', editedEvent.color);
+      existingEvent.setStart(editedEvent.start);
+      existingEvent.setEnd('editedEvent.end');
+      existingEvent.setExtendedProp('customData', editedEvent.customData);
+      existingEvent.setExtendedProp('otherCustomData', editedEvent.otherCustomData);
+      
+    }
+
+  })
+  }
+
+  
 
   ngAfterViewInit() {
     // Ahora puedes acceder a la API de FullCalendar de manera segura
@@ -53,6 +71,8 @@ export class CalendarioComponent {
       });
     }
   }
+
+  
 
 
 
