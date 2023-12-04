@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 //Módulos de firebase
 import {AngularFireModule} from '@angular/fire/compat'
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     FullCalendarModule,
     FormsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
+
     
   ],
   exports:[
