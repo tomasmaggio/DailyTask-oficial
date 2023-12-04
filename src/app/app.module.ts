@@ -7,7 +7,8 @@ import { RouterModule } from '@angular/router';
 import { FullCalendarModule} from '@fullcalendar/angular'
 import { FormsModule } from '@angular/forms';
 
-
+//Módulos de firebase
+import {AngularFireModule} from '@angular/fire/compat'
  
 
 @NgModule({
