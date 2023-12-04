@@ -1,5 +1,5 @@
 .container{
-  padding-left: 5px;
+  padding-left: 5%;
 }
 
 .rectangulo{
@@ -21,6 +21,16 @@
 
   .order-md-2 {
     order: 1;
+  }
+}
+@media (max-width: 576px) {
+  .calendario-div {
+    width: 100%;
+    max-width: none;
+  }
+
+  .evento-pend .info h1 {
+    font-size: 1.2em;
   }
 }
 
@@ -59,7 +69,7 @@
 
 .calendario-div{
   margin-top: 4%;
-  width: 50;
+
 }
 
 .evento-pend{
@@ -67,4 +77,8 @@
   background-color: #4b6dc5;
   border-radius: 35px;
   
+}
+
+.evento-pend .info h1 {
+  font-size: 1.5em; /* unidades em para hacer que el tamaño de fuente sea relativo */
 }

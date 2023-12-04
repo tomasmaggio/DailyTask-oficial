@@ -134,13 +134,16 @@ body{
   }
 
 
+ 
+  
+
 
 .rectangulo {
     border: 4px solid #000; /* Establece un borde de 2px sólido de color negro */
     border-radius: 80px;
     border-color: #3A4C94;
-    width: 600px; /* Ancho del rectángulo */
-    height: auto; /* Alto del rectángulo */
+    width: 100%; /* Ancho del rectángulo */
+    height: 100%; /* Alto del rectángulo */
     padding: 20px; /* Espacio entre el borde y el contenido interno */
     /* Agrega otros estilos necesarios para el rectángulo */
 }
@@ -165,7 +168,7 @@ body{
   text-align: start;
   border-radius: 40px;
   color: #fff;
-  background-color: #3A4C94;
+  background-color: #F72A25;
   padding: 20px;
   margin: 10px;
 }
@@ -173,7 +176,7 @@ body{
   text-align: start;
   border-radius: 40px;
   color: #fff;
-  background-color: #34A853;
+  background-color: #0b5394;
   padding: 20px;
   margin: 10px;
 }
@@ -181,7 +184,7 @@ body{
   text-align: start;
   border-radius: 40px;
   color: #fff;
-  background-color: #4285F4;
+  background-color: #f1c232;
   padding: 20px;
   margin: 10px;
 }

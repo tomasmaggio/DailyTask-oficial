@@ -154,7 +154,7 @@ export class CalendarioComponent {
         this.SharedDataService.sendEvent({
           start: info.dateStr,
           title: '',
-          color: '' // 
+          color: 'transparent' // 
         });
 
         $('#ejemploModal').modal('show');
