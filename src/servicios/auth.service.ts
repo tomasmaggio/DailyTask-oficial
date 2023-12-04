@@ -16,4 +16,8 @@ export class AuthService {
   registerWithEmailAndPassword(user: {email: string, password: string}){
     return this.afs.createUserWithEmailAndPassword(user.email, user.password);
   }
+
+  signWithEmailAndPassword(user: {email: string, password: string}){
+    return this.afs.createUserWithEmailAndPassword(user.email, user.password);
+  }
 }
