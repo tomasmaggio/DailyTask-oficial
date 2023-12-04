@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 //Módulos de firebase
 import {AngularFireModule} from '@angular/fire/compat'
- 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
