@@ -4,6 +4,7 @@ import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import format from 'date-fns/format';
+
 import esLocale from '@fullcalendar/core/locales/es';
 import es from 'date-fns/locale/es';
 import { BrowserModule } from '@angular/platform-browser';

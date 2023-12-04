@@ -3,40 +3,44 @@
         <div class="col-md-2" style="padding-right: 40px;">
             <a (click)="editarImagen" class="imagen-container">
                 <img class="imagen-1" style="border-radius: 100%;" src="../../../../../assets/Ellipse 7.png" alt="">
-                <button class="btn-editar-imagen" *ngIf="mostrarBotones"><i class='bx bxs-edit-alt icon-editar-img'></i></button>
+                <button class="btn-editar-imagen" *ngIf="mostrarBotones"><i
+                        class='bx bxs-edit-alt icon-editar-img'></i></button>
 
             </a>
         </div>
-
-        <div class="col-md-10">
-            <h1 class="texto-1">Ingeniero Lucas Quiñiñir</h1> <br>
-            <p class="texto-2">"Lucas, ingeniero apasionado. Innovó en la construcción sostenible, electrónica <br>
-                médica y robótica educativa. Su talento impulsa el futuro."<img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPJJREFUSEvF0zFKBDEUh/HfnkALEWy19gI2Xkg7rdZGRAu19EaCN7ASbK0EtxeUB1PEcTLJTHbZtEm+7+X/XhY2vBYb5msV3OAb17lCWwQPuOjAl3gckswV7OEV+wn0Crd9yRzBLr5whGccdNAl7loFZ4hKT/COQ7x08TRHFHlH7rE+cIo37GDV2uRo4n0PEpJjfI6Nek0P0spT1hPOS/+oJGiCh3xMkINHMyOyqpUTrAWee8Ha4DnBz8DbJ8WS3h+KqC+YDa95QRO8NEVVU1I6VPoHpfvF/a0IhqaoWGly4E/RNVM0Bf6vr1uJaGrFo+d/AQouJhks7bRaAAAAAElFTkSuQmCC" style="cursor: pointer;" />
-
-            <div class="container-h1">
+        <div class="col">
+            <div>
                 <h1 class="texto-1">Ingeniero Lucan Quiñiñir </h1> <br>
-                <button class="btn-editar-h1" *ngIf="mostrarBotones"><i class='bx bxs-edit-alt icon-editar-h1'></i></button>
+                <button class="btn-editar-h1" *ngIf="mostrarBotones"><i
+                        class='bx bxs-edit-alt icon-editar-h1'></i></button>
+                <p class="texto-2 col-md-10">"Lucan, ingeniero apasionado. Innovó en la construcción sostenible,
+                    electrónica
+                    médica y
+                    robótica educativa. Su talento impulsa el futuro."
+                    <button class="btn-editar" *ngIf="mostrarBotones"><i
+                            class='bx bxs-edit-alt icon-editar'></i></button>
+                </p>
             </div>
-            <p class="texto-2">"Lucan, ingeniero apasionado. Innovó en la construcción sostenible, electrónica médica y robótica educativa. Su talento impulsa el futuro." 
-            <button class="btn-editar" *ngIf="mostrarBotones"><i class='bx bxs-edit-alt icon-editar'></i></button></p> 
         </div>
     </div>
+</div>
 
 
-    <div class="row-2 rectangle-row">
-        <div class="rectangle" style="border: 5px solid #808080;">
-            <a (click)="toggleMostrarBotones()" class="texto-3">Editar</a>
-        
+<div class="row-2 rectangle-row">
+    <div class="rectangle" style="border: 5px solid #808080;">
+        <a (click)="toggleMostrarBotones()" class="texto-3">Editar</a>
 
-            <div class="botones" *ngIf="mostrarBotones">
-                <button class="boton1" routerLink="/usuario">Guardar</button>
-                <button class="boton2" routerLink="/usuario" style="border: 5px solid #ff0000; color: #ff0000;">Descartar Cambios</button>
-            </div>
+
+        <div class="botones" *ngIf="mostrarBotones">
+            <button class="boton1" routerLink="/usuario">Guardar</button>
+            <button class="boton2" routerLink="/usuario" style="border: 5px solid #ff0000; color: #ff0000;">Descartar
+                Cambios</button>
         </div>
+    </div>
+</div>
 
 
 
 
 
-        <app-navbar></app-navbar>
+<app-navbar></app-navbar>
