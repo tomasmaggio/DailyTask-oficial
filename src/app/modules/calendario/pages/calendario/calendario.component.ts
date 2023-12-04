@@ -73,9 +73,21 @@ export class CalendarioComponent {
   }
 
   
- ngOnInit(){
-  
- }
+  ngOnInit() {
+    // Suscribirse al servicio compartido para recibir eventos
+    this.SharedDataService.event$.subscribe(event => {
+      // Verificar si el evento ya existe en la lista
+      const eventExists = this.events.some(e => e.start === event.start);
+
+      if (!eventExists) {
+        // Agregar el evento a la lista de eventos
+        this.events = [...this.events, event];
+
+        // Actualizar los eventos en el calendario
+        this.calendarOptions.events = this.events;
+      }
+    });
+  }
 
 
 
