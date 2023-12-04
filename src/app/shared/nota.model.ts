@@ -3,5 +3,4 @@ export class Nota {
     public titulo: string;
     public body: string;
     public color: string
-    //public color: string;
 }

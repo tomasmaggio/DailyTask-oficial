@@ -75,7 +75,9 @@ import { NotasService } from 'src/app/shared/notas.service';
         })
       ])
     ])
+    
   ]
+
 })
 export class NotasComponent {
   visible: boolean = false;
@@ -196,16 +198,17 @@ export class NotasComponent {
 
 
   openModal(id?: number) {
-    
+    console.log('ID recibido:', id);
+  
     if (id !== undefined) {
       // Si se proporciona un ID, estamos en modo de edición
       this.selectedNotaId = id;
-      this.showModal = true;
     } else {
       // Si no se proporciona un ID, estamos en modo de creación
       this.selectedNotaId = null;
-      this.showModal = true;
     }
+  
+    this.showModal = true;
   }
 
 

@@ -1,19 +1,26 @@
-import { Component, ViewChild } from '@angular/core';
-import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
-//aqui se importan los plugins del fullcalendar (primero hay que instalarlos https://fullcalendar.io/docs/plugin-index)
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { CalendarOptions } from '@fullcalendar/core'; // útil para el chequeo de tipos
+import { BrowserModule } from '@angular/platform-browser';
+import { Calendar } from '@fullcalendar/core';
+import { SharedDataService } from 'src/app/shared/shared-data.service';
+
+// Importaciones de plugins del FullCalendar
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+
+// Importaciones relacionadas con el manejo de fechas y locales
 import format from 'date-fns/format';
 
 import esLocale from '@fullcalendar/core/locales/es';
 import es from 'date-fns/locale/es';
-import { BrowserModule } from '@angular/platform-browser';
-import { Calendar } from '@fullcalendar/core';
+import { event } from 'jquery';
+import { FullCalendarComponent } from '@fullcalendar/angular';
 
 function obtenerAbreviaturaDia(fecha: Date): string {
   const dias = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
   return dias[fecha.getDay()];
 }
+
 
 
 @Component({
@@ -23,109 +30,145 @@ function obtenerAbreviaturaDia(fecha: Date): string {
 })
 export class CalendarioComponent {
 
-  @ViewChild('fullcalendar') fullcalendar!: CalendarioComponent;
+  @ViewChild('fullcalendar') calendarComponent!: CalendarioComponent;
+  @ViewChild('ejemploModal') modalElement!: ElementRef;
+  @ViewChild(FullCalendarComponent, { static: true }) fullcalendar!: FullCalendarComponent;
+
+
+
+  constructor(private SharedDataService: SharedDataService){
+
+    //suscripcion a eventos editados
+  this.SharedDataService.editedEvent$.subscribe(editedEvent => {
+    const calendarApi = this.fullcalendar.getApi();
+    const existingEvent = calendarApi.getEventById(editedEvent.id);
+
+    if (existingEvent){
+      existingEvent.setProp('title', editedEvent.title);
+      existingEvent.setProp('color', editedEvent.color);
+      existingEvent.setStart(editedEvent.start);
+      existingEvent.setEnd('editedEvent.end');
+      existingEvent.setExtendedProp('customData', editedEvent.customData);
+      existingEvent.setExtendedProp('otherCustomData', editedEvent.otherCustomData);
+      
+    }
+
+  })
+  }
+
+  
+
+  ngAfterViewInit() {
+    // Ahora puedes acceder a la API de FullCalendar de manera segura
+    if (this.fullcalendar && this.fullcalendar.getApi) {
+      this.fullcalendar.getApi().gotoDate(new Date()); // Por ejemplo, aquí estamos yendo a la fecha actual
+
+      this.SharedDataService.event$.subscribe(event => {
+        const eventExists = this.fullcalendar.getApi().getEvents().some(e => e.start === event.start);
+
+        if (!eventExists) {
+          this.fullcalendar.getApi().addEvent(event);
+        }
+      });
+    }
+  }
+
+  
+  ngOnInit() {
+    // Suscribirse al servicio compartido para recibir eventos
+    this.SharedDataService.event$.subscribe(event => {
+      // Verificar si el evento ya existe en la lista
+      const eventExists = this.events.some(e => e.start === event.start);
+
+      if (!eventExists) {
+        // Agregar el evento a la lista de eventos
+        this.events = [...this.events, event];
+
+        // Actualizar los eventos en el calendario
+        this.calendarOptions.events = this.events;
+      }
+    });
+  }
+
+
+
+  
+
 
   events: any[] = [
     {
       title: 'Corte de pelo de panchito 🐶',
-      start: '2023-11-07',
+      start: '2023-12-07',
       color: '#1967D2',
     },
     {
        title: 'Clases de Alemán',
-       start: '2023-11-08',
+       start: '2023-12-08',
        color: '#F72A25'
     },
     {
       title: 'Llevar el carro al mecánico',
-      start: '2023-11-09',
+      start: '2023-12-09',
       color: '#0b5394'
    },
    {
-    title: 'Corte de pelo de panchito 🐶',
-    start: '2023-11-07',
-    color: '#1967D2',
-  },
-  {
-     title: 'Clases de Alemán',
-     start: '2023-11-08',
-     color: '#F72A25'
-  },
-  {
-    title: 'Llevar el carro al mecánico',
-    start: '2023-11-09',
-    color: '#0b5394'
- },
- {
-  title: 'Corte de pelo de panchito 🐶',
-  start: '2023-11-07',
-  color: '#1967D2',
-},
-{
-   title: 'Clases de Alemán',
-   start: '2023-11-08',
-   color: '#F72A25'
-},
-{
-  title: 'Llevar el carro al mecánico',
-  start: '2023-11-09',
-  color: '#0b5394'
-},
-{
-  title: 'Corte de pelo de panchito 🐶',
-  start: '2023-11-07',
-  color: '#1967D2',
-},
-{
-   title: 'Clases de Alemán',
-   start: '2023-11-08',
-   color: '#F72A25'
-},
-{
-  title: 'Llevar el carro al mecánico',
-  start: '2023-11-09',
-  color: '#0b5394'
-},
+    title: 'Estudiar',
+    start: '2023-12-09',
+    color: '#f1c232'
+   },
+
+   
   ];
 
   
 
   calendarOptions: CalendarOptions = {
     
-
-
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
-    
-    
-    //idioma
-    locale: esLocale,
+    locale: esLocale,//idioma
+    selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
+    unselectAuto: true,//deseleccionar fechas automaticamente
 
-    //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)
-    selectable: true, 
+    editable: true,//permite hacer los eventos editables
+    eventStartEditable: true,
 
-    //deseleccionar fechas automaticamente
-    unselectAuto: true,
-
+    select: (info) => {
+      // Evitar la creación automática de eventos vacíos al hacer clic en una fecha
+      this.fullcalendar.getApi().unselect();
+    },
     
 
     //funcion para abrir el modal
-     select: function(arg){
-       $('#ejemploModal').modal('toggle');
+     dateClick: (info) => {
+      const startInput = document.getElementById('start') as HTMLInputElement | null;
+      const titleInput = document.getElementById('title') as HTMLInputElement | null;
+      const colorInput = document.getElementById('color') as HTMLInputElement ;
 
+      if (startInput && titleInput) {
+        startInput.value = info.dateStr;
+        titleInput.value = '';
+        colorInput.value = '';
 
-       $('#guardarbtn').click(function(){
-           var titulo = $('titulo').val();
-           console.log(titulo);
-       })
+        // Notifica al servicio con los datos del evento seleccionado
+        this.SharedDataService.sendEvent({
+          start: info.dateStr,
+          title: '',
+          color: '' // 
+        });
 
-      
-     },
+        $('#ejemploModal').modal('show');
+      }
+    },
+    
+
+    
+    
+
+     
 
   
     //Drag & Drop
-    editable: true, //permite hacer los eventos editables (true)
-    eventStartEditable: true,
     eventDrop: (info) => {
       // código para actualizar fecha en BD
     },
@@ -152,6 +195,7 @@ export class CalendarioComponent {
     padding: 4px;
     padding-inline: 50px;
     width:auto;
+    border: 2px solid #334275;
     height:auto;
     background:${eventColor};
     border-radius: 4px; 
