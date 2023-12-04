@@ -6,6 +6,7 @@ import { CalendarioComponent } from './pages/calendario/calendario.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { ModalComponent } from './components/modal/modal.component';
+import { FormsModule } from '@angular/forms';
 
 import * as bootstrap from "bootstrap";
 import * as $ from 'jquery';
@@ -22,6 +23,7 @@ import * as $ from 'jquery';
     CalendarioRoutingModule,
     SharedModule,
     FullCalendarModule,
+    FormsModule
     
   ]
 })
