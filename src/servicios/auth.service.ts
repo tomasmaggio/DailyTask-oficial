@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Route, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,17 @@ export class AuthService {
 
   constructor(private fireauth: AngularFireAuth, private firestore: AngularFirestore, private router: Router) { }
 
+
+  getUsername(userId: string): Observable<string> {
+    return this.firestore
+      .collection('users')
+      .doc(userId)
+      .valueChanges()
+      .pipe(
+        map((user: any) => user.username)
+      );
+  }
+  
   // Método para realizar el inicio de sesión
   login(email: string, password: string) {
     // Utilizamos el servicio AngularFireAuth para autenticar al usuario

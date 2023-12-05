@@ -1,46 +1,41 @@
 <div class="container">
     <div class="row" style="margin: 60px;">
-        <div class="col-md-2" style="padding-right: 40px;">
-            <a (click)="editarImagen" class="imagen-container">
-                <img class="imagen-1" style="border-radius: 100%;" src="../../../../../assets/Ellipse 7.png" alt="">
-                <button class="btn-editar-imagen" *ngIf="mostrarBotones"><i
-                        class='bx bxs-edit-alt icon-editar-img'></i></button>
-
-            </a>
-        </div>
-        <div class="col">
-            <div>
-                <h1 class="texto-1">Ingeniero Lucas Quiñiñir </h1> <br>
-                <button class="btn-editar-h1" *ngIf="mostrarBotones"><i
-                        class='bx bxs-edit-alt icon-editar-h1'></i></button>
-                <p class="texto-2 col-md-10">"Lucas, ingeniero apasionado. Innovó en la construcción sostenible,
-                    electrónica
-                    médica y
-                    robótica educativa. Su talento impulsa el futuro."
-                    <button class="btn-editar" *ngIf="mostrarBotones"><i
-                            class='bx bxs-edit-alt icon-editar'></i></button>
-                </p>
-            </div>
-        </div>
+      <div class="col-md-2" style="padding-right: 40px;">
+        <a (click)="editarImagen()" class="imagen-container">
+          <img class="imagen-1" style="border-radius: 100%;" src="../../../../../assets/Ellipse 7.png" alt="">
+          <button class="btn-editar-imagen" *ngIf="mostrarBotones"><i class='bx bxs-edit-alt icon-editar-img'></i></button>
+        </a>
+      </div>
+      <div class="col">
+        <div>
+            <h1 class="texto-1">{{ username }}</h1> <br>
+            <button class="btn-editar-h1" *ngIf="mostrarBotones"><i class='bx bxs-edit-alt icon-editar-h1'></i></button>
+            <p class="texto-2 col-md-10">"Lucas, ingeniero apasionado. Innovó en la construcción sostenible, electrónica médica y robótica educativa. Su talento impulsa el futuro."
+              <button class="btn-editar" *ngIf="mostrarBotones"><i class='bx bxs-edit-alt icon-editar'></i></button>
+            </p>
+          </div>
+      </div>
     </div>
-</div>
-
-
-
-<div class="row-2 rectangle-row">
+  </div>
+  
+  <div class="row-2 rectangle-row">
     <div class="rectangle" style="border: 5px solid #808080;">
-        <a (click)="toggleMostrarBotones()" class="texto-3">Editar</a>
-
-
-        <div class="botones" *ngIf="mostrarBotones">
-            <button class="boton1" routerLink="/usuario">Guardar</button>
-            <button class="boton2" routerLink="/usuario" style="border: 5px solid #ff0000; color: #ff0000;">Descartar
-                Cambios</button>
-        </div>
+      <a (click)="toggleMostrarBotones()" class="texto-3">Editar</a>
+  
+      <div class="botones" *ngIf="mostrarBotones">
+        <button class="boton1" routerLink="/usuario">Guardar</button>
+        <button class="boton2" routerLink="/usuario" style="border: 5px solid #ff0000; color: #ff0000;">Descartar Cambios</button>
+      </div>
     </div>
-</div>
-
-
-
-
-<app-navbar></app-navbar>
+  </div>
+  
+  <app-navbar></app-navbar>
+  
+  <h2>Usuario</h2>
+  <p>Nombre de usuario: {{ username }}</p>
+  
+  <button (click)="toggleMostrarBotones()">Mostrar/Ocultar botones</button>
+  
+  <div *ngIf="mostrarBotones">
+    <button (click)="editarImagen()">Editar imagen</button>
+  </div>
