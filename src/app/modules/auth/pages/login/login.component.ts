@@ -16,8 +16,14 @@ export class LoginComponent {
 
   constructor(private auth: AuthService) {}
 
+  validateEmail(email: string): boolean {
+    // Expresión regular para validar el formato del correo electrónico
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailRegex.test(email);
+  }
+
   login() {
-    if (this.email == '') {
+    if (!this.validateEmail(this.email)) {
       alert('Por favor ingrese un email válido.');
       return;
     }
