@@ -18,22 +18,22 @@
                         <h6>Crea una cuenta para obtener todas las funciones</h6>
                     </div>
 
-                    <p style="text-align: start;">	
-                        <input id="input" type="text" required />                    
+                    <p style="text-align: start;">    
+                        <input id="input" type="text" required />              
                         <label for="input" alt="Nombre de usuario" placeholder="Nombre de usuario"></label>
-                    </p>
-                    <p style="text-align: start;">	
-                        <input id="input" type="text" required />                    
+                      </p>
+                      <p style="text-align: start;">    
+                        <input [(ngModel)]="email" id="input" type="text" required />              
                         <label for="input" alt="Email" placeholder="Email"></label>
-                    </p>
-                    <p style="text-align: start;">	
-                        <input id="input" type="password" required />                    
+                      </p>
+                      <p style="text-align: start;">    
+                        <input [(ngModel)]="password" id="input" type="password" required />              
                         <label for="input" alt="Contraseña" placeholder="Contraseña"></label>
-                    </p>
-                    <p style="text-align: start;">	
-                        <input id="input" type="password" required />                    
+                      </p>
+                      <p style="text-align: start;">    
+                        <input id="input" type="password" required />              
                         <label for="input" alt="Confirmar contraseña" placeholder="Confirmar contraseña"></label>
-                    </p>
+                      </p>
                     
                     
                     
@@ -46,7 +46,7 @@
                     </div>
 
                     <div style="padding: 10px;">
-                        <button class="btn-comencemos">Empecemos!</button>
+                        <button class="btn-comencemos" (click)="register()">Empecemos!</button>
                     </div>
                     
 
