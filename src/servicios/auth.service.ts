@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core'; //decorador que indica que el servicio puede ser inyectado en otros componentes o servicios
 import { AngularFireAuth } from '@angular/fire/compat/auth'; //servicio de angularfire para interactuar con la autentificación de firebase
 import { Route, Router } from '@angular/router'; //servicio de enrutamiento de Angular para navegar entre diferentes rutas
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; //FormsModule lo tenemos para usar en NgModel
 
 @Injectable({
   providedIn: 'root'
