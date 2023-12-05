@@ -9,7 +9,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class AuthService {
 
-  constructor(private fireauth: AngularFireAuth, private router: Router) { }
+  constructor(private fireauth: AngularFireAuth, private firestore: AngularFirestore, private router: Router) { }
 
   // Método para realizar el inicio de sesión
   login(email: string, password: string) {
@@ -27,11 +27,15 @@ export class AuthService {
   }
 
   // Método para realizar el registro de un nuevo usuario
-  register(username: email: string, password: string) {
+  register(username: string, email: string, password: string) {
     // Utilizamos el servicio AngularFireAuth para crear un nuevo usuario en Firebase
     this.fireauth.createUserWithEmailAndPassword(email, password)
-      .then(() => {
+      .then((userCredential) => {
         // Si el registro es exitoso, mostramos una alerta y redirigimos al usuario a la página de inicio de sesión
+        return this.firestore.collection('users').doc(userCredential.user?.uid).set({
+          username: username,
+          email: email
+        });
         alert('Creaste tu cuenta con éxito');
         this.router.navigate(['/login']);
       })
