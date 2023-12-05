@@ -9,11 +9,12 @@
       </div>
 
       <form class="modal-body" #eventoForm="ngForm">
-        <input type="text" id="title" required class="form-control" placeholder="titulo del evento" name="title"
+        <label for="">Titulo del evento</label>
+        <input type="text" id="title" required class="form-control" placeholder="" name="title"
                autocomplete="off" [(ngModel)]="event.title"><br>
         <label for="">Fecha</label>
         <input type="date" id="start" class="form-control" name="start" autocomplete="off" [(ngModel)]="event.start"><br>
-        <label for="">Colorcito</label>
+        <label for="">Elija un color</label>
         <input type="color" id="color" required class="form-control" name="color" autocomplete="off"
                [(ngModel)]="event.color">
       </form>

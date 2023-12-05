@@ -195,7 +195,6 @@ export class CalendarioComponent {
     padding: 4px;
     padding-inline: 50px;
     width:auto;
-    border: 2px solid #334275;
     height:auto;
     background:${eventColor};
     border-radius: 4px; 
