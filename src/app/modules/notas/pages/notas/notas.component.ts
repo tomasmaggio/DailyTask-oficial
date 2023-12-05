@@ -105,6 +105,7 @@ export class NotasComponent {
     this.notasFiltradas = this.notasService.getAll();
   }
 
+  
   eliminarNota(nota: Nota) {
     let notaId = this.notasService.getId(nota);
     this.notasService.delete(notaId);
