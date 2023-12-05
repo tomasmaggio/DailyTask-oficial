@@ -20,7 +20,7 @@
 
       <div class="modal-footer">
         <button type="button" id="cancelarbtn" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" id="guardarbtn" class="btn-guardar" (click)="guardarEvento()">Guardar</button>
+        <button type="button" id="guardarbtn" class="btn-guardar" (click)="guardarEvento()" [disabled]="!eventoForm.valid">Guardar</button>
       </div>
     </div>
   </div>
