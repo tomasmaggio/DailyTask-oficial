@@ -9,6 +9,7 @@ import { AuthService } from 'src/servicios/auth.service';
 export class RegistroComponent implements OnInit {
   email: any;
   password: string;
+  username: string; //Acá se declara la propiedad username.
 
   constructor(private auth: AuthService) {
     // Inyectamos el servicio AuthService en el constructor del componente
@@ -40,7 +41,7 @@ export class RegistroComponent implements OnInit {
     }
 
     // Llamamos al método de registro del AuthService, pasando el correo electrónico y la contraseña
-    this.auth.register(this.email, this.password);
+    this.auth.register(this.email, this.password, this.username);
 
     // Reiniciamos los valores de email y password
     this.email = '';

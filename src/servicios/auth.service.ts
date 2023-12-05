@@ -27,7 +27,7 @@ export class AuthService {
   }
 
   // Método para realizar el registro de un nuevo usuario
-  register(email: string, password: string) {
+  register(username: email: string, password: string) {
     // Utilizamos el servicio AngularFireAuth para crear un nuevo usuario en Firebase
     this.fireauth.createUserWithEmailAndPassword(email, password)
       .then(() => {
