@@ -8,15 +8,15 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <div class="modal-body" >
-        <input type="text" id="title" class="form-control" placeholder="titulo del evento" name="title" autocomplete="off"
+      <form class="modal-body" #eventoForm="ngForm" >
+        <input type="text" id="title" required class="form-control" placeholder="titulo del evento" name="title" autocomplete="off"
           [(ngModel)]="event.title"><br>
           <label for="">Fecha</label>
           <input type="date" id="start" class="form-control" name="start" autocomplete="off"
           [(ngModel)]="event.start"><br>
           <label for="">Colorcito</label>
-        <input type="color" id="color" class="form-control" name="color" autocomplete="off" [(ngModel)]="event.color">
-      </div>
+        <input type="color" id="color" required class="form-control" name="color" autocomplete="off" [(ngModel)]="event.color">
+      </form>
 
       <div class="modal-footer">
         <button type="button" id="cancelarbtn" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
