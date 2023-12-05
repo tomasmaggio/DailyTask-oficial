@@ -8,19 +8,26 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <div class="modal-body" >
-        <input type="text" id="title" class="form-control" placeholder="titulo del evento" name="title" autocomplete="off"
-          [(ngModel)]="event.title"><br>
-          <label for="">Fecha</label>
-          <input type="date" id="start" class="form-control" name="start" autocomplete="off"
-          [(ngModel)]="event.start"><br>
-          <label for="">Colorcito</label>
-        <input type="color" id="color" class="form-control" name="color" autocomplete="off" [(ngModel)]="event.color">
-      </div>
+      <form class="modal-body" #eventoForm="ngForm">
+        <label for="title">Titulo del evento</label>
+        <input type="text" id="title" required class="form-control" placeholder="" name="title" autocomplete="off"
+               [(ngModel)]="event.title"><br>
+      
+        <label for="start">Fecha</label>
+        <input type="date" id="start" class="form-control" name="start" autocomplete="off"
+               [(ngModel)]="event.start"><br>
+      
+        <label for="color">Elija un color</label>
+        <input type="color" id="color" required class="form-control" name="color" autocomplete="off"
+               [(ngModel)]="event.color" minlength="1">
+      </form>
 
       <div class="modal-footer">
         <button type="button" id="cancelarbtn" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" id="guardarbtn" class="btn-guardar" (click)="guardarEvento()">Guardar</button>
+        <button type="button" id="guardarbtn" class="btn-guardar" (click)="guardarEvento()"
+          [disabled]="!eventoForm.valid || event.color === 'transparent'">
+          Guardar
+        </button>
       </div>
     </div>
   </div>
