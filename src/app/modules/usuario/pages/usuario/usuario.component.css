@@ -1,5 +1,5 @@
 .container{
-    padding-left: 5px;
+    padding-left: 5px;  
 
 }
 
@@ -22,8 +22,8 @@
 .btn-editar-h1{
     border: none;
     background: none;
-    margin-top: 34px;
     transition: transform 0.3s ease;
+    height: 10px;
 }
 
 .container-h1{

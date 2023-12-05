@@ -59,7 +59,7 @@ export class CalendarioComponent {
   
 
   ngAfterViewInit() {
-    // Ahora puedes acceder a la API de FullCalendar de manera segura
+    //  acceder a la API de FullCalendar de manera segura
     if (this.fullcalendar && this.fullcalendar.getApi) {
       this.fullcalendar.getApi().gotoDate(new Date()); // Por ejemplo, aquí estamos yendo a la fecha actual
 
@@ -124,7 +124,7 @@ export class CalendarioComponent {
 
   calendarOptions: CalendarOptions = {
     
-    initialView: 'dayGridMonth',
+    initialView: 'dayGridMonth', //vista de mes 
     plugins: [dayGridPlugin, interactionPlugin],
     locale: esLocale,//idioma
     selectable: true, //seleccionar fechas (varias fechas) (no sirve para seleccionar o mover eventos)

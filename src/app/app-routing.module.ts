@@ -28,11 +28,6 @@ const routes: Routes = [
   },
 
   {
-    path: 'guardados',
-    loadChildren: () => import('./modules/guardados/guardados.module').then(m => m.GuardadosModule)
-  },
-
-  {
     path: 'notas',
     loadChildren: () => import('./modules/notas/notas.module').then(m => m.NotasModule)
   },
