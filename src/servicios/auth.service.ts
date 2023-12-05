@@ -1,23 +1,46 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import {GoogleAuthProvider} from '@angular/fire/auth'
+import { Route, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private afs: AngularFireAuth) { }
+  constructor(private fireauth: AngularFireAuth, private router: Router) { }
 
-  signInwithGoogle(){
-    return this.afs.signInWithPopup(new GoogleAuthProvider());
+//login 
+login(email: string, password: string) {
+  this.fireauth.signInWithEmailAndPassword(email, password).then(() => {
+    localStorage.setItem('token', 'true');
+    this.router.navigate(['/inicio']);
+  }, err => {
+    alert(err.message);
+    this.router.navigate(['/login']);
+  });
+}
+  // registro
+  register(email: string, password: string) {
+    this.fireauth.createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        alert('Creaste tu cuenta con éxito')
+        this.router.navigate(['/login']);
+      })
+      .catch((err) => {
+        console.error(err);
+        this.router.navigate(['/registro']);
+      });
   }
 
-  registerWithEmailAndPassword(user: {email: string, password: string}){
-    return this.afs.createUserWithEmailAndPassword(user.email, user.password);
-  }
+//Cerrar sesión
+logout() {
+  this.fireauth.signOut().then(() => {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }).catch(err => {
+    alert(err.message);
+  });
+}
 
-  signWithEmailAndPassword(user: {email: string, password: string}){
-    return this.afs.createUserWithEmailAndPassword(user.email, user.password);
-  }
 }

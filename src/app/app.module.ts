@@ -4,18 +4,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { FullCalendarModule} from '@fullcalendar/angular'
+import { FullCalendarModule} from '@fullcalendar/angular';
 import { FormsModule } from '@angular/forms';
 
-//Módulos de firebase
-import {AngularFireModule} from '@angular/fire/compat'
+// Módulos de firebase
+import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -26,11 +25,8 @@ import { environment } from 'src/environments/environment';
     RouterModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule
-
-    
   ],
-  exports:[
-    
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]
