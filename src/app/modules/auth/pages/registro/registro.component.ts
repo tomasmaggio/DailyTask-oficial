@@ -41,9 +41,10 @@ export class RegistroComponent implements OnInit {
     }
 
     // Llamamos al método de registro del AuthService, pasando el correo electrónico y la contraseña
-    this.auth.register(this.email, this.password, this.username);
+    this.auth.register(this.username,this.email, this.password);
 
     // Reiniciamos los valores de email y password
+    this.username = '';
     this.email = '';
     this.password = '';
   }
