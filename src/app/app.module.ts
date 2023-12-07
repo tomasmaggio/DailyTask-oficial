@@ -6,11 +6,16 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { FullCalendarModule} from '@fullcalendar/angular';
 import { FormsModule } from '@angular/forms';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+
 
 // Módulos de firebase
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
+
+//Firestorage
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,8 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     RouterModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   exports: [
   ],

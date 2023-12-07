@@ -1,4 +1,64 @@
 <div class="container">
+  <div class="row" style="margin: 60px">
+    <div class="col-md-2" style="padding-right: 40px">
+      <img
+        class="imagen-1"
+        style="border-radius: 100%"
+        src="../../../../../assets/Ellipse 7.png"
+        alt=""
+      />
+      <button class="btn-editar-imagen" [hidden]="!mostrarBotones">
+        <i class="bx bxs-edit-alt icon-editar-img"></i>
+      </button>
+    </div>
+    <div class="col">
+      <div>
+        <h1 class="texto-1">{{ username }}</h1>
+        <br />
+        <button class="btn-editar-h1" [hidden]="!mostrarBotones">
+          <i class="bx bxs-edit-alt icon-editar-h1"></i>
+        </button>
+        <p class="texto-2 col-md-10" *ngIf="!mostrarBotones">
+          {{ textoOriginal }}
+          <button
+            class="btn-editar"
+            [hidden]="!mostrarBotones"
+            (click)="editarDescripcion()"
+          >
+            <i class="bx bxs-edit-alt icon-editar"></i>
+          </button>
+        </p>
+        <p class="texto-3" *ngIf="!mostrarBotones && !textoOriginal">
+          Acá podés agregar tu descripción.
+        </p>
+        <textarea
+          class="form-control"
+          rows="4"
+          [(ngModel)]="descripcioneditada"
+          *ngIf="mostrarBotones"
+        ></textarea>
+        <button
+          class="btn btn-primary"
+          (click)="editarDescripcion()"
+          *ngIf="!mostrarBotones"
+        >
+          Editar descripción
+        </button>
+        <button
+          class="btn btn-success"
+          (click)="guardarCambios()"
+          *ngIf="mostrarBotones"
+        >
+          Guardar cambios
+        </button>
+        <button
+          class="btn btn-secondary"
+          (click)="descartarCambios()"
+          *ngIf="mostrarBotones"
+        >
+          Descartar cambios
+        </button>
+      </div>
     <div class="row" style="margin: 60px;">
         <div class="col-md-2" style="padding-right: 40px;">
             <a (click)="editarImagen" class="imagen-container">
@@ -20,11 +80,21 @@
             </div>
         </div>
     </div>
+  </div>
 </div>
 
-
-
 <div class="row-2 rectangle-row">
+  <div class="rectangle" style="border: 5px solid #808080">
+    <a (click)="toggleMostrarBotones()" class="texto-3">Editar</a>
+    <div class="botones" [hidden]="!mostrarBotones">
+      <button class="boton1" routerLink="/usuario">Guardar</button>
+      <button
+        class="boton2"
+        routerLink="/usuario"
+        style="border: 5px solid #ff0000; color: #ff0000"
+      >
+        Descartar Cambios
+      </button>
     <div class="rectangle" style="border: 5px solid #808080;">
         <a (click)="toggleMostrarBotones()" class="texto-3">Editar</a>
 
@@ -34,9 +104,8 @@
             <button class="boton2" (click)="toggleMostrarBotones()" style="border: 3px solid #ff0000; color: #ff0000;">Descartar Cambios</button>
         </div>
     </div>
+  </div>
 </div>
-
-
-
+//comentario de relleno
 
 <app-navbar></app-navbar>
