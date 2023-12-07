@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { event } from 'jquery';
 import { NgForm } from '@angular/forms';
+import { NgClass } from '@angular/common';
 import { SharedDataService } from 'src/app/shared/shared-data.service';
 
 @Component({

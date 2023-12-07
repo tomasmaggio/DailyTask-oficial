@@ -1,41 +1,44 @@
-<div class="container" >
-      <div class="col-md-9 columna1">        
-        <div class="rectangulo">
-            
-          <div class="rectangulo-titulo d-flex align-items-center">
-            <div class="col" (click)="openModal()"><p style="font-size: 40px;">Notas</p></div>
-            <div class="col text-end " style="margin-top: -12px; margin-right:30px ;" >
-                <button (click)="openModal()" class="btn-agregar "><i class='bx bx-plus'></i></button>
-            </div>
-          </div>
-            <div class="col text-center">
-                <input class="barra-busqueda-input" type="text" (keyup)="filtro($any($event.target).value)" placeholder="Buscar...">          
-            </div>
-            <div class="notas-container" [@listAnim] style="padding: 10px;">
-              <ng-container *ngIf="notas.length; else noNotasMessage">
-                <app-notaind
-                  *ngFor="let nota of notasFiltradas; let i = index"
-                  [link]="'/src/app/modules/notas' + nota"
-                  (eliminar)="eliminarNota(nota)"
-                  (editar)="openModal(i)"
-                  [@itemAnim]
-                  [titulo]="nota.titulo" 
-                  [contenido]="nota.body">
-                </app-notaind>
-              </ng-container>
-              <!-- mensaje que aparecerá hasta que no hayan notas nuevas -->
-              <ng-template #noNotasMessage>
-                <p class="mensaje-p">Aún no hay notas <br> ¡Agregue una nueva nota apretando +! </p>
-              </ng-template>
-            </div>
-        </div>
-      </div>
-      <div class="col-md-3 columna2 d-flex justify-content-start align-items-start">
-
-      </div>
-
+<div class="container">
+  <div class="col-md-9 columna1">
+   <div class="rectangulo">
+    <!-- Barra de título -->
+    <div class="rectangulo-titulo d-flex align-items-center">
+     <!-- Columna para el título "Notas" -->
+     <div class="col" (click)="openModal()"><p style="font-size: 40px;">Notas</p></div>
+     <!-- Columna para el botón de agregar una nueva nota -->
+     <div class="col text-end " style="margin-top: -12px; margin-right:30px ;" >
+       <button (click)="openModal()" class="btn-agregar "><i class='bx bx-plus'></i></button>
+     </div>
+    </div>
+    <!-- Columna para la barra de búsqueda -->
+    <div class="col text-center">
+       <input class="barra-busqueda-input" type="text" (keyup)="filtro($any($event.target).value)" placeholder="Buscar...">
+     </div>
+    <!-- Contenedor de las notas -->
+    <div class="notas-container" [@listAnim] style="padding: 10px;">
+      <!-- Si hay notas, mostrarlas; de lo contrario, mostrar un mensaje -->
+      <ng-container *ngIf="notas.length; else noNotasMessage">
+       <!-- Componente app-notaind para cada nota -->
+       <app-notaind
+        *ngFor="let nota of notasFiltradas; let i = index"
+        [link]="'/src/app/modules/notas' + nota"
+        (eliminar)="eliminarNota(nota)"
+        (editar)="openModal(i)"
+        [@itemAnim]
+        [titulo]="nota.titulo" 
+        [contenido]="nota.body">
+       </app-notaind>
+      </ng-container>
+      <!-- Mensaje que aparecerá si no hay notas -->
+      <ng-template #noNotasMessage>
+       <p class="mensaje-p">Aún no hay notas <br> ¡Agregue una nueva nota apretando +!</p>
+      </ng-template>
+    </div>
+   </div>
   </div>
+  <div class="col-md-3 columna2 d-flex justify-content-start align-items-start">
+  </div>
+</div>
 
 <app-notasmodal [showModal]="showModal" (onClose)="closeDialog()"></app-notasmodal>
 <app-navbar></app-navbar>
-

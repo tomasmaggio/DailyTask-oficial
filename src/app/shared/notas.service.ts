@@ -27,7 +27,7 @@ export class NotasService {
 
 
 
-  add(nota: Nota) { // Este método agrega una nueva nota al arreglo de notas y devuelve el id de la nota recién agregada. Es útil para crear nuevas notas.
+  add(nota: Nota) { // Este método agrega una nueva nota al arreglo de notas y devuelve el id de la nota recién agregada. 
     // Agrega una nueva nota al arreglo de notas, con el metodo push para agregarla al final del arreglo
     let newLength = this.notas.push(nota);
 

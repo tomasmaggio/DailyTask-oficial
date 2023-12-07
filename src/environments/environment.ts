@@ -1,4 +1,5 @@
-export const environment = {
+//este archivo contiene la configuración de firebase necesaria para inicializar angularFire
+export const environment = { 
     production: false,
     firebaseConfig : {
 

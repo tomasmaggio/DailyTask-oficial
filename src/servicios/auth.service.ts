@@ -5,6 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
 
+//importaciones y decoradores
+import { Injectable } from '@angular/core'; //decorador que indica que el servicio puede ser inyectado en otros componentes o servicios
+import { AngularFireAuth } from '@angular/fire/compat/auth'; //servicio de angularfire para interactuar con la autentificación de firebase
+import { Route, Router } from '@angular/router'; //servicio de enrutamiento de Angular para navegar entre diferentes rutas
+import { FormsModule } from '@angular/forms'; //FormsModule lo tenemos para usar en NgModel
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +30,9 @@ export class AuthService {
   }
   
   // Método para realizar el inicio de sesión
+  constructor(private fireauth: AngularFireAuth, private router: Router) { } //Se inyectan los servicios AngularFireAuth y Router en el constructor del servicio.
+
+  // Método para realizar el inicio de sesión con correo y contraseña
   login(email: string, password: string) {
     // Utilizamos el servicio AngularFireAuth para autenticar al usuario
     this.fireauth.signInWithEmailAndPassword(email, password).then(() => {
@@ -38,6 +47,7 @@ export class AuthService {
     });
   }
 
+ 
   // Método para realizar el registro de un nuevo usuario
   register(username: string, email: string, password: string) {
     // Utilizamos el servicio AngularFireAuth para crear un nuevo usuario en Firebase
@@ -48,6 +58,14 @@ export class AuthService {
           username: username,
           email: email
         });
+
+  // Método para realizar el registro de un nuevo usuario con correo y contraseña
+  register(email: string, password: string) {
+    // Utilizamos el servicio AngularFireAuth para crear un nuevo usuario en Firebase
+    this.fireauth.createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        // Si el registro es exitoso, mostramos una alerta y redirigimos al usuario a la página de inicio de sesión
+ 
         alert('Creaste tu cuenta con éxito');
         this.router.navigate(['/login']);
       })
