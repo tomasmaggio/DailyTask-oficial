@@ -17,4 +17,5 @@ body{
 
 .card-body{
   flex: 1 1 auto;
+  padding: 1.5rem;
 }
