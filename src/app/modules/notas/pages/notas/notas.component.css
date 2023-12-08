@@ -2,3 +2,7 @@ body{
   background: white;
   margin-top: 20px;
 }
+
+.card{
+  position: relative;
+}
