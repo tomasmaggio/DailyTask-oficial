@@ -11,4 +11,5 @@ body{
   word-wrap: break-word;
   background-color: #fff;
   border: 0 solid transparent;
+  border-radius: 1;
 }
