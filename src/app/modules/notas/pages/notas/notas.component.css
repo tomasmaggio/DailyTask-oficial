@@ -10,4 +10,5 @@ body{
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
+  border: 0 solid transparent;
 }
