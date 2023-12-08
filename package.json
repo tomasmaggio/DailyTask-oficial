@@ -23,7 +23,7 @@
     "@fullcalendar/core": "^6.1.8",
     "@fullcalendar/daygrid": "^6.1.8",
     "@fullcalendar/interaction": "^6.1.8",
-    "bootstrap": "^5.3.1",
+    "bootstrap": "^5.3.2",
     "boxicons": "^2.1.4",
     "date-fns": "^2.30.0",
     "firebase": "angular/fire",
