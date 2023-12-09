@@ -54,7 +54,7 @@ export class NotasComponent implements OnInit {
   }
 
   borrarNota(nota: Notas){
-    
+    let decision = confirm('¿Está seguro de querer borrar esta nota?')
   }
 
 
