@@ -53,5 +53,9 @@ export class NotasComponent implements OnInit {
     })
   }
 
+  borrarNota(nota: Notas){
+    
+  }
+
 
 }
