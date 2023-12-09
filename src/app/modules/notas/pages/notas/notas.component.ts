@@ -83,6 +83,7 @@ export class NotasComponent implements OnInit {
       this.notasService.editarNota(nota, this.notaObj).then(() => {
         alert('Nota editada con éxito')
       });
+      this.editarForm.reset();
     }
   
   }
