@@ -23,7 +23,8 @@ export class NotasComponent implements OnInit {
   }
 
   añadirNota(){
-    
+    const {value} = this.notaForm
+    console.log(value);
   }
 
 }
