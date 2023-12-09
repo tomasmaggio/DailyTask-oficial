@@ -34,16 +34,16 @@
           ></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form [formGroup]="notaForm">
             <div class="mb-3">
               <label for="recipient-name" class="col-form-label"
                 >Título:</label
               >
-              <input type="text" class="form-control" id="recipient-name" />
+              <input type="text" class="form-control" id="recipient-name" formControlName="titulo" />
             </div>
             <div class="mb-3">
               <label for="message-text" class="col-form-label">Descripción:</label>
-              <textarea class="form-control" id="message-text"></textarea>
+              <textarea class="form-control" id="message-text" formControlName="descripcion"></textarea>
             </div>
           </form>
         </div>
@@ -55,7 +55,7 @@
           >
             Cerrar
           </button>
-          <button type="button" class="btn btn-primary">Agregar nota</button>
+          <button type="button" class="btn btn-primary" (click)="agregarNota()" [disabled]="notaForm.invalid">Agregar nota</button>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
           ></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form [formGroup]="notaForm">
             <div class="mb-3">
               <label for="tituloEditar" class="form-label">Título:</label>
               <input type="text" class="form-control" id="tituloEditar" />
