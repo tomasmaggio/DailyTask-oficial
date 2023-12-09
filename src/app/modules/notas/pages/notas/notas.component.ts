@@ -45,4 +45,10 @@ export class NotasComponent implements OnInit {
       this.notaForm.reset();
     });
   }
+
+  obtenerNotas(){
+    
+  }
+
+
 }
