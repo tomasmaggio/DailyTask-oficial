@@ -22,4 +22,8 @@ export class NotasComponent implements OnInit {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
 
+  añadirNota(){
+    
+  }
+
 }
