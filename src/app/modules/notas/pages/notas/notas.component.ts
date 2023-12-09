@@ -16,6 +16,7 @@ export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
   editarForm!: FormGroup
+  notaDetalles: FormGroup
 
   notas: any[]
   notaObj: Notas = {
@@ -72,7 +73,7 @@ export class NotasComponent implements OnInit {
     }
 
     obtenerDetalles(nota: Notas){
-      
+
     }
   
     editarNota(nota: Notas){
