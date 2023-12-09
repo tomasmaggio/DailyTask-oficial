@@ -15,7 +15,7 @@ import { Notas } from 'src/app/models/notas';
 export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
-
+  notas: any[]
   notaObj: Notas = {
     id: '',
     title: '',
