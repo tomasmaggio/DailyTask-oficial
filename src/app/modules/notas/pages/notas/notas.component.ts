@@ -39,5 +39,10 @@ export class NotasComponent implements OnInit {
     this.notaObj.id = '';
     this.notaObj.title = value.titulo;
     this.notaObj.description = value.descripcion;
+  
+    this.notasService.agregarNota(this.notaObj).then(() => {
+      alert("Nota agregada con éxito");
+      this.notaForm.reset();
+    });
   }
 }
