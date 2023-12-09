@@ -15,6 +15,8 @@ import { Notas } from 'src/app/models/notas';
 export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
+  editarForm!: FormGroup
+
   notas: any[]
   notaObj: Notas = {
     id: '',
@@ -23,10 +25,17 @@ export class NotasComponent implements OnInit {
   }
 
   constructor(private notasService: NotasService, private formBuilder: FormBuilder) { 
+    //Creación de nota
     this.notaForm = this.formBuilder.group({
       titulo: ['', Validators.required],
       descripcion: ['', Validators.required]
     })
+    //EDITAR
+    this.editarForm = this.formBuilder.group({
+      titulo: ['', Validators.required],
+      descripcion: ['', Validators.required]
+    })
+    
   }
   ngOnInit(): void {
     this.obtenerNotas()
@@ -63,7 +72,7 @@ export class NotasComponent implements OnInit {
     }
   
     editarNota(nota: Notas){
-      
+
     }
   
   }
