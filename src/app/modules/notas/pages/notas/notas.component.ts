@@ -18,8 +18,8 @@ export class NotasComponent implements OnInit {
 
   notaObj: Notas = {
     id: '',
-    titulo:'',
-    descripcion:''
+    title: '',
+    description: '',
   }
 
   constructor(private notasService: NotasService, private formBuilder: FormBuilder) { 
