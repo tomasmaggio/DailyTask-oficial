@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Notas } from 'src/app/models/notas';
-import { Firestore, addDoc, collection, doc } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData, doc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -22,6 +22,8 @@ export class NotasComponent implements OnInit {
   //Obtener todas las notas
   obtenerNotas(): Observable<Notas[]>{
     let notasRef = collection(this.afs, 'notas')
+    return collectionData(notasRef,{idField:'id'} )as
+    Observable<Notas[]>
   }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
