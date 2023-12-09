@@ -32,7 +32,7 @@ export class NotasComponent implements OnInit {
     })
     //EDITAR
     this.editarForm = this.formBuilder.group({
-      titulo: ['', Validators.required],
+      titulo_editado: ['', Validators.required],
       descripcion: ['', Validators.required]
     })
     
