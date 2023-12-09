@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Notas } from 'src/app/models/notas';
-import { Firestore, addDoc, collection, collectionData, deleteDoc, doc } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData, deleteDoc, doc, updateDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -36,6 +36,7 @@ export class NotasComponent implements OnInit {
   //Editar una nota
   editarNota(nota: Notas, notas: any){
     let docRef = doc(this.afs,'notas/${nota.id}');
+    return updateDoc(docRef,notas)
   }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
