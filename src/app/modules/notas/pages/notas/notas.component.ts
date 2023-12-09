@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Notas } from 'src/app/models/notas';
 
 @Component({
   selector: 'app-notas',
