@@ -12,6 +12,8 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
+import { NotasComponent } from './modules/notas/pages/notas/notas.component';
+import { NotasModule } from './modules/notas/notas.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { environment } from 'src/environments/environment';
     AngularFireAuthModule,
     AngularFireStorageModule,
     ReactiveFormsModule,
+    NotasModule,
     provideFirestore(() => getFirestore()),
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
   ],
