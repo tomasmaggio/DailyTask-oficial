@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotasmodalComponent } from './modules/notas/pages/notasmodal/notasmodal.component';
-import { NotasModule } from './modules/notas/notas.module';
 import { NotasComponent } from './modules/notas/pages/notas/notas.component';
 import { LoginComponent } from './modules/auth/pages/login/login.component';
 import { RegistroComponent } from './modules/auth/pages/registro/registro.component';
@@ -31,7 +29,7 @@ const routes: Routes = [
 
   {
     path: 'notas',
-    loadChildren: () => import('./modules/notas/notas.module').then(m => m.NotasModule)
+    component: NotasComponent
   },
 
   {
@@ -55,22 +53,16 @@ const routes: Routes = [
   },
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
-  
-
-  
 
   //comodin para redirigir la vista si la url no es la indicada
   // {
   //   path: '**',
   //   redirectTo: 'inicio', 
   // }
-
-
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
