@@ -73,7 +73,7 @@ export class NotasComponent implements OnInit {
     }
 
     obtenerDetalles(nota: Notas){
-
+      this.notaDetalles = nota
     }
   
     editarNota(nota: Notas){
