@@ -1,5 +1,7 @@
 body {
+  padding-left: 5%;
   margin-top: 20px;
+
 }
 
 .card {
@@ -8,7 +10,7 @@ body {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #2469a0;
+  background-color: #1967D2;
   border: 0 solid transparent;
   border-radius: 1;
   margin-bottom: 30px;
@@ -20,7 +22,7 @@ body {
 }
 
 .modal-title {
-  color: #fff;
+  color: #000;
   font-size: 24px;
 }
 
@@ -53,6 +55,10 @@ body {
   opacity: 0.5;
 }
 
-.text-muted {
-  color: #6c757d;
+.h5-titulo{
+  color: #ffffff;
+}
+
+.p-body {
+  color: #ffffff;
 }
