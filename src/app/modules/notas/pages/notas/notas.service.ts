@@ -12,7 +12,7 @@ export class NotasService {
   constructor(private afs: Firestore) { }
 
   // Añadir una nueva nota
-  añadirNota(nota: Notas) {
+  agregarNota(nota: Notas) {
     nota.id = doc(collection(this.afs, 'id')).id;
     return addDoc(collection(this.afs, 'notas'), nota);
   }
