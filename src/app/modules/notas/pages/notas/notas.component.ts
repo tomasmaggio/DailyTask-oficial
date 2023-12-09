@@ -70,6 +70,10 @@ export class NotasComponent implements OnInit {
 
       }
     }
+
+    obtenerDetalles(nota: Notas){
+      
+    }
   
     editarNota(nota: Notas){
       const {value} = this.editarForm;
