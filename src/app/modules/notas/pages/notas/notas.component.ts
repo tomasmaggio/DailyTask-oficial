@@ -73,7 +73,11 @@ export class NotasComponent implements OnInit {
   
     editarNota(nota: Notas){
       const {value} = this.editarForm;
-      console.log(value);
+      console.log(value)
+   
+      this.notaObj.id = nota.id;
+      this.notaObj.title = value.titulo_editado;
+      this.notaObj.description = value.descripcion_editada;
     }
   
   }
