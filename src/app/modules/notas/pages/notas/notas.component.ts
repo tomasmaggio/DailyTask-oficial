@@ -16,7 +16,7 @@ export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
   editarForm!: FormGroup
-  notaDetalles: FormGroup
+  notaDetalles: any
 
   notas: any[]
   notaObj: Notas = {
