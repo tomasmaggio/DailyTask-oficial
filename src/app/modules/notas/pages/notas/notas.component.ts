@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Notas } from 'src/app/models/notas';
-import { Firestore } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, doc } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-notas',
@@ -14,7 +14,8 @@ export class NotasComponent implements OnInit {
 
   //Añadir una nueva nota
   añadirNota(nota: Notas){
-
+    nota.id = doc(collection(this.afs,'id')).id
+    return addDoc(collection(this.afs,'notas'),nota)
   }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
