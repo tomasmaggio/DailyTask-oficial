@@ -28,14 +28,14 @@ export class NotasComponent implements OnInit {
 
   //Borrar una nota
   borrarNota(nota: Notas){
-    let docRef = doc(collection(this.afs,'notas/${nota.id}'))
+    let docRef = doc(this.afs,'notas/${nota.id}')
   
     return deleteDoc(docRef)
   }
 
   //Editar una nota
   editarNota(nota: Notas, notas: any){
-    let docRef = doc(collection(this.afs,'notas/${nota.id}'));
+    let docRef = doc(this.afs,'notas/${nota.id}');
   }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
