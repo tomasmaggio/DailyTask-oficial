@@ -12,7 +12,12 @@ export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
 
-  constructor(private notasService: NotasService, private formBuilder: FormBuilder) { }
+  constructor(private notasService: NotasService, private formBuilder: FormBuilder) { 
+    this.notaForm = this.formBuilder.group({
+      titulo: ['', Validators.required],
+      descripcion: ['', Validators.required]
+    })
+  }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
