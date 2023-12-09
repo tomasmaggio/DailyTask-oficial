@@ -37,6 +37,7 @@ export class NotasComponent implements OnInit {
     console.log(value);
 
     this.notaObj.id = '',
+    this.notaObj.title = value.titulo,
   }
 
 }
