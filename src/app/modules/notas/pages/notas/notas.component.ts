@@ -9,8 +9,10 @@ import { Firestore } from '@angular/fire/firestore';
 })
 export class NotasComponent implements OnInit {
 
-  constructor() { }
+  constructor(private afs: Firestore) { }
 
+
+  //Añadir una nueva nota
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
