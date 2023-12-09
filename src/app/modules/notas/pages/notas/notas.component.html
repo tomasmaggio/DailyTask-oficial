@@ -2,10 +2,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-  <button type="button" class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#Agregarnota"
-    data-whatever="@mdo">
-    Crear una nueva nota
-  </button>
+  <div class="header-cont">
+    <div class="row">
+      <div class="col">
+        <h1 class="titulo-notas" data-bs-toggle="modal" data-bs-target="#Agregarnota" data-whatever="@mdo">Notas</h1>
+      </div>
+      <div class="col text-end">
+        <button class="btn-agregarnota" data-bs-toggle="modal" data-bs-target="#Agregarnota" data-whatever="@mdo">Crear nota<i class='bx bx-plus'></i></button>
+      </div>
+    </div>
+  </div>
 
   <div class="modal fade" id="Agregarnota" tabindex="-1" aria-labelledby="Agregarnota" aria-hidden="true">
     <div class="modal-dialog">
@@ -69,9 +75,10 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container-notas">
     <div class="row">
       <div class="col-md-4" *ngFor="let nota of notas">
+        
         <div class="card card-body">
         
           <div class="row justify-content-between">
@@ -80,11 +87,11 @@
             </div>
             <div class="col-6 acciones">
               <div class="d-flex align-items-center justify-content-end">
-                <button class="">
+                <button class="btn-editar">
                   <i type="button" data-bs-toggle="modal" data-bs-target="#EditarNotaModal 
-                    " (click)="obtenerDetalles(nota)" data-whatever="@mdo" class="bi bi-pen"></i>
+                    " (click)="obtenerDetalles(nota)" data-whatever="@mdo" class="bx bxs-edit-alt"></i>
                 </button>
-                <button class="">
+                <button class="btn-borrar">
                   <i class='bx bxs-trash' (click)="borrarNota(nota)"></i>
                 </button>
               </div>
