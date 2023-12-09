@@ -83,13 +83,13 @@
           <form [formGroup]="editarForm">
             <div class="mb-3">
               <label for="tituloEditar" class="form-label">Título:</label>
-              <input type="text" class="form-control" id="tituloEditar" />
+              <input type="text" class="form-control" id="tituloEditar" formControlName="titulo_editado" />
             </div>
             <div class="mb-3">
               <label for="descripcionEditar" class="form-label"
                 >Descripción:</label
               >
-              <textarea class="form-control" id="descripcionEditar"></textarea>
+              <textarea class="form-control" id="descripcionEditar" formControlName="descripcion_editada" ></textarea>
             </div>
           </form>
         </div>
