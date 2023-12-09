@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NotasService } from './notas.service';
+import { Nota } from 'src/app/shared/nota.model';
 
 @Component({
   selector: 'app-notas',
@@ -8,8 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class NotasComponent implements OnInit {
 
-  constructor() { }
+  notaForm!: FormGroup
 
+  constructor(private notasService: NotasService, private formBuilder: FormBuilder) { }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
