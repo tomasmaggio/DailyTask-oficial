@@ -74,6 +74,7 @@ export class NotasComponent implements OnInit {
 
     obtenerDetalles(nota: Notas){
       this.notaDetalles = nota
+      console.log(this.notaDetalles)
     }
   
     editarNota(nota: Notas){
