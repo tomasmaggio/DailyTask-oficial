@@ -13,6 +13,9 @@ export class NotasComponent implements OnInit {
 
 
   //Añadir una nueva nota
+  añadirNota(nota: Notas){
+
+  }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
