@@ -32,14 +32,12 @@ export class NotasComponent implements OnInit {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
 
-  agregarNota (){
-    const {value} = this.notaForm
+  agregarNota() {
+    const { value } = this.notaForm;
     console.log(value);
-
-    this.notaObj.id = '',
-    this.notaObj.title = value.titulo,
-    this.notaObj.description = value.descripcion,
-
+  
+    this.notaObj.id = '';
+    this.notaObj.title = value.titulo;
+    this.notaObj.description = value.descripcion;
   }
-
 }
