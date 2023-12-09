@@ -57,9 +57,8 @@ export class NotasComponent implements OnInit {
     let decision = confirm('¿Está seguro de querer borrar esta nota?')
   
     if (decision === true){
-      
+      this.notasService.borrarNota(nota);
+
+      }
     }
   }
-
-
-}
