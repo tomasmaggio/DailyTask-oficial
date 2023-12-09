@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Notas } from 'src/app/models/notas';
+import { Firestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-notas',
