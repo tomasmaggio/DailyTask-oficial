@@ -29,7 +29,7 @@ export class NotasComponent implements OnInit {
     })
   }
   ngOnInit(): void {
-    // Aquí puedes agregar la lógica de inicialización del componente
+    this.obtenerNotas()
   }
 
   agregarNota() {
