@@ -25,6 +25,11 @@ export class NotasComponent implements OnInit {
     return collectionData(notasRef,{idField:'id'} )as
     Observable<Notas[]>
   }
+
+  //Borrar una nota
+  borrarNota(nota: Notas){
+    
+  }
   ngOnInit(): void {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
