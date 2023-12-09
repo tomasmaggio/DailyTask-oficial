@@ -47,7 +47,7 @@ export class NotasComponent implements OnInit {
   }
 
   obtenerNotas(){
-    
+    this.notasService.obtenerNotas().subscribe
   }
 
 
