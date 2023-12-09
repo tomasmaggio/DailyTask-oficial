@@ -84,13 +84,14 @@
             <div class="mb-3">
               <label for="tituloEditar" class="form-label">Título:</label>
               <input type="text" class="form-control" id="tituloEditar" formControlName="titulo_editado"
-              [value]="notaDetalles?.titulo" />
+              [value]="notaDetalles?.title" />
             </div>
             <div class="mb-3">
               <label for="descripcionEditar" class="form-label"
                 >Descripción:</label
               >
-              <textarea class="form-control" id="descripcionEditar" formControlName="descripcion_editada" ></textarea>
+              <textarea class="form-control" id="descripcionEditar" formControlName="descripcion_editada" 
+              [value]="notaDetalles?.description"></textarea>
             </div>
           </form>
         </div>
