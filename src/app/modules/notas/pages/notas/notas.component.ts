@@ -61,4 +61,9 @@ export class NotasComponent implements OnInit {
 
       }
     }
+  
+    editarNota(nota: Notas){
+      
+    }
+  
   }
