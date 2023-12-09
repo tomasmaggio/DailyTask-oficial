@@ -78,6 +78,11 @@ export class NotasComponent implements OnInit {
       this.notaObj.id = nota.id;
       this.notaObj.title = value.titulo_editado;
       this.notaObj.description = value.descripcion_editada;
+    
+    
+      this.notasService.editarNota(nota, this.notaObj).then(() => {
+        
+      })
     }
   
   }
