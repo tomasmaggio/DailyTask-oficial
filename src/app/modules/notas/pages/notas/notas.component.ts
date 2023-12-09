@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotasService } from './notas.service';
-import { Nota } from 'src/app/shared/nota.model';
+import { Notas } from 'src/app/models/notas';
 
 
 
@@ -16,7 +16,7 @@ export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
 
-  notaObj: Nota = {
+  notaObj: Notas = {
     id: '',
     titulo:'',
     descripcion:''
