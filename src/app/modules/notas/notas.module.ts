@@ -3,21 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { NotasRoutingModule } from './notas-routing.module';
 import { NotasComponent } from './pages/notas/notas.component';
-import { NotaindComponent } from './pages/notaind/notaind.component';
-import { NotasmodalComponent } from './pages/notasmodal/notasmodal.component';
+
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
-import { FormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    NotasComponent,
-    NotaindComponent,
-    NotasmodalComponent
+    NotasComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     SplitButtonModule,
     InputTextModule,
     DialogModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class NotasModule { }

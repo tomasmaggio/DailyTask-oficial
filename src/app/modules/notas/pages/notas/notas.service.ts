@@ -3,6 +3,7 @@ import { Notas } from 'src/app/models/notas';
 import { Firestore, addDoc, collection, collectionData, deleteDoc, doc, updateDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })

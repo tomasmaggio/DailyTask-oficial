@@ -3,11 +3,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotasService } from './notas.service';
 import { Nota } from 'src/app/shared/nota.model';
 
+
+
+
 @Component({
   selector: 'app-notas',
   templateUrl: './notas.component.html',
   styleUrls: ['./notas.component.css']
 })
+
 export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
