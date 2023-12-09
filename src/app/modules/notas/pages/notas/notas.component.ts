@@ -51,8 +51,9 @@ export class NotasComponent implements OnInit {
     this.notaObj.description = value.descripcion;
   
     this.notasService.agregarNota(this.notaObj).then(() => {
-      alert("Nota agregada con éxito");
       this.notaForm.reset();
+      // Cerrar el modal
+     $('#Agregarnota').modal('hide');
     });
   }
 
@@ -87,9 +88,10 @@ export class NotasComponent implements OnInit {
     
     
       this.notasService.editarNota(nota, this.notaObj).then(() => {
-        alert('Nota editada con éxito')
+        this.editarForm.reset();
+        // Cerrar el modal
+        $('#EditarNotaModal').modal('hide');
       });
-      this.editarForm.reset();
     }
   
   }
