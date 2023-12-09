@@ -73,20 +73,28 @@
     <div class="row">
       <div class="col-md-4" *ngFor="let nota of notas">
         <div class="card card-body">
-          <h5 class="h5-titulo">{{nota.title}}</h5>
-          <p class="p-body">
-            {{nota.description}}
-          </p>
-
-          <div class="d-flex align-items-center">
-            <span class="mx-2">
-              <i type="button" data-bs-toggle="modal" data-bs-target="#EditarNotaModal 
-                " (click)="obtenerDetalles(nota)" data-whatever="@mdo" class="bi bi-pen"></i>
-            </span>
-            <span class="mx-2">
-              <i class="bi bi-trash" (click)="borrarNota(nota)"></i>
-            </span>
+        
+          <div class="row justify-content-between">
+            <div class="col-6">
+              <h5 class="h5-titulo">{{nota.title}}</h5>
+            </div>
+            <div class="col-6 acciones">
+              <div class="d-flex align-items-center justify-content-end">
+                <button class="">
+                  <i type="button" data-bs-toggle="modal" data-bs-target="#EditarNotaModal 
+                    " (click)="obtenerDetalles(nota)" data-whatever="@mdo" class="bi bi-pen"></i>
+                </button>
+                <button class="">
+                  <i class='bx bxs-trash' (click)="borrarNota(nota)"></i>
+                </button>
+              </div>
+            </div>
           </div>
+
+          <div class="row">
+            <p class="p-body">{{nota.description}}</p>
+          </div>
+          
         </div>
       </div>
     </div>
