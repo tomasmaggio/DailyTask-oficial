@@ -35,6 +35,8 @@ export class NotasComponent implements OnInit {
   agregarNota (){
     const {value} = this.notaForm
     console.log(value);
+
+    this.notaObj.id = '',
   }
 
 }
