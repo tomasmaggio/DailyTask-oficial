@@ -38,6 +38,8 @@ export class NotasComponent implements OnInit {
 
     this.notaObj.id = '',
     this.notaObj.title = value.titulo,
+    this.notaObj.description = value.descripcion,
+
   }
 
 }
