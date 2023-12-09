@@ -16,6 +16,12 @@ export class NotasComponent implements OnInit {
 
   notaForm!: FormGroup
 
+  notaObj: Nota = {
+    id: '',
+    titulo:'',
+    descripcion:''
+  }
+
   constructor(private notasService: NotasService, private formBuilder: FormBuilder) { 
     this.notaForm = this.formBuilder.group({
       titulo: ['', Validators.required],
@@ -26,7 +32,7 @@ export class NotasComponent implements OnInit {
     // Aquí puedes agregar la lógica de inicialización del componente
   }
 
-  agregarNota(){
+  agregarNota (){
     const {value} = this.notaForm
     console.log(value);
   }
