@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NotasService } from './notas.service';
+import { NotasService } from '../../services/notas.service';
 import { Notas } from 'src/app/models/notas';
 
 
