@@ -43,16 +43,20 @@ export class NotasComponent implements OnInit {
   }
 
   agregarNota() {
+    // Obtener los valores del formulario
     const { value } = this.notaForm;
     console.log(value);
-
-    this.notaObj.id = '';
-    this.notaObj.title = value.titulo;
-    this.notaObj.description = value.descripcion;
-
+  
+    // Configurar los datos de la nueva nota
+    this.notaObj.id = '';  // Se asigna un ID (podría ser generado o manejado de otra manera)
+    this.notaObj.title = value.titulo;  // Título de la nota obtenido del formulario
+    this.notaObj.description = value.descripcion;  // Descripción de la nota obtenida del formulario
+  
+    // Llamar al servicio para agregar la nueva nota
     this.notasService.agregarNota(this.notaObj).then(() => {
+      // Restablecer el formulario después de agregar la nota
       this.notaForm.reset();
-      // Cerrar el modal
+      // Cerrar el modal de agregar nota (usando jQuery en este caso)
       $('#Agregarnota').modal('hide');
     });
   }
