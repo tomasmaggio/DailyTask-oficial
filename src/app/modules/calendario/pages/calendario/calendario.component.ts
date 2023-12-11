@@ -92,9 +92,6 @@ export class CalendarioComponent {
 
 
 
-  
-
-
   events: any[] = [
     {
       title: 'Corte de pelo de panchito 🐶',
