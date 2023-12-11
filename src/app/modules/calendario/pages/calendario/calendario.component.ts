@@ -2,7 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core'; // útil para el chequeo de tipos
 import { BrowserModule } from '@angular/platform-browser';
 import { Calendar } from '@fullcalendar/core';
-import { SharedDataService } from 'src/app/shared/shared-data.service';
+import { SharedDataService } from 'src/app/modules/calendario/services/shared-data.service';
 
 // Importaciones de plugins del FullCalendar
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -90,9 +90,6 @@ export class CalendarioComponent {
     });
   }
 
-
-
-  
 
 
   events: any[] = [
