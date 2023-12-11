@@ -49,6 +49,7 @@ export class AuthService {
         console.error(err);
         this.router.navigate(['/registro']);
       });
+      this.router.navigate(['/login']);
   }
 
   logout() {
