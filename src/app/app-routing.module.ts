@@ -5,10 +5,10 @@ import { LoginComponent } from './modules/auth/pages/login/login.component';
 import { RegistroComponent } from './modules/auth/pages/registro/registro.component';
 
 const routes: Routes = [
-  // Para que siempre al iniciar redirija a esta vista
+  // Para que siempre al iniciar reridija a esta vista
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'bienvenida',
     pathMatch: 'full'
   },
 
