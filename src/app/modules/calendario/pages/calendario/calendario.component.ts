@@ -36,27 +36,27 @@ export class CalendarioComponent {
 
 
 
-  constructor(private SharedDataService: SharedDataService){
+  constructor(private SharedDataService: SharedDataService) {
 
     //suscripcion a eventos editados
-  this.SharedDataService.editedEvent$.subscribe(editedEvent => {
-    const calendarApi = this.fullcalendar.getApi();
-    const existingEvent = calendarApi.getEventById(editedEvent.id);
+    this.SharedDataService.editedEvent$.subscribe(editedEvent => {
+      const calendarApi = this.fullcalendar.getApi();
+      const existingEvent = calendarApi.getEventById(editedEvent.id);
 
-    if (existingEvent){
-      existingEvent.setProp('title', editedEvent.title);
-      existingEvent.setProp('color', editedEvent.color);
-      existingEvent.setStart(editedEvent.start);
-      existingEvent.setEnd('editedEvent.end');
-      existingEvent.setExtendedProp('customData', editedEvent.customData);
-      existingEvent.setExtendedProp('otherCustomData', editedEvent.otherCustomData);
-      
-    }
+      if (existingEvent) {
+        existingEvent.setProp('title', editedEvent.title);
+        existingEvent.setProp('color', editedEvent.color);
+        existingEvent.setStart(editedEvent.start);
+        existingEvent.setEnd('editedEvent.end');
+        existingEvent.setExtendedProp('customData', editedEvent.customData);
+        existingEvent.setExtendedProp('otherCustomData', editedEvent.otherCustomData);
 
-  })
+      }
+
+    })
   }
 
-  
+
 
   ngAfterViewInit() {
     //  acceder a la API de FullCalendar de manera segura
@@ -73,7 +73,7 @@ export class CalendarioComponent {
     }
   }
 
-  
+
   ngOnInit() {
     // Suscribirse al servicio compartido para recibir eventos
     this.SharedDataService.event$.subscribe(event => {
@@ -99,28 +99,28 @@ export class CalendarioComponent {
       color: '#1967D2',
     },
     {
-       title: 'Clases de Alemán',
-       start: '2023-12-08',
-       color: '#F72A25'
+      title: 'Clases de Alemán',
+      start: '2023-12-08',
+      color: '#F72A25'
     },
     {
       title: 'Llevar el carro al mecánico',
       start: '2023-12-09',
       color: '#0b5394'
-   },
-   {
-    title: 'Estudiar',
-    start: '2023-12-09',
-    color: '#f1c232'
-   },
+    },
+    {
+      title: 'Estudiar',
+      start: '2023-12-09',
+      color: '#f1c232'
+    },
 
-   
+
   ];
 
-  
+
 
   calendarOptions: CalendarOptions = {
-    
+
     initialView: 'dayGridMonth', //vista de mes 
     plugins: [dayGridPlugin, interactionPlugin],
     locale: esLocale,//idioma
@@ -134,37 +134,42 @@ export class CalendarioComponent {
       // Evitar la creación automática de eventos vacíos al hacer clic en una fecha
       this.fullcalendar.getApi().unselect();
     },
-    
 
-    //funcion para abrir el modal
-     dateClick: (info) => {
-      const startInput = document.getElementById('start') as HTMLInputElement | null;
-      const titleInput = document.getElementById('title') as HTMLInputElement | null;
-      const colorInput = document.getElementById('color') as HTMLInputElement ;
 
+    // Función que se ejecuta al hacer clic en una fecha del calendario
+    dateClick: (info) => {
+      // Obtener referencias a elementos de entrada en el modal
+      const startInput = document.getElementById('start') as HTMLInputElement;
+      const titleInput = document.getElementById('title') as HTMLInputElement;
+      const colorInput = document.getElementById('color') as HTMLInputElement;
+
+      // Verificar la existencia de los elementos de entrada
       if (startInput && titleInput) {
+        // Establecer la fecha seleccionada en el campo de inicio
         startInput.value = info.dateStr;
+        // Limpiar los campos de título y color en el modal
         titleInput.value = '';
         colorInput.value = '';
 
-        // Notifica al servicio con los datos del evento seleccionado
+        // Notificar al servicio con los datos del evento seleccionado
         this.SharedDataService.sendEvent({
           start: info.dateStr,
           title: '',
-          color: 'transparent' // 
+          color: 'transparent'
         });
 
+        // Mostrar el modal de ejemplo
         $('#ejemploModal').modal('show');
       }
     },
-    
 
-    
-    
 
-     
 
-  
+
+
+
+
+
     //Drag & Drop
     eventDrop: (info) => {
       // código para actualizar fecha en BD
@@ -172,19 +177,19 @@ export class CalendarioComponent {
 
     eventMouseEnter: this.handleEventMouseEnter.bind(this),
     eventMouseLeave: this.handleEventMouseLeave.bind(this),
-    
+
     events: this.events
-  
+
   };
 
 
-//Funcion para mostrar el Tooltip cada que se le pasa el cursor por encima de un evento en en el calendario
+  //Funcion para mostrar el Tooltip cada que se le pasa el cursor por encima de un evento en en el calendario
   handleEventMouseEnter(info: any): void {
     const eventColor = info.event.backgroundColor || info.event.borderColor || '';
-      // Formatear la fecha en el formato deseado con la abreviatura del día
+    // Formatear la fecha en el formato deseado con la abreviatura del día
     const formattedDate = info.event.start
-    ? format(new Date(info.event.start), "'- 'EEE dd LLL - h:mm a", { locale: es })
-    : '';
+      ? format(new Date(info.event.start), "'- 'EEE dd LLL - h:mm a", { locale: es })
+      : '';
 
     const tooltip = `<div class="calendarTooltip" style="
     padding-left:10px; 
@@ -199,28 +204,28 @@ export class CalendarioComponent {
     position:absolute;
     z-index:10001;">
     ${info.event.title} ${formattedDate}</div>`;
-    
+
     const $tool = $(tooltip).appendTo('body');
 
     $(info.el).mouseover(function (e) {
       $(this).css('z-index', 10000);
       $tool.fadeIn('1000');
       $tool.fadeTo(10, 1.9);
-    
-      
-    
+
+
+
     }).mousemove(function (e) {
       $tool.css('top', e.pageY + 10);
       $tool.css('left', e.pageX + 20);
     });
 
-    
+
   }
 
   handleEventMouseLeave(info: any): void {
     $(info.el).css('z-index', 8);
     $('.calendarTooltip').remove();
   }
-  
-  
+
+
 }
