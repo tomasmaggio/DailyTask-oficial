@@ -20,7 +20,7 @@
           </button>
         </p>
         <p class="texto-3" *ngIf="!mostrarBotones && !textoOriginal">
-          Acá podés agregar tu descripción.
+          ¡Agregar una descripción!
         </p>
         <textarea class="form-control" rows="4" [(ngModel)]="descripcioneditada" *ngIf="mostrarBotones"></textarea>
         <button class="btn btn-primary" (click)="editarDescripcion()" *ngIf="!mostrarBotones">
